@@ -1,0 +1,20 @@
+ 1912   ./post.sh http://10.64.213.149:9004/dpa-api/discovery cubaan2.xml
+ 1913  sh GET_nodes.sh
+ 1915  sh DELETE_nodes.sh
+ 1916  sh GET_nodes.sh
+ 1918   ./post.sh http://10.64.213.149:9004/dpa-api/discoverytests cubaan2.xml
+ 1919  ./get.sh http://10.64.213.149:9004/dpa-api/discoverytests/requestteststatus/4aa0f1b2-1a96-433a-b886-5acb1146e36f
+ 1920  ./GET_nodes.sh
+ 1922  ./get.sh http://10.64.213.149:9004/dpa-api/discoverytests/requestteststatus/4aa0f1b2-1a96-433a-b886-5acb1146e36f
+ 1923   ./post.sh http://10.64.213.149:9004/dpa-api/discoverytests cubaan2.xml
+ 1924  ./get.sh http://10.64.213.149:9004/dpa-api/discoverytests/requestteststatus/1fd43004-3c24-4f4b-9894-01b6a551b0a6
+ 1927   ./post.sh http://10.64.213.149:9004/dpa-api/discoverytests cubaan3.xml
+ 1928  ./get.sh http://10.64.213.149:9004/dpa-api/discoverytests/requestteststatus/d1836e8e-48fd-4f5b-8302-882cc3161d01
+ 1931   ./post.sh http://10.64.213.149:9004/dpa-api/discoverytests cubaan3.xml
+ 1932  ./get.sh http://10.64.213.149:9004/dpa-api/discoverytests/requestteststatus/8a573532-8a04-44fc-a389-ad543a94e38e
+ 1936   ./post.sh http://10.64.213.149:9004/dpa-api/discoverytests cubaan3.xml
+ 1938   ./post.sh http://10.64.213.149:9004/dpa-api/discoverytests cubaan3.xml
+ 1939  ./get.sh http://10.64.213.149:9004/dpa-api/discoverytests/requestteststatus/febe1e14-8b45-432d-ae9c-6691a65cf142
+ 1943   ./post.sh http://10.64.213.149:9004/dpa-api/discoverytests cubaan3.xml
+ 1944  ./get.sh http://10.64.213.149:9004/dpa-api/discoverytests/requestteststatus/e2d23c15-7458-40e3-b078-bfb937a50ea5
+

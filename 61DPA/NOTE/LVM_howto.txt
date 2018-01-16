@@ -1,0 +1,138 @@
+LVM 
+===
+
+sda1	sdb1      (PVs on partitions or whole disks)
+ \       /
+  \     /
+  diskvg	  (VG)
+  /     \
+ /       \
+usrlv    rootlv   (LVs)
+|         |
+|         |
+xfs      ext4     (filesystems)
+
+
+
++-- Volume Group --------------------------------+
+|                                                |
+|    +----------------------------------------+	 |
+| PV | PE |  PE | PE | PE | PE | PE | PE | PE |	 |
+|    +----------------------------------------+	 |
+|      .       	  .    	     . 	      .	       	 |
+|      .          .    	     .        .	         |
+|    +----------------------------------------+	 |
+| LV | LE |  LE | LE | LE | LE | LE | LE | LE |	 |
+|    +----------------------------------------+	 |
+|            .          .        .     	   .     |
+|            . 	        .        .     	   .     |
+|    +----------------------------------------+	 |
+| PV | PE |  PE | PE | PE | PE | PE | PE | PE |	 |
+|    +----------------------------------------+	 |
+|                                                |
++------------------------------------------------+
+
+PV - physical volume
+PE - physical extent
+LE - logical extent
+LV - logical volume
+
+
+1) Partitioning hard disks (first) :
+
+main command = fdisk
+
+- to list all existing partitions with table = fdisk -l
+- creating tables (on new attached disks) = fdisk <disk_dev>
+
+# fdisk -l
+  (will get all disk device)
+    example newly hard disk that didn't have partition tables :
+
+  Disk /dev/sdb: 10.7 GB, 10737418240 bytes, 20971520 sectors
+  Units = sectors of 1 * 512 = 512 bytes
+  Sector size (logical/physical): 512 bytes / 512 bytes
+  I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+# fdisk /dev/sdb
+ | (/dev/sdb is a new hard disk that didnt have partition table)
+ |
+ | [root@rt-centos70 ~]# fdisk /dev/sdb
+ | Welcome to fdisk (util-linux 2.23.2).
+ |
+ | Changes will remain in memory only, until you decide to write them.
+ | Be careful before using the write command.
+ |
+ | Device does not contain a recognized partition table
+ | Building a new DOS disklabel with disk identifier 0xa69375dc.
+ |
+ | Command (m for help): n
+ | Partition type:
+ |    p   primary (0 primary, 0 extended, 4 free)
+ |    e   extended
+ | Select (default p): p
+ | Partition number (1-4, default 1): 1
+ | First sector (2048-20971519, default 2048):
+ | Using default value 2048
+ | Last sector, +sectors or +size{K,M,G} (2048-20971519, default 20971519):
+ | Using default value 20971519
+ | Partition 1 of type Linux and of size 10 GiB is set
+ |
+ | Command (m for help): p
+ |
+ | Disk /dev/sdb: 10.7 GB, 10737418240 bytes, 20971520 sectors
+ | Units = sectors of 1 * 512 = 512 bytes
+ | Sector size (logical/physical): 512 bytes / 512 bytes
+ | I/O size (minimum/optimal): 512 bytes / 512 bytes
+ | Disk label type: dos
+ | Disk identifier: 0xa69375dc
+ |
+ |    Device Boot      Start         End      Blocks   Id  System
+ | /dev/sdb1            2048    20971519    10484736   83  Linux
+ |
+ | Command (m for help): w
+ | The partition table has been altered!
+ |
+ | Calling ioctl() to re-read partition table.
+ | Syncing disks.
+ | [root@rt-centos70 ~]#
+
+ - first, type "n" to "add a new partition", then "p" for "primary" partition (extended if more than 5 partitions needed), then "1" for partition number one (if partition already there, need to choose other number), First sector - press enter ("default"),  last sector - just press enter ("default") or size in "+(size){KMG}" format, e.g "+2GB".
+ - then, to check the partition table, press "p"
+ - after satisfied, press "w" so that what you've done will write to hard disk.
+
+2) Partitioning hard disks (second) :
+
+# fdisk -l /dev/sdb 
+ (should show created partition table above)
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1            2048    20971519    10484736   83  Linux
+  
+# mkfs -t ext4 /dev/sdb1  --- this is NO NEED
+ 
+    mkfs -t (partition type) (device)
+
+3) add partition to VG
+
+# vgdisplay
+(will display all VG / LVM name)
+
+OR
+
+# vgs
+
+[root@rt-centos70 ~]# vgs
+  VG     #PV #LV #SN Attr   VSize VFree
+  diskvg   3   2   0 wz--n- 5.85g 5.17g
+[root@rt-centos70 ~]#
+
+# vgextend diskvg /dev/sdb1
+
+(format = vgextend [existingVG] [new-device])
+
+# [root@rt-centos70 ~]# vgs
+  VG     #PV #LV #SN Attr   VSize VFree
+  diskvg   3   2   0 wz--n- 5.85g 5.17g
+[root@rt-centos70 ~]#
+

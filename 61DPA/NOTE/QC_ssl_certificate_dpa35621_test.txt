@@ -1,0 +1,112 @@
+1) Install and setup DPA server 6.1.1.GA
+2) make a backup of apollo.keystore and standalone.xml files
+Linux - /opt/emc/dpa/services/standalone/configuration/apollo.keystore & standalone.xml
+Windows - C:\Program Files\EMC\dpa\services\standalone\configuration\apollo.keystore & standalone.xml
+3) Run any REST request using https and make sure it display default server certificate setting as follow :
+
+Example :
+
+GET https://10.64.213.62:9002/dpa-api/license
+
+* SSL connection using TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+* Server certificate:
+*       subject: CN=EMC Data Protection Advisor,OU=EMC Data Protection Advisor,O=EMC Data Protection Advisor,L=Unknown,ST=Unknown,C=Un...
+*       start date: Jul 22 16:04:11 2013 GMT
+*       expire date: Sep 11 16:04:11 2024 GMT
+*       common name: EMC Data Protection Advisor
+*       issuer: CN=EMC Data Protection Advisor,OU=EMC Data Protection Advisor,O=EMC Data Protection Advisor,L=Unknown,ST=Unknown,C=Un...
+* Server auth using Basic with user 'administrator'
+
+OR
+
+Login to UI through browser and check the cetificate information :
+
+Chrome
+- click lock key symbol near your URL
+- > Connection > Certificate information > Details > Issuer
+
+Firefox
+- click lock key symbol near your URL
+- > More Information > View Certificate > Issued By
+
+4) Create and import self-signed certificate
+4.1) /opt/emc/dpa/services/_jre/bin/keytool -genkey -alias [youralias] -keyalg RSA -keysize 2048 -keystore /opt/emc/dpa/services/standalone/configuration/apollo.keystore
+
+[youralias] = any alias (any name) as long as you use it consistently = rt-dpa2
+
+4.2) keystore password = apollo
+4.3) first and last name = server hostname (in full with domainname - `hostname -f`)
+rt-dpa2.homebase.corp.com 
+
+4.4) change standalone.xml's key-alias with [youralias]
+
+original => key-alias="apollokey" name="ssl" password="apollo"
+new => key-alias="rt-dpa2" name="ssl" password="apollo"
+
+5) restart DPA service
+6) Run any REST request using https and make sure it display new server certificate
+
+Example :
+
+GET https://10.64.213.62:9002/dpa-api/license
+
+* SSL connection using TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+* Server certificate:
+*       subject: CN=rt-dpa2.homebase.corp.com,OU=DPA Horizon,O=EMC Computer Systems UK Ltd,L=Abingdon,ST=Oxfordshire,C=UK
+*       start date: Aug 22 13:00:50 2014 GMT
+*       expire date: Nov 20 13:00:50 2014 GMT
+*       common name: rt-dpa2.homebase.corp.com
+*       issuer: CN=rt-dpa2.homebase.corp.com,OU=DPA Horizon,O=EMC Computer Systems UK Ltd,L=Abingdon,ST=Oxfordshire,C=UK
+* Server auth using Basic with user 'administrator'
+
+OR
+
+Login to UI through browser and check the cetificate information :
+
+Chrome
+- click lock key symbol near your URL
+- > Connection > Certificate information > Details > Issuer
+
+Firefox
+- click lock key symbol near your URL
+- > More Information > View Certificate > Issued By
+
+7) make another backup of apollo.keystore and standalone.xml files (same as step 2)
+8) Upgrade DPA server to latest 6.2.0
+9) Run any REST request using https and make sure it display new server certificate
+
+Example :
+
+GET https://10.64.213.62:9002/dpa-api/license
+
+* SSL connection using TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+* Server certificate:
+*       subject: CN=rt-dpa2.homebase.corp.com,OU=DPA Horizon,O=EMC Computer Systems UK Ltd,L=Abingdon,ST=Oxfordshire,C=UK
+*       start date: Aug 22 13:00:50 2014 GMT
+*       expire date: Nov 20 13:00:50 2014 GMT
+*       common name: rt-dpa2.homebase.corp.com
+*       issuer: CN=rt-dpa2.homebase.corp.com,OU=DPA Horizon,O=EMC Computer Systems UK Ltd,L=Abingdon,ST=Oxfordshire,C=UK
+* Server auth using Basic with user 'administrator'
+
+OR
+
+Login to UI through browser and check the cetificate information :
+
+Chrome
+- click lock key symbol near your URL
+- > Connection > Certificate information > Details > Issuer 
+
+Firefox
+- click lock key symbol near your URL
+- > More Information > View Certificate > Issued By
+
+10) Extra tests
+
+10.1) List of certificates in apollo.keystore have same entries (before and after upgrade)
+
+keytool -list -keystore apollo.keystore
+
+10.2) key-alias value in standalone.xml (before and after upgrade) are the value set in step 4.4
+
+eg
+key-alias="rt-dpa2" name="ssl" password="apollo"

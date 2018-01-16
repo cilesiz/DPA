@@ -1,0 +1,16 @@
+16:22Talib, Rosli
+Mike ask me to test sql server. what Instance value should I put to discover seri
+he said I can use seri
+
+16:25Bandarupally, Himabindu
+Database -> ms sql-> seri.wysdm.lab.emc.com-> instance details as below
+
+Administrator / serverg0d
+
+default instance 
+Type: windows authentication
+Credentials --use the following 
+Administrator / serverg0d
+
+16:27Talib, Rosli
+Test successful!... thanks Bindu

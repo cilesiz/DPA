@@ -1,0 +1,9 @@
+<versions>
+   <version for="apollo.ear" patch="120">6.1.1.85488</version>
+   <version for="controller.rar" patch="120">6.1.1.85488</version>
+   <version for="dpa.ear" patch="120">6.1.1.85488</version>
+   <version for="remotex.rar" patch="120">6.1.1.85488</version>
+   <version for="ui.war" patch="120">6.1.1.85488</version>
+   <version for="webserver.war" patch="120">6.1.1.85488</version>
+   <version for="installer">6.1.0.83248</version>
+</versions>

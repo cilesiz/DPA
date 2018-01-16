@@ -1,0 +1,210 @@
+<licenses>
+  <license lastModified="2014-03-07T18:19:40.187Z">
+    <id>66a76a19-8cb4-4e44-bf4c-6c5f6113aacd</id>
+    <name>DPA base license for EMC (407828)</name>
+    <code>EMC-DPA-ENT</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MC0CFBWlBV62/TeaFz/7lsF+OImeVHQkAhUAh5Vgge6UnrSe/7t/lhLAXCLnl2Y=</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.199Z">
+    <id>b786c9e6-323d-4bf3-a873-e9e88f5df72d</id>
+    <name>VNX 5800 BLOCK licenses for EMC (398984)</name>
+    <code>DPA-CLAR-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MC0CFQCFXdaIbxbEbgcsv5T1QXYhbJJZXAIUCKhD567RpYEneyNV6uMFk5nYpT0=</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.206Z">
+    <id>f78b56e7-83ca-4612-bd25-2b7ea81ee488</id>
+    <name>VNX 5600 BLOCK licenses for EMC (53807)</name>
+    <code>DPA-CLAR-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MC0CFQCDecNAmknwtSBY0v4FhcHxs/y50AIURWbaIovIzuQw0tVMP0ivNbIEerU=</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.224Z">
+    <id>05751e2c-324d-49ba-8713-80dc0856a886</id>
+    <name>VNX 5200 BLOCK licenses for EMC (888102)</name>
+    <code>DPA-CLAR-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MC0CFQCBxJI1YfzB9+fLIatwRXNO3DysIQIUXKO2VKH/Ef8ZvtQUV7JV2imvGjk=</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.234Z">
+    <id>ad7d70ce-c61e-4f55-847b-31a389524d02</id>
+    <name>1 TB Symmetrix/RecoverPoint capacity licenses for EMC (514480)</name>
+    <code>DPA-SYM-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MC0CFQCCU6wAXS/dJjkM0v3Cmh7h5AhdFAIUR9lC7vF4UtwOJCz+FS4deDdvG64=</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.244Z">
+    <id>fb2b82f8-8654-411b-82c7-e2fb4c2ddd7d</id>
+    <name>1 TB NetWorker source capacity license for EMC (823535)</name>
+    <code>DPA-BC-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MCwCFCOMuY2iVLXN3S44GeW0dFrA+TonAhRkvMDbnlV0jonJvCT64pgzMyZ22Q==</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.254Z">
+    <id>8b0c7043-7485-4fdf-833b-834df806231f</id>
+    <name>1 Netapp licenses for EMC (894479)</name>
+    <code>DPA-FSRV-1</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MCwCFAsBfrap+fpfmilOGryjgToATDrFAhRGKE6oWfrM6pSULqS0qNV3nX72vQ==</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.264Z">
+    <id>fd8f02e8-d3c4-4343-9691-1a0e0aeaf5f9</id>
+    <name>CLARiiON array licenses for EMC (451385)</name>
+    <code>DPA-CLAR-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MC4CFQCJplBtrZr2ITpjcpQ3YeVtAhWaxwIVAJZtANu24CWmeKc/QugKXp8fgv8j</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.274Z">
+    <id>7c4dcec7-b1a3-4463-9b88-dd53e9249e9b</id>
+    <name>1 Celerra licenses for EMC (561423)</name>
+    <code>DPA-FSRV-1</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MCwCFHFHr7QxcRP8mgROTHgF/pDGVyOFAhRKRVGVQ3522OHCmEkrxRvgMoVpwQ==</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.284Z">
+    <id>8af1b4fe-6b33-4fda-a16b-35402d445ae8</id>
+    <name>1TB avamar backend capacity license for EMC (180517)</name>
+    <code>DPA-BDC-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MCwCFHkb/EULErR9Br8SzyQCGxa2LyJ9AhQq76AX39xiJfvrd0solBGbHf9cKw==</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.295Z">
+    <id>a9e9b1a1-b1fc-4bf5-929a-833db04607f9</id>
+    <name>VNX 8000 BLOCK licenses for EMC (550175)</name>
+    <code>DPA-CLAR-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MCwCFA0XeL2qqiB5bfqJIdUn0V41QKOnAhR0GOA8XoieiDQ9xeWPELHmtN86Iw==</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.309Z">
+    <id>c7fbdd38-b344-4351-86a0-5cde5865d7f9</id>
+    <name>VNX 7600 BLOCK licenses for EMC (747635)</name>
+    <code>DPA-CLAR-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MCwCFC2FhjDfcbDusmohcKtkFQEvypTBAhQfIK4Dp9IkX9ONRr/ALpG9ZSRt0Q==</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.318Z">
+    <id>fb5673ca-f6a5-489b-8c38-d25b8eafcab4</id>
+    <name>VNX 5400 BLOCK licenses for EMC (674592)</name>
+    <code>DPA-CLAR-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MCwCFAlmslqLy+GS3ZkDTu1jSnhMORsMAhRwRvHtJybLGjU6E83mZ9QpWWBx+g==</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.339Z">
+    <id>d4ffaf4e-7373-4107-bb0b-b183707568f2</id>
+    <name>20 backup client licenses for EMC (909806)</name>
+    <code>DPA-BCM-1</code>
+    <type>SysDM V1.1 License</type>
+    <instances>20</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MC0CFH22nDQV9K8U5YN/aD/KiPnmNPl9AhUAlFHI4UyOkz3sq1/T0V9hXZ//ty4=</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.348Z">
+    <id>c177ab27-cdcc-4d6e-8d92-48cf8f86514b</id>
+    <name>1 Virtualization server licenses for EMC (342764)</name>
+    <code>DPA-VMS-1</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MCwCFFXjn4gi6SPWR+v1563xaSDLKqPiAhRUsG8hAyaYOy94NpZc8n1FWhHTow==</sig>
+  </license>
+  <license lastModified="2014-03-07T18:19:40.357Z">
+    <id>b10b65de-fd7d-478f-8a92-07db013fa51f</id>
+    <name>Virtual Ports for Xsigo Director licenses for EMC (43466)</name>
+    <code>XSIGO-DIRECTOR-1</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>EMC Corporation</holder>
+    <subnet>10.64.205.148</subnet>
+    <subnetMask>255.255.255.255</subnetMask>
+    <featureSet>0</featureSet>
+    <sig>MCwCFGMh7tY3V+XPmV3lGGVe6flv1QXXAhQikBTu0Cm27dS6N0ENmQyw7Em9cw==</sig>
+  </license>
+</licenses>

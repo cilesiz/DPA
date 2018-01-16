@@ -1,0 +1,237 @@
+listing_jer ()
+{
+
+tmplist="$tmprundir"/tmplist_`date +%Y%m%d_%H%M%S`
+tmplistdisp1="$tmprundir"/tmplistdisp1_`date +%Y%m%d_%H%M%S`
+tmplistdisp2="$tmprundir"/tmplistdisp2_`date +%Y%m%d_%H%M%S`
+
+## urllistings   mainlistpath           mainpath  tmpfile  value1    value2          value3      value4
+## URLprojects   /projects/project/id   project   tmp1pr   id        inactive        name        (none)
+## (1)           (2)                    (3)       (4)      (5)       (6)             (7)         (8)
+
+urllistings="$1"
+mainlistpath="$2"
+mainpath="$3"
+value1="$5"
+value2="$6"
+value3="$7"
+value4="$8"
+tmpfile="$4"
+
+echo
+echo "URL = $urllistings"
+echo
+echo
+
+curl -k -v -u "$login1":"$paswd1" \
+-H "Accept: application/vnd.emc.apollo-v1+xml" -H "Content-Type: application/vnd.emc.apollo-v1+xml" \
+-X GET "$urllistings" > "$tmplistdisp1" 
+
+echo
+echo
+xml fo "$tmplistdisp1"
+
+xml sel -T -t -m "$mainlistpath" -v "." -n "$tmplistdisp1" | awk '{print "#"NR"#"$1"#"}' > "$tmplistdisp2"
+cp "$tmplistdisp2" "$tmpfile"
+
+echo
+echo
+i=1
+echo -n > "$tmplist"
+for idtocheck in `xml sel -T -t -m "$mainlistpath" -v "." -n "$tmplistdisp1"`
+do
+echo -n "$i   " >> "$tmplist"
+curl -k -v -u "$login1":"$paswd1" \
+-H "Accept: application/vnd.emc.apollo-v1+xml" -H "Content-Type: application/vnd.emc.apollo-v1+xml" \
+-X GET "$urllistings"/"$idtocheck" | \
+xml sel -t -m "$mainpath" -v "$value1" -v numField -o "  $value2=" -v "$value2" -v numField -o "  $value3=" -v "$value3" -v numField -o "  $value4=" -v "$value4" >> "$tmplist"
+(( i++ ))
+done
+
+echo
+echo
+echo "LIST OF $mainpath ID"
+echo "--------------------"
+echo
+cat "$tmplist" 
+rm -rf "$tmplist" "$tmplistdisp1" "$tmplistdisp2"
+}
+
+listing_jer_extra ()
+{
+
+tmplist="$tmprundir"/tmplist_`date +%Y%m%d_%H%M%S`
+tmplistdisp1="$tmprundir"/tmplistdisp1_`date +%Y%m%d_%H%M%S`
+tmplistdisp2="$tmprundir"/tmplistdisp2_`date +%Y%m%d_%H%M%S`
+
+## urllistings   mainlistpath           mainpath  tmpfile  value1    value2          value3      value4  value5
+## URLprojects   /projects/project/id   project   tmp1pr   id        inactive        name        (none)  (none)
+## (1)           (2)                    (3)       (4)      (5)       (6)             (7)         (8)     (9)
+
+urllistings="$1"
+mainlistpath="$2"
+mainpath="$3"
+value1="$5"
+value2="$6"
+value3="$7"
+value4="$8"
+value5="$9"
+tmpfile="$4"
+
+echo
+echo "URL = $urllistings"
+echo
+echo
+
+curl -k -v -u "$login1":"$paswd1" \
+-H "Accept: application/vnd.emc.apollo-v1+xml" -H "Content-Type: application/vnd.emc.apollo-v1+xml" \
+-X GET "$urllistings" > "$tmplistdisp1"
+
+echo
+echo
+xml fo "$tmplistdisp1"
+
+xml sel -T -t -m "$mainlistpath" -v "." -n "$tmplistdisp1" | awk '{print "#"NR"#"$1"#"}' > "$tmplistdisp2"
+cp "$tmplistdisp2" "$tmpfile"
+
+echo
+echo
+i=1
+echo -n > "$tmplist"
+for idtocheck in `xml sel -T -t -m "$mainlistpath" -v "." -n "$tmplistdisp1"`
+do
+echo -n "$i   " >> "$tmplist"
+curl -k -v -u "$login1":"$paswd1" \
+-H "Accept: application/vnd.emc.apollo-v1+xml" -H "Content-Type: application/vnd.emc.apollo-v1+xml" \
+-X GET "$urllistings"/"$idtocheck" | \
+xml sel -t -m "$mainpath" -v "$value1" -v numField -o "  $value2=" -v "$value2" -v numField -o "  $value3=" -v "$value3" -v numField -o "  $value4=" -v "$value4" -v numField -o "  $value5=" -v "$value5" >> "$tmplist"
+(( i++ ))
+done
+
+echo
+echo
+echo "LIST OF $mainpath ID"
+echo "--------------------"
+echo
+cat "$tmplist" 
+rm -rf "$tmplist" "$tmplistdisp1" "$tmplistdisp2"
+}
+
+listing_jer_useragent ()
+{
+
+tmplist="$tmprundir"/tmplist_`date +%Y%m%d_%H%M%S`
+tmplistdisp1="$tmprundir"/tmplistdisp1_`date +%Y%m%d_%H%M%S`
+tmplistdisp2="$tmprundir"/tmplistdisp2_`date +%Y%m%d_%H%M%S`
+
+## urllistings   mainlistpath           mainpath  tmpfile  value1    value2          value3      value4
+## URLprojects   /projects/project/id   project   tmp1pr   id        inactive        name        (none)
+## (1)           (2)                    (3)       (4)      (5)       (6)             (7)         (8)
+
+urllistings="$1"
+mainlistpath="$2"
+mainpath="$3"
+value1="$5"
+value2="$6"
+value3="$7"
+value4="$8"
+tmpfile="$4"
+
+echo
+echo "URL = $urllistings"
+echo
+echo
+
+curl -k -v -u "$login1":"$paswd1" \
+-H "Accept: application/vnd.emc.apollo-v1+xml" -H "Content-Type: application/vnd.emc.apollo-v1+xml" \
+-X GET "$urllistings" > "$tmplistdisp1" 
+
+echo
+echo
+xml fo "$tmplistdisp1"
+
+xml sel -T -t -m "$mainlistpath" -v "." -n "$tmplistdisp1" | grep "agent:" | awk -F"agent:" '{print "#"NR"#"$2"#"}' > "$tmplistdisp2"
+cp "$tmplistdisp2" "$tmpfile"
+
+echo
+echo
+i=1
+echo -n > "$tmplist"
+for idtocheck in `cat "$tmplistdisp2" | awk -F"#" '{print $(NF-1)}'`
+do
+echo -n "$i   $idtocheck  " >> "$tmplist"
+curl -k -v -u "$login1":"$paswd1" \
+-H "Accept: application/vnd.emc.apollo-v1+xml" -H "Content-Type: application/vnd.emc.apollo-v1+xml" \
+-X GET "$URL_dpa_agent1"/"$idtocheck"/configuration | \
+xml sel -t -m "$mainpath" -v "$value1" -v numField -o "  $value2=" -v "$value2" -v numField -o "  $value3=" -v "$value3" -v numField -o "  $value4=" -v "$value4" >> "$tmplist"
+(( i++ ))
+done
+
+echo
+echo
+echo "LIST OF $mainpath ID"
+echo "--------------------"
+echo
+cat "$tmplist" 
+rm -rf "$tmplist" "$tmplistdisp1" "$tmplistdisp2"
+}
+
+listing_jer_extra_agent ()
+{
+
+tmplist="$tmprundir"/tmplist_`date +%Y%m%d_%H%M%S`
+tmplistdisp1="$tmprundir"/tmplistdisp1_`date +%Y%m%d_%H%M%S`
+tmplistdisp2="$tmprundir"/tmplistdisp2_`date +%Y%m%d_%H%M%S`
+
+## urllistings   mainlistpath           mainpath  tmpfile  value1    value2          value3      value4  value5
+## URLprojects   /projects/project/id   project   tmp1pr   id        inactive        name        (none)  (none)
+## (1)           (2)                    (3)       (4)      (5)       (6)             (7)         (8)     (9)
+
+urllistings="$1"
+mainlistpath="$2"
+mainpath="$3"
+value1="$5"
+value2="$6"
+value3="$7"
+value4="$8"
+value5="$9"
+tmpfile="$4"
+
+echo
+echo "URL = $urllistings"
+echo
+echo
+
+curl -k -v -u "$login1":"$paswd1" \
+-H "Accept: application/vnd.emc.apollo-v1+xml" -H "Content-Type: application/vnd.emc.apollo-v1+xml" \
+-X GET "$urllistings" > "$tmplistdisp1"
+
+echo
+echo
+xml fo "$tmplistdisp1"
+
+xml sel -T -t -m "$mainlistpath" -v "." -n "$tmplistdisp1" | awk '{print "#"NR"#"$1"#"}' > "$tmplistdisp2"
+cp "$tmplistdisp2" "$tmpfile"
+
+echo
+echo
+i=1
+echo -n > "$tmplist"
+for idtocheck in `xml sel -T -t -m "$mainlistpath" -v "." -n "$tmplistdisp1"`
+do
+echo -n "$i   " >> "$tmplist"
+curl -k -v -u "$login1":"$paswd1" \
+-H "Accept: application/vnd.emc.apollo-v1+xml" -H "Content-Type: application/vnd.emc.apollo-v1+xml" \
+-X GET "$urllistings"/"$idtocheck"/settings | \
+xml sel -t -m "$mainpath" -v "$value1" -v numField -o "  $value2=" -v "$value2" -v numField -o "  $value3=" -v "$value3" -v numField -o "  $value4=" -v "$value4" -v numField -o "  $value5=" -v "$value5" >> "$tmplist"
+(( i++ ))
+done
+
+echo
+echo
+echo "LIST OF $mainpath ID"
+echo "--------------------"
+echo
+cat "$tmplist" 
+rm -rf "$tmplist" "$tmplistdisp1" "$tmplistdisp2"
+}

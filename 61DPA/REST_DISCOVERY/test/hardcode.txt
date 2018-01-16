@@ -1,0 +1,34 @@
+- Backup Application
+ArcServe
+CommVault
+Avamar
+NetWorker
+DataProtector
+TSM
+ACSLS
+BackupExec
+NetBackup
+PureDisk
+- Database
+MSSQLDatabase
+OracleDatabase
+PostgreSQLDatabase
+- Host
+Host
+- Primary Storage
+Celerra
+VPlexManagement
+Vnx
+RecoverPoint
+HPEVA
+- Protection Storage
+DataDomain
+EDL
+NearStore
+TapeLibrary
+- Switch
+FibreChannel
+InfinibandPort
+XSIGOSwitch
+- VM
+VCenter

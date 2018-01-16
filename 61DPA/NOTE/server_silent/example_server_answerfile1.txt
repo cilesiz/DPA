@@ -1,0 +1,39 @@
+#Choose Install Folder
+#---------------------
+USER_INSTALL_DIR=/opt/emc/dpa
+
+#Choose Install Set
+#------------------
+CHOSEN_FEATURE_LIST=EXEC,DATASTO,APPLN
+CHOSEN_INSTALL_FEATURE_LIST=EXEC,DATASTO,APPLN
+CHOSEN_INSTALL_SET=APPDS
+
+#Install
+#-------
+-fileOverwrite_/opt/emc/dpa/services/applications/apollo.ear=Yes
+-fileOverwrite_/opt/emc/dpa/services/applications/controller.rar=Yes
+-fileOverwrite_/opt/emc/dpa/services/applications/dpa.ear=Yes
+-fileOverwrite_/opt/emc/dpa/services/applications/remotex.rar=Yes
+-fileOverwrite_/opt/emc/dpa/services/applications/ui.war=Yes
+-fileOverwrite_/opt/emc/dpa/services/applications/webserver.war=Yes
+-fileOverwrite_/opt/emc/dpa/services/executive/application-service.conf=Yes
+-fileOverwrite_/opt/emc/dpa/services/copyright.txt=Yes
+-fileOverwrite_/opt/emc/dpa/services/jboss-modules.jar=Yes
+-fileOverwrite_/opt/emc/dpa/services/LICENSE.pdf=Yes
+-fileOverwrite_/opt/emc/dpa/services/executive/application-service.sh=Yes
+-fileOverwrite_/opt/emc/dpa/services/executive/datastore-service.sh=Yes
+-fileOverwrite_/opt/emc/dpa/services/executive/libwrapper.so=Yes
+-fileOverwrite_/opt/emc/dpa/services/executive/wrapper=Yes
+-fileOverwrite_/opt/emc/dpa/services/executive/wrapper.jar=Yes
+-fileOverwrite_/opt/emc/dpa/services/executive/executive.jar=Yes
+-fileOverwrite_/opt/emc/dpa/services/datastore/data-template.tar.gz=Yes
+-fileOverwrite_/opt/emc/dpa/agent/etc/dpa=Yes
+-fileOverwrite_/opt/emc/dpa/agent/etc/dpa.config=Yes
+-fileOverwrite_/opt/emc/dpa/agent/etc/dpa.custom=Yes
+-fileOverwrite_/opt/emc/dpa/agent/etc/dpaagent_config.xml=Yes
+-fileOverwrite_/opt/emc/dpa/agent/dpa_agent_version.txt=Yes
+-fileOverwrite_/opt/emc/dpa/services/bin/dpa.sh=Yes
+-fileOverwrite_/opt/emc/dpa/DPA.ico=Yes
+-fileOverwrite_/opt/emc/dpa/_uninstall/Uninstall_Data_Protection_Advisor.lax=Yes
+-fileOverwrite_/opt/emc/dpa/services/datastore/data/pg_xlog/000000010000000000000001=Yes
+-fileOverwrite_/root/Desktop/Data Protection Advisor.url=Yes

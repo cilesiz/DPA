@@ -1,0 +1,7 @@
+Database -> ms sql-> seri.wysdm.lab.emc.com-> instance details as below
+
+Administrator / serverg0d
+
+default instance 
+SQL server authentication
+Credential - config/config

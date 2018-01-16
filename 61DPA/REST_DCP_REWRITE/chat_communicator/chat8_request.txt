@@ -1,0 +1,25 @@
+blank = take default value from DCP Default (usually DPA server itself)
+None = agentless
+
+
+
+
+
+14:52Bandarupally, Himabindu
+f_overridden_agent_type will have remote /local based on what you give on discovery 
+this overridden value will be set when there is any change to defaults while discovery 
+This field is blank for DPA server Host 
+for agentless it is None 
+
+14:56Talib, Rosli
+ok
+
+14:57Bandarupally, Himabindu
+do you see it blank other than dpa Host and postgres
+
+14:58Talib, Rosli
+yes
+in Clariion
+
+14:59Bandarupally, Himabindu
+probably a bug 

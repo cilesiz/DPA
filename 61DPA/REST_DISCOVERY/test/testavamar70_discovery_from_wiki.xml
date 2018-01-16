@@ -1,0 +1,31 @@
+<discoveryJob>
+  <task>
+    <primaryObject exists="false">
+      <node version="1" type="Host">
+        <name>hostname</name>
+        <displayName></displayName>
+        <operatingSystem>
+          <family>LINUX</family>
+        </operatingSystem>
+      </node>
+      <dataCollectionParameter>
+        ...
+      </dataCollectionParameter>
+      <parents>
+        ...
+      </parents>
+    </primaryObject>
+    <dependentObjects>
+      <dependentObject>
+        <node version="1" type="Avamar">
+          <displayName>Avamar</displayName>    
+        </node>
+        <dataCollectionParameter>
+          <credential version="1">
+              <id></id>
+          </credential>
+        </dataCollectionParameter>      
+      </dependentObject>
+    </dependentObjects>
+  </task>
+</discoveryJob>

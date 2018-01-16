@@ -1,0 +1,291 @@
+<schedules>
+   <schedule version="1" lastModified="2014-04-15T23:09:22.898+01:00">
+      <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+      <name>runAt5:0:0EveryDay</name>
+      <system>false</system>
+      <hidden>true</hidden>
+      <period>0</period>
+      <type>POINT</type>
+      <schedulePart type="SchedulePartDays">
+         <exclude>false</exclude>
+         <fromHour>5</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <fromTimeZone>GB-Eire</fromTimeZone>
+         <toHour>5</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toTimeZone>GB-Eire</toTimeZone>
+      </schedulePart>
+   </schedule>
+   <schedule version="1" lastModified="2014-04-15T23:09:23.371+01:00">
+      <id>1b05fe54-0053-4ecc-a754-aeb724fac2cf</id>
+      <name>defaultViewletSchedule</name>
+      <system>true</system>
+      <hidden>true</hidden>
+      <type>POINT</type>
+      <schedulePart type="SchedulePartDays">
+         <exclude>false</exclude>
+         <fromHour>14</fromHour>
+         <fromMinute>15</fromMinute>
+         <fromSecond>0</fromSecond>
+         <fromTimeZone>GB-Eire</fromTimeZone>
+         <toHour>14</toHour>
+         <toMinute>15</toMinute>
+         <toSecond>0</toSecond>
+         <toTimeZone>GB-Eire</toTimeZone>
+      </schedulePart>
+   </schedule>
+   <schedule version="1" lastModified="2014-04-16T13:16:40.109+01:00">
+      <id>2e133638-72d8-4830-91b3-069ace49c4d4</id>
+      <name>always</name>
+      <description>schedule active at all times</description>
+      <system>true</system>
+      <hidden>false</hidden>
+      <period>-1</period>
+      <type>WINDOW</type>
+      <schedulePart type="SchedulePartWeeks">
+         <exclude>false</exclude>
+         <fromHour>0</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <toHour>23</toHour>
+         <toMinute>59</toMinute>
+         <toSecond>59</toSecond>
+         <toWeekDay>7</toWeekDay>
+         <fromWeekDay>1</fromWeekDay>
+      </schedulePart>
+   </schedule>
+   <schedule version="1" lastModified="2014-04-16T13:16:40.238+01:00">
+      <id>640f2456-2293-46fc-aba0-d684e375f4d0</id>
+      <name>9am every day</name>
+      <description>schedule at 9am every day</description>
+      <system>true</system>
+      <hidden>false</hidden>
+      <period>-1</period>
+      <type>POINT</type>
+      <schedulePart type="SchedulePartDays">
+         <exclude>false</exclude>
+         <fromHour>9</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <fromTimeZone></fromTimeZone>
+         <toHour>9</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toTimeZone></toTimeZone>
+      </schedulePart>
+   </schedule>
+   <schedule version="1" lastModified="2014-04-16T13:16:40.326+01:00">
+      <id>d801dbc0-ab9f-4a9c-9c22-39e7b4c0a09b</id>
+      <name>Default SLA Schedule</name>
+      <description>The Schedule used to calculate compliance with SLAs
+		</description>
+      <system>true</system>
+      <hidden>false</hidden>
+      <period>-1</period>
+      <type>WINDOW</type>
+      <schedulePart type="SchedulePartWeeks">
+         <exclude>false</exclude>
+         <fromHour>19</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <toHour>7</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toWeekDay>1</toWeekDay>
+         <fromWeekDay>7</fromWeekDay>
+      </schedulePart>
+      <schedulePart type="SchedulePartWeeks">
+         <exclude>false</exclude>
+         <fromHour>19</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <toHour>7</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toWeekDay>2</toWeekDay>
+         <fromWeekDay>1</fromWeekDay>
+      </schedulePart>
+      <schedulePart type="SchedulePartWeeks">
+         <exclude>false</exclude>
+         <fromHour>19</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <toHour>7</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toWeekDay>3</toWeekDay>
+         <fromWeekDay>2</fromWeekDay>
+      </schedulePart>
+      <schedulePart type="SchedulePartWeeks">
+         <exclude>false</exclude>
+         <fromHour>19</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <toHour>7</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toWeekDay>4</toWeekDay>
+         <fromWeekDay>3</fromWeekDay>
+      </schedulePart>
+      <schedulePart type="SchedulePartWeeks">
+         <exclude>false</exclude>
+         <fromHour>19</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <toHour>7</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toWeekDay>5</toWeekDay>
+         <fromWeekDay>4</fromWeekDay>
+      </schedulePart>
+      <schedulePart type="SchedulePartWeeks">
+         <exclude>false</exclude>
+         <fromHour>19</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <toHour>7</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toWeekDay>6</toWeekDay>
+         <fromWeekDay>5</fromWeekDay>
+      </schedulePart>
+      <schedulePart type="SchedulePartWeeks">
+         <exclude>false</exclude>
+         <fromHour>19</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <toHour>7</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toWeekDay>7</toWeekDay>
+         <fromWeekDay>6</fromWeekDay>
+      </schedulePart>
+   </schedule>
+   <schedule version="1" lastModified="2014-04-16T13:16:40.923+01:00">
+      <id>8e121060-6422-422f-8dc9-0c1952cc573d</id>
+      <name>LicenseChecker</name>
+      <description>Schedule to update the counts for capabilities</description>
+      <system>true</system>
+      <hidden>true</hidden>
+      <type>POINT</type>
+      <schedulePart type="SchedulePartHour">
+         <exclude>false</exclude>
+         <fromMinute>15</fromMinute>
+         <fromSeconds>0</fromSeconds>
+         <toMinute>15</toMinute>
+         <toSeconds>0</toSeconds>
+         <onHours>
+            <onHour hour="0"/>
+            <onHour hour="1"/>
+            <onHour hour="2"/>
+            <onHour hour="3"/>
+            <onHour hour="4"/>
+            <onHour hour="5"/>
+            <onHour hour="6"/>
+            <onHour hour="7"/>
+            <onHour hour="8"/>
+            <onHour hour="9"/>
+            <onHour hour="10"/>
+            <onHour hour="11"/>
+            <onHour hour="12"/>
+            <onHour hour="13"/>
+            <onHour hour="14"/>
+            <onHour hour="15"/>
+            <onHour hour="16"/>
+            <onHour hour="17"/>
+            <onHour hour="18"/>
+            <onHour hour="19"/>
+            <onHour hour="20"/>
+            <onHour hour="21"/>
+            <onHour hour="22"/>
+            <onHour hour="23"/>
+         </onHours>
+      </schedulePart>
+   </schedule>
+   <schedule version="1" lastModified="2014-04-16T13:16:41.23+01:00">
+      <id>b2b8e57b-609b-479e-ae88-3b10dab6e4f0</id>
+      <name>Report Results Cleanup</name>
+      <description>Report Results Cleanup - Schedule at 6am every day</description>
+      <system>true</system>
+      <hidden>true</hidden>
+      <period>-1</period>
+      <type>POINT</type>
+      <schedulePart type="SchedulePartDays">
+         <exclude>false</exclude>
+         <fromHour>6</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <fromTimeZone></fromTimeZone>
+         <toHour>6</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toTimeZone></toTimeZone>
+      </schedulePart>
+   </schedule>
+   <schedule version="1" lastModified="2014-04-16T13:16:41.52+01:00">
+      <id>e3881da1-cc08-4553-b7f5-e45224eaa530</id>
+      <name>Default Data Deletion Schedule</name>
+      <description>Default Data Deletion Schedule</description>
+      <system>false</system>
+      <hidden>false</hidden>
+      <period>-1</period>
+      <type>WINDOW</type>
+      <schedulePart type="SchedulePartDays">
+         <exclude>false</exclude>
+         <fromHour>9</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <fromTimeZone>Europe/London</fromTimeZone>
+         <toHour>17</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toTimeZone>Europe/London</toTimeZone>
+      </schedulePart>
+   </schedule>
+   <schedule version="1" lastModified="2014-04-16T13:16:41.81+01:00">
+      <id>6520da41-363d-4017-95b3-944c628d349c</id>
+      <name>Default ModTest Deletion Schedule</name>
+      <description>Default ModTest Deletion Schedule</description>
+      <system>true</system>
+      <hidden>true</hidden>
+      <period>0</period>
+      <type>POINT</type>
+      <schedulePart type="SchedulePartWeeks">
+         <exclude>false</exclude>
+         <fromHour>4</fromHour>
+         <fromMinute>0</fromMinute>
+         <fromSecond>0</fromSecond>
+         <fromTimeZone class="sun.util.calendar.ZoneInfo">Europe/London</fromTimeZone>
+         <toHour>4</toHour>
+         <toMinute>0</toMinute>
+         <toSecond>0</toSecond>
+         <toTimeZone class="sun.util.calendar.ZoneInfo">Europe/London</toTimeZone>
+         <toWeekDay>0</toWeekDay>
+         <fromWeekDay>0</fromWeekDay>
+      </schedulePart>
+   </schedule>
+   <schedule version="1" lastModified="2014-04-16T13:16:41.104+01:00">
+      <id>6520da41-363d-4017-95b3-924c628d349c</id>
+      <name>Default Capabilities Recalculating Schedule</name>
+      <description>Default Capabilities Recalculating Schedule</description>
+      <system>true</system>
+      <hidden>true</hidden>
+      <period>0</period>
+      <type>POINT</type>
+      <schedulePart type="SchedulePartHour">
+         <exclude>false</exclude>
+         <fromMinute>0</fromMinute>
+         <fromSeconds>1</fromSeconds>
+         <toMinute>0</toMinute>
+         <toSeconds>1</toSeconds>
+         <onHours>
+            <onHour hour="0"/>
+            <onHour hour="6"/>
+            <onHour hour="12"/>
+            <onHour hour="18"/>
+         </onHours>
+      </schedulePart>
+   </schedule>
+</schedules>

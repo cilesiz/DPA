@@ -1,0 +1,110 @@
+Avamar
+------
+10.64.205.220   avamar71.wysdm.lab.emc.com      avamar71
+Default Avamar Credentials      =       viewuser / viewuser1
+/opt/emc/dpa/agent/bin/dpaagent_modavamar -f jobmonitor -t avamar71.wysdm.lab.emc.com -U viewuser -P viewuser1 -B '01/06/2014 00:00:00' -c
+
+Networker
+---------
+
+10.64.205.152    centos5vtl2.wysdm.lab.emc.com   centos5vtl2
+10.64.205.153    w2k3sql2005.wysdm.lab.emc.com   w2k3sql2005
+10.64.205.101    w2k8nw762sn.wysdm.lab.emc.com   w2k8nw762sn
+10.64.205.72     tsunami.wysdm.lab.emc.com       tsunami
+
+1) w2k3nw80.wysdm.lab.emc.com (10.64.205.167)
+8.0 SP1	/ Windows Server 2003 / administrator/serverg0d
+License Permanent / Launch NMC from port 9003	 
+2) w2k3nw802.wysdm.lab.emc.com 
+8.0.2 / Windows Server 2003 / administrator/serverg0d	
+3) w2k3x64nw81.wysdm.lab.emc.com (10.64.205.190)
+8.1 / Windows Server 2003_x64 / administrator/serverg0d	
+License Permanent	 
+4) rhel6x64nw811.wysdm.lab.emc.com (10.64.255.220)
+8.1.1 / RedHat Linux 6 / administrator/serverg0d / root/serverg0d to login to the host	
+License Permanent	
+5) w2k8x64nw82.wysdm.lab.emc.com
+8.2 / Windows Server 2008 / administrator/Serverg0d!	
+License Permanent	
+
+
+Data Domain
+-----------
+1) 10.64.231.34 ( version = 5.3 , no simulator )
+EMC Data Domain Credential
+SSH Performance Request - dpabootcamp/abc123
+Need an agent on CORP machine
+
+2) 10.64.255.27 ( version = 5.2 , no simulator )
+EMC Data Domain Credential
+SSH Performance Request - dpa/serverg0d
+
+3) tdd332.wysdm.lab.emc.com ( version = 5.3 , simulator )
+EMC Data Domain Credential
+
+4) 10.76.27.40 ( version = 5.5 , no simulator )
+sysadmin/abc123
+Need an agent on CORP machine
+
+5) dd620.wysdm.lab.emc.com ( version = 5.5 , no simulator )
+EMC Data Domain Credential
+SSH Performance Request - dpa/serverg0d
+WysDM Lab
+
+Recover Point
+-------------
+1) 10.64.255.124 ( version = (unknown) , simulator )
+EMC Recoverpoint Credentials
+
+2) 10.76.12.162 ( version = 4.0 , simulator )
+EMC Recoverpoint Credentials
+
+Tape Library
+------------
+1) 10.13.153.235 ( version = Quantum i6000 , no simulator )
+Tape Library Credentials
+HP manufacturer
+
+Disk Library
+------------
+1) ttledl31.wysdm.lab.emc.com ( version = 3.1 , simulator )
+EMC Disk Library Credentials (v3.x)
+comments = Use v2.x (credentials) to discover in our lab environment
+
+2) ttledl30.wysdm.lab.emc.com ( version = 3.0 , simulator )
+EMC Disk Library Credentials (v3.x)
+comments = Use v2.x (credentials) to discover in our lab environment
+
+FC switch
+---------
+1) 10.64.205.13 ( version = 6.3.1a , no simulator )
+FC SNMP Credentials
+Brocade manufacturer
+
+2) tfccisco9509.wysdm.lab.emc.com ( version = (unknown) , simulator )
+FC SNMP Credentials
+Cisco manufacturer
+
+IP switch
+---------
+1) 10.64.205.71 ( version = 3.5.1 , no simulator )
+IP SNMP Credentials
+XSIGO
+
+2) tipcisco65x.wysdm.lab.emc.com ( version = (unknown) , simulator )
+IP SNMP Credentials
+Cisco
+
+Virtual Tape Library (VTL)
+-------------------------
+1) centos5vtl6nw.wysdmlab.emc.com ( simulator )
+root/serverg0d
+
+2) centos5vtl2.wysdmlab.emc.com ( simulator )
+root/serverg0d
+
+Solution Enabler (SE)
+---------------------
+w2k3sqlqa.wysdm.lab.emc.com ( version = 7.1 )
+MibWalk = Clariion
+Create Windows Cretentials = Wysdm\Administrator serverg0d

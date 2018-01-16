@@ -1,0 +1,28 @@
+<!-- Test host and application, local collector, host doesn't exist -->
+<discoveryJob>
+	<task>
+		<primaryObject exists="true">
+			<node type="host" version="1">
+				<!-- exists=true so this host must exist. Either id or name can be specified 
+					here -->
+				<name>myhost</name>
+			</node>
+			<!-- exists=true so dont specify dataCollectionParameter or parents -->
+		</primaryObject>
+		<dependentObjects>
+			<dependentObject>
+				<node type="networkerBackupApplication" version="1">
+					<name>default</name>
+				</node>
+				<dataCollectionParameter>
+					<!-- 'local' infers to use the applications owning host -->
+					<agent local="true">
+					</agent>
+				</dataCollectionParameter>
+				<options>
+					<option name="timeout">900</option>
+				</options>
+			</dependentObject>
+		</dependentObjects>
+	</task>
+</discoveryJob>

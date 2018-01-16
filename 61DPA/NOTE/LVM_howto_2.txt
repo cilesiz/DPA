@@ -1,0 +1,536 @@
+1) TO CREATE VG
+===============
+
+[root@rt-centos70 ~]# vgcreate
+  Please provide volume group name and physical volumes
+  Run `vgcreate --help' for more information.
+[root@rt-centos70 ~]# vgcreate --help
+  vgcreate: Create a volume group
+
+vgcreate
+        [-A|--autobackup {y|n}]
+        [--addtag Tag]
+        [--alloc AllocationPolicy]
+        [-c|--clustered {y|n}]
+        [-d|--debug]
+        [-h|--help]
+        [-l|--maxlogicalvolumes MaxLogicalVolumes]
+        [-M|--metadatatype 1|2]
+        [--[vg]metadatacopies #copies]
+        [-p|--maxphysicalvolumes MaxPhysicalVolumes]
+        [-s|--physicalextentsize PhysicalExtentSize[bBsSkKmMgGtTpPeE]]
+        [-t|--test]
+        [-v|--verbose]
+        [--version]
+        [-y|--yes]
+        [ PHYSICAL DEVICE OPTIONS ]
+        VolumeGroupName PhysicalDevicePath [PhysicalDevicePath...]
+
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# vgcreate diskvg /dev/sdb1
+WARNING: xfs signature detected on /dev/sdb1 at offset 0. Wipe it? [y/n] n
+  1 existing signature left on the device.
+  Aborting pvcreate on /dev/sdb1.
+  Unable to add physical volume '/dev/sdb1' to volume group 'diskvg'.
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# vgcreate diskvg /dev/sdb1
+WARNING: xfs signature detected on /dev/sdb1 at offset 0. Wipe it? [y/n] y
+  Wiping xfs signature on /dev/sdb1.
+  Physical volume "/dev/sdb1" successfully created
+  Volume group "diskvg" successfully created
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# vgdisplay
+  --- Volume group ---
+  VG Name               diskvg
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               2.00 GiB
+  PE Size               4.00 MiB
+  Total PE              511
+  Alloc PE / Size       0 / 0
+  Free  PE / Size       511 / 2.00 GiB
+  VG UUID               ESk4KB-IJIC-o1rQ-kDVU-TjzU-2oCh-WDZGxT
+
+2) TO CREATE LV
+===============
+
+[root@rt-centos70 ~]# lvdisplay
+[root@rt-centos70 ~]# lvcreate
+  Please provide a volume group name
+  Run `lvcreate --help' for more information.
+[root@rt-centos70 ~]# lvcreate roslitest
+  Please specify either size or extents
+  Run `lvcreate --help' for more information.
+[root@rt-centos70 ~]# lvcreate --help
+  lvcreate: Create a logical volume
+
+lvcreate
+        [-A|--autobackup {y|n}]
+        [-a|--activate [a|e|l]{y|n}]
+        [--addtag Tag]
+        [--alloc AllocationPolicy]
+        [--cachemode CacheMode]
+        [-C|--contiguous {y|n}]
+        [-d|--debug]
+        [-h|-?|--help]
+        [--ignoremonitoring]
+        [--monitor {y|n}]
+        [-i|--stripes Stripes [-I|--stripesize StripeSize]]
+        [-k|--setactivationskip {y|n}]
+        [-K|--ignoreactivationskip]
+        {-l|--extents LogicalExtentsNumber[%{VG|PVS|FREE}] |
+         -L|--size LogicalVolumeSize[bBsSkKmMgGtTpPeE]}
+        [-M|--persistent {y|n}] [--major major] [--minor minor]
+        [-m|--mirrors Mirrors [--nosync] [{--mirrorlog {disk|core|mirrored}|--corelog}]]
+        [-n|--name LogicalVolumeName]
+        [--noudevsync]
+        [-p|--permission {r|rw}]
+        [--[raid]minrecoveryrate Rate]
+        [--[raid]maxrecoveryrate Rate]
+        [-r|--readahead ReadAheadSectors|auto|none]
+        [-R|--regionsize MirrorLogRegionSize]
+        [-T|--thin  [-c|--chunksize  ChunkSize]
+          [--discards {ignore|nopassdown|passdown}]
+          [--poolmetadatasize MetadataSize[bBsSkKmMgG]]]
+          [--poolmetadataspare {y|n}]
+        [--thinpool ThinPoolLogicalVolume{Name|Path}]
+        [-t|--test]
+        [--type VolumeType]
+        [-v|--verbose]
+        [-W|--wipesignatures {y|n}]
+        [-Z|--zero {y|n}]
+        [--version]
+        VolumeGroupName [PhysicalVolumePath...]
+
+lvcreate
+        { {-s|--snapshot} OriginalLogicalVolume[Path] |
+          [-s|--snapshot] VolumeGroupName[Path] -V|--virtualsize VirtualSize}
+          {-T|--thin} VolumeGroupName[Path][/PoolLogicalVolume]
+                      -V|--virtualsize VirtualSize}
+        [-c|--chunksize]
+        [-A|--autobackup {y|n}]
+        [--addtag Tag]
+        [--alloc AllocationPolicy]
+        [-C|--contiguous {y|n}]
+        [-d|--debug]
+        [--discards {ignore|nopassdown|passdown}]
+        [-h|-?|--help]
+        [--ignoremonitoring]
+        [--monitor {y|n}]
+        [-i|--stripes Stripes [-I|--stripesize StripeSize]]
+        [-k|--setactivationskip {y|n}]
+        [-K|--ignoreactivationskip]
+        {-l|--extents LogicalExtentsNumber[%{VG|FREE|ORIGIN}] |
+         -L|--size LogicalVolumeSize[bBsSkKmMgGtTpPeE]}
+        [--poolmetadatasize MetadataVolumeSize[bBsSkKmMgG]]
+        [-M|--persistent {y|n}] [--major major] [--minor minor]
+        [-n|--name LogicalVolumeName]
+        [--noudevsync]
+        [-p|--permission {r|rw}]
+        [-r|--readahead ReadAheadSectors|auto|none]
+        [-t|--test]
+        [--thinpool ThinPoolLogicalVolume[Path]]
+        [-v|--verbose]
+        [--version]
+        [PhysicalVolumePath...]
+
+
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# lvcreate diskvg -L +100M -n roslitest
+  Logical volume "roslitest" created
+[root@rt-centos70 ~]# lvdisplay
+  --- Logical volume ---
+  LV Path                /dev/diskvg/roslitest
+  LV Name                roslitest
+  VG Name                diskvg
+  LV UUID                bK1GrJ-diQw-dZdo-iYaO-IKwE-TDtD-DEIGXQ
+  LV Write Access        read/write
+  LV Creation host, time rt-centos70.homebase.corp.emc.com, 2014-10-20 15:55:09 +0100
+  LV Status              available
+  # open                 0
+  LV Size                100.00 MiB
+  Current LE             25
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:0
+
+[root@rt-centos70 ~]# lvcreate diskvg --size 100M --name roslitestdua
+  Logical volume "roslitestdua" created
+[root@rt-centos70 ~]# lvdisplay
+  --- Logical volume ---
+  LV Path                /dev/diskvg/roslitest
+  LV Name                roslitest
+  VG Name                diskvg
+  LV UUID                bK1GrJ-diQw-dZdo-iYaO-IKwE-TDtD-DEIGXQ
+  LV Write Access        read/write
+  LV Creation host, time rt-centos70.homebase.corp.emc.com, 2014-10-20 15:55:09 +0100
+  LV Status              available
+  # open                 0
+  LV Size                100.00 MiB
+  Current LE             25
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:0
+
+  --- Logical volume ---
+  LV Path                /dev/diskvg/roslitestdua
+  LV Name                roslitestdua
+  VG Name                diskvg
+  LV UUID                gJXJqR-FuN2-CDz6-mRl2-Onc7-IvcM-c7oOfZ
+  LV Write Access        read/write
+  LV Creation host, time rt-centos70.homebase.corp.emc.com, 2014-10-20 15:56:00 +0100
+  LV Status              available
+  # open                 0
+  LV Size                100.00 MiB
+  Current LE             25
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:1
+
+3) mkfs & mount
+===============
+
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# mkfs -t xfs /dev/diskvg/roslitestdua
+meta-data=/dev/diskvg/roslitestdua isize=256    agcount=4, agsize=6400 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=0
+data     =                       bsize=4096   blocks=25600, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=0
+log      =internal log           bsize=4096   blocks=853, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# mkdir /test123
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# mount /dev/diskvg/roslitestdua /test123
+[root@rt-centos70 ~]# df -kT
+Filesystem                      Type     1K-blocks     Used Available Use% Mounted on
+/dev/sda2                       xfs       20469760 11251508   9218252  55% /
+devtmpfs                        devtmpfs   6062104        0   6062104   0% /dev
+tmpfs                           tmpfs      6070536        0   6070536   0% /dev/shm
+tmpfs                           tmpfs      6070536     8960   6061576   1% /run
+tmpfs                           tmpfs      6070536        0   6070536   0% /sys/fs/cgroup
+/dev/sda5                       xfs       15349760  1461084  13888676  10% /opt
+/dev/sda1                       xfs         303788   107908    195880  36% /boot
+10.64.213.59:/dpa_build         nfs4      11354112  4020224   6757376  38% /dpa_build
+10.64.213.59:/horizonQA         nfs4      28899328  1937408  25493504   8% /root/rosli
+/dev/mapper/diskvg-roslitestdua xfs          98988     5280     93708   6% /test123
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# mount /dev/diskvg/roslitest /tmp234
+[root@rt-centos70 ~]# df -kT
+Filesystem                      Type     1K-blocks     Used Available Use% Mounted on
+/dev/sda2                       xfs       20469760 11251616   9218144  55% /
+devtmpfs                        devtmpfs   6062104        0   6062104   0% /dev
+tmpfs                           tmpfs      6070536        0   6070536   0% /dev/shm
+tmpfs                           tmpfs      6070536     8960   6061576   1% /run
+tmpfs                           tmpfs      6070536        0   6070536   0% /sys/fs/cgroup
+/dev/sda5                       xfs       15349760  1461088  13888672  10% /opt
+/dev/sda1                       xfs         303788   107908    195880  36% /boot
+10.64.213.59:/dpa_build         nfs4      11354112  4020224   6757376  38% /dpa_build
+10.64.213.59:/horizonQA         nfs4      28899328  1937408  25493504   8% /root/rosli
+/dev/mapper/diskvg-roslitestdua xfs          98988     5280     93708   6% /test123
+/dev/mapper/diskvg-roslitest    ext4         95054     1550     86336   2% /tmp234
+[root@rt-centos70 ~]#
+
+4) EXTEND LV
+============
+
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# lvextend --size +500M /dev/mapper/diskvg-roslitest
+  Extending logical volume roslitest to 600.00 MiB
+  Logical volume roslitest successfully resized
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# df -kh
+Filesystem                       Size  Used Avail Use% Mounted on
+/dev/sda2                         20G   11G  8.8G  55% /
+devtmpfs                         5.8G     0  5.8G   0% /dev
+tmpfs                            5.8G     0  5.8G   0% /dev/shm
+tmpfs                            5.8G  8.8M  5.8G   1% /run
+tmpfs                            5.8G     0  5.8G   0% /sys/fs/cgroup
+/dev/sda5                         15G  1.4G   14G  10% /opt
+/dev/sda1                        297M  106M  192M  36% /boot
+10.64.213.59:/dpa_build           11G  3.9G  6.5G  38% /dpa_build
+10.64.213.59:/horizonQA           28G  1.9G   25G   8% /root/rosli
+/dev/mapper/diskvg-roslitestdua   97M  5.2M   92M   6% /test123
+/dev/mapper/diskvg-roslitest      93M  1.6M   85M   2% /tmp234
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# umount /tmp234
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# fsck -f /dev/mapper/diskvg-roslitest
+fsck from util-linux 2.23.2
+e2fsck 1.42.9 (28-Dec-2013)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/mapper/diskvg-roslitest: 11/25688 files (9.1% non-contiguous), 8896/102400 blocks
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# resize2fs /dev/mapper/diskvg-roslitest
+resize2fs 1.42.9 (28-Dec-2013)
+Resizing the filesystem on /dev/mapper/diskvg-roslitest to 614400 (1k) blocks.
+The filesystem on /dev/mapper/diskvg-roslitest is now 614400 blocks long.
+
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# mount /dev/diskvg/roslitest /tmp234
+[root@rt-centos70 ~]# df -kh
+Filesystem                       Size  Used Avail Use% Mounted on
+/dev/sda2                         20G   11G  8.8G  55% /
+devtmpfs                         5.8G     0  5.8G   0% /dev
+tmpfs                            5.8G     0  5.8G   0% /dev/shm
+tmpfs                            5.8G  8.8M  5.8G   1% /run
+tmpfs                            5.8G     0  5.8G   0% /sys/fs/cgroup
+/dev/sda5                         15G  1.4G   14G  10% /opt
+/dev/sda1                        297M  106M  192M  36% /boot
+10.64.213.59:/dpa_build           11G  3.9G  6.5G  38% /dpa_build
+10.64.213.59:/horizonQA           28G  1.9G   25G   8% /root/rosli
+/dev/mapper/diskvg-roslitestdua   97M  5.2M   92M   6% /test123
+/dev/mapper/diskvg-roslitest     578M  2.3M  542M   1% /tmp234
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# vgdisplay
+  --- Volume group ---
+  VG Name               diskvg
+  System ID
+  Format                lvm2
+  Metadata Areas        2
+  Metadata Sequence No  5
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               2
+  Max PV                0
+  Cur PV                2
+  Act PV                2
+  VG Size               3.86 GiB
+  PE Size               4.00 MiB
+  Total PE              987
+  Alloc PE / Size       175 / 700.00 MiB
+  Free  PE / Size       812 / 3.17 GiB
+  VG UUID               ESk4KB-IJIC-o1rQ-kDVU-TjzU-2oCh-WDZGxT
+
+[root@rt-centos70 ~]#
+
+5) EXTEND VG
+============
+
+[root@rt-centos70 ~]# vgextend diskvg /dev/sdb2
+  Physical volume '/dev/sdb2' is already in volume group 'diskvg'
+  Unable to add physical volume '/dev/sdb2' to volume group 'diskvg'.
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# vgextend diskvg /dev/sdb3
+WARNING: ext4 signature detected on /dev/sdb3 at offset 1080. Wipe it? [y/n] y
+  Wiping ext4 signature on /dev/sdb3.
+  Physical volume "/dev/sdb3" successfully created
+  Volume group "diskvg" successfully extended
+[root@rt-centos70 ~]# vgdisplay
+  --- Volume group ---
+  VG Name               diskvg
+  System ID
+  Format                lvm2
+  Metadata Areas        3
+  Metadata Sequence No  6
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               2
+  Max PV                0
+  Cur PV                3
+  Act PV                3
+  VG Size               5.85 GiB
+  PE Size               4.00 MiB
+  Total PE              1498
+  Alloc PE / Size       175 / 700.00 MiB
+  Free  PE / Size       1323 / 5.17 GiB
+  VG UUID               ESk4KB-IJIC-o1rQ-kDVU-TjzU-2oCh-WDZGxT
+
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# pvdisplay
+  --- Physical volume ---
+  PV Name               /dev/sdb1
+  VG Name               diskvg
+  PV Size               2.00 GiB / not usable 4.00 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              511
+  Free PE               336
+  Allocated PE          175
+  PV UUID               elCI4X-5Wt1-BKkU-iedr-oTEQ-VeGS-AgGled
+
+  --- Physical volume ---
+  PV Name               /dev/sdb2
+  VG Name               diskvg
+  PV Size               1.86 GiB / not usable 3.00 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              476
+  Free PE               476
+  Allocated PE          0
+  PV UUID               Rwn2zt-OT9E-hpHK-fy5x-OImG-8Xun-FxNcvX
+
+  --- Physical volume ---
+  PV Name               /dev/sdb3
+  VG Name               diskvg
+  PV Size               2.00 GiB / not usable 4.00 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              511
+  Free PE               511
+  Allocated PE          0
+  PV UUID               qlqq4k-1jBf-0EON-3hd4-V7Bp-4MXw-Jf85My
+
+[root@rt-centos70 ~]#
+
+6) ALSO CAN USE pvcreate (but not necessary needed)
+===================================================
+
+[root@rt-centos70 ~]# pvcreate /dev/sdb5
+  Physical volume "/dev/sdb5" successfully created
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# pvdisplay
+  --- Physical volume ---
+  PV Name               /dev/sdb1
+  VG Name               diskvg
+  PV Size               2.00 GiB / not usable 4.00 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              511
+  Free PE               336
+  Allocated PE          175
+  PV UUID               elCI4X-5Wt1-BKkU-iedr-oTEQ-VeGS-AgGled
+
+  --- Physical volume ---
+  PV Name               /dev/sdb2
+  VG Name               diskvg
+  PV Size               1.86 GiB / not usable 3.00 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              476
+  Free PE               476
+  Allocated PE          0
+  PV UUID               Rwn2zt-OT9E-hpHK-fy5x-OImG-8Xun-FxNcvX
+
+  --- Physical volume ---
+  PV Name               /dev/sdb3
+  VG Name               diskvg
+  PV Size               2.00 GiB / not usable 4.00 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              511
+  Free PE               511
+  Allocated PE          0
+  PV UUID               qlqq4k-1jBf-0EON-3hd4-V7Bp-4MXw-Jf85My
+
+  "/dev/sdb5" is a new physical volume of "500.00 MiB"
+  --- NEW Physical volume ---
+  PV Name               /dev/sdb5
+  VG Name
+  PV Size               500.00 MiB
+  Allocatable           NO
+  PE Size               0
+  Total PE              0
+  Free PE               0
+  Allocated PE          0
+  PV UUID               BBxger-dAM1-0Qya-J3Nf-OT5f-7vC0-32mrnc
+
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# vgextend diskvg /dev/sdb5
+  Volume group "diskvg" successfully extended
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# pvs
+  PV         VG     Fmt  Attr PSize   PFree
+  /dev/sdb1  diskvg lvm2 a--    2.00g   1.31g
+  /dev/sdb2  diskvg lvm2 a--    1.86g   1.86g
+  /dev/sdb3  diskvg lvm2 a--    2.00g   2.00g
+  /dev/sdb5  diskvg lvm2 a--  496.00m 496.00m
+[root@rt-centos70 ~]#
+
+ot@rt-centos70 ~]# pvdisplay
+  --- Physical volume ---
+  PV Name               /dev/sdb1
+  VG Name               diskvg
+  PV Size               2.00 GiB / not usable 4.00 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              511
+  Free PE               336
+  Allocated PE          175
+  PV UUID               elCI4X-5Wt1-BKkU-iedr-oTEQ-VeGS-AgGled
+
+  --- Physical volume ---
+  PV Name               /dev/sdb2
+  VG Name               diskvg
+  PV Size               1.86 GiB / not usable 3.00 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              476
+  Free PE               476
+  Allocated PE          0
+  PV UUID               Rwn2zt-OT9E-hpHK-fy5x-OImG-8Xun-FxNcvX
+
+  --- Physical volume ---
+  PV Name               /dev/sdb3
+  VG Name               diskvg
+  PV Size               2.00 GiB / not usable 4.00 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              511
+  Free PE               511
+  Allocated PE          0
+  PV UUID               qlqq4k-1jBf-0EON-3hd4-V7Bp-4MXw-Jf85My
+
+  --- Physical volume ---
+  PV Name               /dev/sdb5
+  VG Name               diskvg
+  PV Size               500.00 MiB / not usable 4.00 MiB
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              124
+  Free PE               124
+  Allocated PE          0
+  PV UUID               BBxger-dAM1-0Qya-J3Nf-OT5f-7vC0-32mrnc
+
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# pvs
+  PV         VG     Fmt  Attr PSize   PFree
+  /dev/sdb1  diskvg lvm2 a--    2.00g   1.31g
+  /dev/sdb2  diskvg lvm2 a--    1.86g   1.86g
+  /dev/sdb3  diskvg lvm2 a--    2.00g   2.00g
+  /dev/sdb5  diskvg lvm2 a--  496.00m 496.00m
+[root@rt-centos70 ~]#
+[root@rt-centos70 ~]# pvscan
+  PV /dev/sdb1   VG diskvg   lvm2 [2.00 GiB / 1.31 GiB free]
+  PV /dev/sdb2   VG diskvg   lvm2 [1.86 GiB / 1.86 GiB free]
+  PV /dev/sdb3   VG diskvg   lvm2 [2.00 GiB / 2.00 GiB free]
+  PV /dev/sdb5   VG diskvg   lvm2 [496.00 MiB / 496.00 MiB free]
+  Total: 4 [6.34 GiB] / in use: 4 [6.34 GiB] / in no VG: 0 [0   ]
+[root@rt-centos70 ~]#

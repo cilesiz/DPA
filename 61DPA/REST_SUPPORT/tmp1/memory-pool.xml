@@ -1,0 +1,37 @@
+<memory-pool>
+   <memory>
+      <name>Code Cache</name>
+      <used>21251.904</used>
+      <free>21495.808</free>
+      <initial>2555.904</initial>
+      <max>50331.648</max>
+   </memory>
+   <memory>
+      <name>PS Eden Space</name>
+      <used>940572.672</used>
+      <free>940572.672</free>
+      <initial>537919.488</initial>
+      <max>997720.064</max>
+   </memory>
+   <memory>
+      <name>PS Survivor Space</name>
+      <used>308078.872</used>
+      <free>361234.432</free>
+      <initial>89128.960</initial>
+      <max>361234.432</max>
+   </memory>
+   <memory>
+      <name>PS Old Gen</name>
+      <used>972970.888</used>
+      <free>1431830.528</free>
+      <initial>1431830.528</initial>
+      <max>2236612.608</max>
+   </memory>
+   <memory>
+      <name>PS Perm Gen</name>
+      <used>217203.752</used>
+      <free>217579.520</free>
+      <initial>22020.096</initial>
+      <max>536870.912</max>
+   </memory>
+</memory-pool>

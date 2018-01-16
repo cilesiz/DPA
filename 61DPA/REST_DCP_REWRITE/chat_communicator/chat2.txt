@@ -1,0 +1,148 @@
+Skilbeck, Michael
+hi 
+have you had a chance to look at test cases?
+
+
+14:46Bandarupally, Himabindu
+Hi Mike
+yes mike 
+
+
+14:46Talib, Rosli
+yes
+
+
+14:46Skilbeck, Michael
+i was thinking if they are ok we could split by object type
+and finish off the test cases
+so we are ready
+
+
+14:47Bandarupally, Himabindu
+ok sure 
+
+
+14:47Skilbeck, Michael
+when code is
+so i will continue with backup apps
+and you can each pick an object type
+
+
+14:48Bandarupally, Himabindu
+ok i have some test cases on host 
+
+
+14:48Skilbeck, Michael
+from host
+primary storage
+protection storage
+and switches
+also vcenter
+
+
+14:51Bandarupally, Himabindu
+ok mike will finish host and pick some from above 
+
+
+14:51Skilbeck, Michael
+ok
+
+
+14:52Talib, Rosli
+Rob ask me to help test DPA-30921
+
+
+14:53Skilbeck, Michael
+please can you tell him that this is higher priority
+ask thanky to find somone to test this
+that is out of scope of the sprint
+
+
+14:54Talib, Rosli
+ok
+
+
+14:55Skilbeck, Michael
+thanks
+
+
+14:55Talib, Rosli
+I will start with primary storage
+
+
+14:55Skilbeck, Michael
+great
+so bindu
+
+
+14:55Bandarupally, Himabindu
+yes mike 
+
+
+14:55Skilbeck, Michael
+you have stated what is special about replication and host monitoring
+
+
+14:56Bandarupally, Himabindu
+as i have mentioned in teh bug DPA-32026
+thanky asked me to add test case on host config request
+i will send you the email 
+
+
+14:57Skilbeck, Michael
+you need to say that on the host configuration request we have the replication monitoring option which should be set to enabled
+
+
+14:59Bandarupally, Himabindu
+ok , also user is can edit the request to run agent les
+
+
+14:59Skilbeck, Michael
+yes
+that is right
+anyway please let me know if you have questions or need help
+
+
+15:00Bandarupally, Himabindu
+ok thanks 
+
+
+15:00Talib, Rosli
+sure. need to go now to get my children from school
+
+
+15:00Skilbeck, Michael
+ok np
+
+
+15:00Talib, Rosli
+and it's heavy rain here
+
+
+15:01Skilbeck, Michael
+oh no
+hope you don'tget soaked
+have a good weekend
+
+
+
+15:01Talib, Rosli
+you too
+
+
+15:01Bandarupally, Himabindu
+thanks ,have a good weekend 
+
+
+15:01Skilbeck, Michael
+Bindu have a great time in Geneava
+
+
+15:02Talib, Rosli
+wow...
+bye all
+
+
+
+15:08Bandarupally, Himabindu
+thanks mike

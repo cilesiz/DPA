@@ -1,0 +1,38 @@
+2014-01-31 00:11:41,829 DEBUG [com.emc.dpa.command.discovery.DiscoveryTestCommandBean] (EJB default - 144) Sending XML to Agent 
+
+<AXMLREQUEST key='AxyRlRUHJu9DTbdyJlJJCg=='>
+<CHECKREQUEST>
+<REQUEST>
+   <MODULE>
+      <NAME>avamar</NAME>
+   </MODULE>
+   <FUNCTION>
+      <NAME>jobmonitor</NAME>
+   </FUNCTION>
+   <TARGET>
+      <NODETYPE>Avamar</NODETYPE>
+      <NETNAME>avamar70.wysdm.lab.emc.com</NETNAME>
+      <INSTANCENAME>Avamar</INSTANCENAME>
+      <ISLOCAL>false</ISLOCAL>
+   </TARGET>
+   <RUNBY>worker</RUNBY>
+   <CRED>
+      <TYPE>generic-app</TYPE>
+      <GENERICAPP>
+         <USERNAME>viewuser</USERNAME>
+         <PASSWORD>CP27qy8YUzsOvVahMjnGIC4FQ==</PASSWORD>
+      </GENERICAPP>
+   </CRED>
+   <OPTION>
+      <CAST>Int</CAST>
+      <NAME>dbport</NAME>
+      <VALUE>5555</VALUE>
+   </OPTION>
+   <OPTION>
+      <CAST>String</CAST>
+      <NAME>dbname</NAME>
+      <VALUE>mcdb</VALUE>
+   </OPTION>
+</REQUEST>
+</CHECKREQUEST>
+</AXMLREQUEST>

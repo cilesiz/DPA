@@ -1,0 +1,36 @@
+   <apolloNodeMetadata>
+      <name>Application</name>
+      <topLevel>false</topLevel>
+      <subClassesNodes>
+         <nodeTypeNameXML nodeTypeName="PostgreSQLApplication"/>
+         <nodeTypeNameXML nodeTypeName="DataProtector"/>
+         <nodeTypeNameXML nodeTypeName="ArcServe"/>
+         <nodeTypeNameXML nodeTypeName="BackupExec"/>
+         <nodeTypeNameXML nodeTypeName="SystemApplication"/>
+         <nodeTypeNameXML nodeTypeName="OracleApplication"/>
+         <nodeTypeNameXML nodeTypeName="Cluster"/>
+         <nodeTypeNameXML nodeTypeName="ECC"/>
+         <nodeTypeNameXML nodeTypeName="Homebase"/>
+         <nodeTypeNameXML nodeTypeName="Avamar"/>
+         <nodeTypeNameXML nodeTypeName="NetWorker"/>
+         <nodeTypeNameXML nodeTypeName="ExchangeApplication"/>
+         <nodeTypeNameXML nodeTypeName="VCenter"/>
+         <nodeTypeNameXML nodeTypeName="DatabaseApplication"/>
+         <nodeTypeNameXML nodeTypeName="SolutionsEnablerApplication"/>
+         <nodeTypeNameXML nodeTypeName="HPCommandView"/>
+         <nodeTypeNameXML nodeTypeName="BackupApplication"/>
+         <nodeTypeNameXML nodeTypeName="CommVault"/>
+         <nodeTypeNameXML nodeTypeName="Replication"/>
+         <nodeTypeNameXML nodeTypeName="OracleDatabase"/>
+         <nodeTypeNameXML nodeTypeName="BackupScript"/>
+         <nodeTypeNameXML nodeTypeName="TSM"/>
+         <nodeTypeNameXML nodeTypeName="SharepointApplication"/>
+         <nodeTypeNameXML nodeTypeName="DPAApplication"/>
+         <nodeTypeNameXML nodeTypeName="MSSQLApplication"/>
+         <nodeTypeNameXML nodeTypeName="DPADataStore"/>
+         <nodeTypeNameXML nodeTypeName="Webserver"/>
+         <nodeTypeNameXML nodeTypeName="PureDisk"/>
+         <nodeTypeNameXML nodeTypeName="NetBackup"/>
+         <nodeTypeNameXML nodeTypeName="OracleRMAN"/>
+         <nodeTypeNameXML nodeTypeName="ACSLS"/>
+      </subClassesNodes>

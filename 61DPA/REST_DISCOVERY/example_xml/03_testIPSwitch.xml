@@ -1,0 +1,33 @@
+<!-- An IP Switch. Collector set to a previously created host -->
+<discoveryJob>
+	<task>
+		<primaryObject exists="false">
+			<node type="ipswitch" version="1">
+				<name>myipswitch2</name>
+				<aliases>
+					<alias>myipswitch2.corp.emc.com</alias>
+				</aliases>
+			</node>
+			<dataCollectionParameter>
+				<agent local="false">
+					<node type="host" version="1">
+						<!-- Either id or name can be specified here. This host must exist -->
+						<name>myhost</name>
+					</node>
+				</agent>
+				<credential>
+					<!-- Either id or name can be specified here -->
+					<name>IP SNMP Credentials</name>
+				</credential>
+			</dataCollectionParameter>
+			<parents>
+				<parent primary="true">
+					<node type="group">
+						<!-- Either id or name can be specified here -->
+						<name>IP Switches</name>
+					</node>
+				</parent>
+			</parents>
+		</primaryObject>
+	</task>
+</discoveryJob>

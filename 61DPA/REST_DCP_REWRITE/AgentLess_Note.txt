@@ -1,0 +1,25 @@
+AgentLess :
+
+1) MSSQL / PSQL / Oracle
+2) ( WRONG - it's not because it use Remote/DPAserver ) Switch - FC, IPswitch, XSIGO
+3) ( WRONG AS WELL ) Protection(2nd) Storage - DD, DiskLibrary, NetApp, TapeLibrary
+4) SE - Clariion 
+
+4) SE
+
+w2k3sqlqa		
+- WIndows Cretentials
+- Wysdm\Administrator
+- serverg0d
+/DPA32895/SCRIPTS/POST_credential_argv.sh "$dpaserver" Standard Administratorserverg0d Administrator serverg0d "Common DPA Windows Administrator"
+
+(Need WINDOWS DPA Server)
+
+
+Chat with Mike :
+================
+checking with you (forgot about this, maybe next time I should write a note) - Agentless as I know are for Database (MSSQL, PostGres, Oracle) and SE (Clariion/Symmetrix)... any other use that?
+
+Skilbeck, Michael
+host - replication analysis
+

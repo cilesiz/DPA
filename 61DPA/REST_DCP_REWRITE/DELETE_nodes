@@ -1,0 +1,1 @@
+link ../REST_NODES/DELETE_nodes.sh

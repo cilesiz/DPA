@@ -1,0 +1,54 @@
+<scheduledReport version="1" >
+         <description></description>
+      <controlPanel>
+         <id></id>
+         <name></name>
+      </controlPanel>
+      <window>
+         <id>6eeb93f7-4c65-4e18-bead-43f47de10ed1</id>
+         <name>Last Day</name>
+      </window>
+      <schedule>
+         <id>2c58b984-d862-4f68-8948-e58b504e2b7c</id>
+         <name>test</name>
+      </schedule>
+      <user>
+         <id>46c9a9d5-a645-4dcb-b288-3d30ff930ad7</id>
+         <logonName>administrator</logonName>
+      </user>
+      <generateIfEmpty>false</generateIfEmpty>
+      <enabled>true</enabled>
+      <publications>
+         <publication>
+            <publicationMethod>file</publicationMethod>
+            <formatType>HTML</formatType>
+            <pageOrientation>Portrait</pageOrientation>
+            <pageSize>A4</pageSize>
+            <fitContent>false</fitContent>
+            <fileName></fileName>
+            <notifyByMail>false</notifyByMail>
+         </publication>
+      </publications>
+      <nodeLinks>
+         <nodeLink type="Group">
+            <id>00000000-0000-0000-0000-000000000001</id>
+            <name>Root</name>
+            <child type="Group">
+               <id>00000000-0000-0000-0000-000000000010</id>
+               <name>Groups</name>
+               <child type="Group">
+                  <id>8ad04346-9abd-4466-8bd8-05306b63519d</id>
+                  <name>Configuration</name>
+                  <child type="Group">
+                     <id>307c9831-e611-453d-bbb8-89ff3e0248b7</id>
+                     <name>Servers</name>
+                     <child type="Group">
+                        <id>c5723b8f-c5b7-4237-af29-b689203fbc44</id>
+                        <name>Backup Servers</name>
+                     </child>
+                  </child>
+               </child>
+            </child>
+         </nodeLink>
+      </nodeLinks>
+   </scheduledReport>

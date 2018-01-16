@@ -1,0 +1,73 @@
+15:00Talib, Rosli
+
+hi Mike
+I'm retest DPA-32687 (actually I has already closed it)... I want to check with you... last line of the ticket description said about replication analysis tab... how to get that tab?
+
+
+15:14Skilbeck, Michael
+
+Hi
+on advisor
+the RA tab
+
+
+15:18Talib, Rosli
+
+ok, so it running fine for Oracle psdb, but having problem with seri
+
+
+15:18Skilbeck, Michael
+
+ok 
+what is issue
+
+
+15:18Talib, Rosli
+
+i show "Data Collection Error"
+
+
+15:19Skilbeck, Michael
+
+that is because you are using linux agent?
+you need windows agent
+
+
+15:20Talib, Rosli
+
+yeah, I use windows remote agent - aleut
+
+
+15:20Skilbeck, Michael
+
+ah ok
+i will come back to you in 5 mins
+
+
+15:44Skilbeck, Michael
+
+ok please share the screen
+lets have a look
+
+
+15:46Skilbeck, Michael
+
+on seri did it create the application?
+
+
+15:47Talib, Rosli
+
+no
+
+
+15:47Skilbeck, Michael
+
+can you show me the application on inventory
+go to applications tab of inventory
+ok now show the object properties for the host
+and lets look at request history
+on data collection
+select the row
+click on row
+and click on history
+button

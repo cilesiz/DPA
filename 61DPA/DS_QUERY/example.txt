@@ -1,0 +1,123 @@
+dpa ds query "select * from apollo.agentless_discovery_settings;"
+dpa ds query "select * from apollo.node;"
+
+# CHANGE SHOWING DISPLAY STYLE IN NODES
+
+dpa ds query "select f_name,f_display_name,f_isagent from apollo.node;"
+dpa ds query "SELECT f_name,f_display_name, CASE WHEN f_isagent=true THEN 'TRUE' WHEN f_isagent=false THEN 'FALSE' END FROM apollo.node;"
+
+dpa ds query "select * from apollo.process_info;"
+dpa ds query "select f_host,f_id,f_key from apollo.process_info;"
+
+# USER INFO
+
+dpa ds query "select * from apollo.user;"
+dpa ds query "select f_display_name from apollo.user;"
+dpa ds query "select f_display_name,f_id,f_logon_name from apollo.user;"
+dpa ds query "select f_logon_name,f_password from apollo.user;"
+dpa ds query "select f_logon_name,f_password from apollo.user where f_logon_name='administrator';"
+
+# RESET PASSWD FOR ADMINISTRATOR USER
+
+dpa ds query "update apollo.user set f_password='HP1387F709729271A22|956FAE7148C65608DA1B23773E8173E8BBDC2D074D8E47F55D88E20ED1D5254E' where f_logon_name='administrator';"
+
+# LICENSE INFORMATION
+
+dpa ds query "select f_name,f_id,f_lastmodified,f_expiry from dpa.license;"
+
+# VERSION INFORMATION
+
+dpa ds query "select * from apollo.apollo_version;"
+dpa ds query "select * from dpa.dpa_version;"
+
+dpa ds query "update apollo.apollo_version set minor=3 where minor=2;"
+dpa ds query "update dpa.dpa_version set minor=3 where minor=2;"
+
+# PROBLEM IN REPORT DIRECTORY FOLDER (Windows to Linux)
+
+dpa ds query "select * from dpa.reportersettings;"
+dpa ds query "select f_export_results_dir,f_rds_results_dir,f_rest_results_dir,f_sched_results_dir,f_viewlet_results_dir,f_vtl_template_uri from dpa.reportersettings;"
+
+## http://hb-wiki.corp.emc.com/display/DPAE/Setting+up+Customer+Environment+for+Performance+Testing
+# To know which hosts you can extract data from use this SQL command:
+
+dpa ds query "select n.f_global_name, max(f_report_size), count(*) from dpa.request_history rh, apollo.node n where  f_module = 'avamar' and n.f_id = rh.f_target_id group by n.f_global_name order by 2 desc"
+
+# Check backupjob count :
+
+dpa ds query "select count(*) from dpa.backupjob;"
+
+### DCP 
+
+# check new request history created 
+
+dpa ds query "select * from dpa.request_history;"
+
+# check report data (esp backup data under groupevent) being process normally
+
+dpa ds query "select * from dpa.groupevent;"
+dpa ds query "select * from dpa.backupevent;"
+
+#### TEST INSERT, DELETE, UPDATE
+
+dpa ds query "select * from dpa.dpa_version;"
+
+## insert new values (ALL available) 
+dpa ds query "INSERT INTO dpa.dpa_version VALUES ('3c85b8dd-783d-41c5-a514-e13c390a7310','2013-08-26T15:30:24.174+01:00',3,3);"
+dpa ds query "INSERT INTO dpa.dpa_version VALUES ('3c85b8dd-783d-41c5-a514-e13c390a7310','2014-08-26T15:30:24.174+01:00',7,8,9,false,98765);"
+
+## change some of the value
+dpa ds query "UPDATE dpa.dpa_version SET minor=99 WHERE f_id='3c85b8dd-783d-41c5-a514-e13c390a7309';"
+
+## delete the whole line of the table
+dpa ds query "DELETE from dpa.dpa_version WHERE f_id='3c85b8dd-783d-41c5-a514-e13c390a7310';"
+
+
+#### Check different between f_starttime and f_endtime for report
+
+dpa ds query "SELECT f_report_name, f_object_name, f_period, f_run_origin, f_window_id, f_queue_status, f_starttime, f_endtime, f_total_time, f_endtime - f_starttime  as duration FROM dpa.reporterjob WHERE (extract(epoch from now()) - f_starttime) < (18000) ORDER BY f_starttime desc"
+
+dpa ds query "SELECT f_report_name, f_object_name, f_starttime, f_endtime, f_total_time, f_endtime - f_starttime  as duration FROM dpa.reporterjob WHERE (extract(epoch from now()) - f_starttime) < (18000) ORDER BY f_starttime desc"
+
+dpa ds query "SELECT f_report_name, f_starttime, f_endtime, f_total_time, f_endtime - f_starttime  as duration FROM dpa.reporterjob ORDER BY f_endtime desc"
+
+####### From Jaya training....
+
+# Datamine query for getting list of reports using a particular source in 6.2:
+
+dpa ds query "SELECT f_name FROM dpa.report WHERE f_design LIKE '%<DATASOURCE>Backup Pool Client Config Mapping</DATASOURCE>%' and f_system = 't' ORDER BY f_name asc"
+
+# original message
+# ----------------
+# SELECT f_name
+# FROM dpa.report 
+# WHERE f_design LIKE '%<DATASOURCE>Backup Pool Client Config Mapping</DATASOURCE>%' and f_system = 't'
+# order by f_name asc
+
+# Datamine query for getting a list of report sources using a particular table in 6.2:
+
+dpa ds query "SELECT f_category, f_name FROM dpa.reportsource WHERE f_canned_source LIKE '%<TABLE>view_backupjob</TABLE>%' ORDER BY f_name asc"
+
+# original message
+# ----------------
+# SELECT f_category, f_name 
+# FROM dpa.reportsource 
+# WHERE f_canned_source LIKE '%<TABLE>view_backupjob</TABLE>%'
+# order by f_name asc
+
+#######
+
+#### Reporter Job summary
+
+dpa ds query "select f_report_name,f_total_time,f_run_origin,f_starttime,f_endtime,f_result_status,f_user_name from dpa.reporterjob"
+
+OR
+
+On AS nodes :
+
+GUI = Run Reports > Select Scope > Configuration > Servers > DPA Server  
+                  > Select Report Template > DPA > History > Report History 
+	          > Select Time Period > Predefined period > Last Month / Last Week (or any time appropriate)
+      		  Finish
+
+###### 

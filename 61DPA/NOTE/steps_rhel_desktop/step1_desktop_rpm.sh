@@ -1,0 +1,30 @@
+rpm -ivh \
+gnome-desktop-2.28.2-11.el6.x86_64.rpm \
+gnome-python2-gnome-2.28.0-3.el6.x86_64.rpm \
+libgnomeui-2.24.1-4.el6.x86_64.rpm \
+libgnomecanvas-2.26.0-4.el6.x86_64.rpm \
+libgnome-2.28.0-11.el6.x86_64.rpm \
+gnome-python2-2.28.0-3.el6.x86_64.rpm \
+gnome-python2-gnomevfs-2.28.0-3.el6.x86_64.rpm \
+pygtk2-2.16.0-3.el6.x86_64.rpm \
+redhat-menus-14.0.0-3.el6.noarch.rpm \ 
+gnome-vfs2-2.24.2-6.el6.x86_64.rpm \
+shared-mime-info-0.70-4.el6.x86_64.rpm \
+libbonobo-2.24.2-5.el6.x86_64.rpm \
+libbonoboui-2.24.2-3.el6.x86_64.rpm \
+startup-notification-0.10-2.1.el6.x86_64.rpm \ 
+GConf2-2.28.0-6.el6.x86_64.rpm \
+ORBit2-2.14.17-3.2.el6_3.x86_64.rpm \ 
+gnome-keyring-2.28.2-8.el6_3.x86_64.rpm \
+libglade2-2.6.4-3.1.el6.x86_64.rpm \
+libart_lgpl-2.3.20-5.1.el6.x86_64.rpm \
+avahi-glib-0.6.25-12.el6.x86_64.rpm \
+xcb-util-0.3.6-1.el6.x86_64.rpm \
+libIDL-0.8.13-2.1.el6.x86_64.rpm \
+system-gnome-theme-60.0.2-1.el6.noarch.rpm \
+system-icon-theme-6.0.0-2.el6.noarch.rpm \
+gnome-themes-2.28.1-6.el6.noarch.rpm \
+gnome-icon-theme-2.28.0-2.el6.noarch.rpm \
+sgml-common-0.6.3-32.el6.noarch.rpm \
+dmz-cursor-themes-0.4-4.el6.noarch.rpm \
+gtk2-engines-2.18.4-5.el6.x86_64.rpm

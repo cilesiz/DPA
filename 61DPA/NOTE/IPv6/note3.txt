@@ -1,0 +1,140 @@
+http://www.cyberciti.biz/faq/redhat-centos-rhel-fedora-linux-add-multiple-ip-samenic/
+====================================================================================
+
+Red Hat / CentOS Add IPv6 Network Alias (multiple IPv6 IP to Same NIC)
+by NIX CRAFT on JANUARY 24, 2009 · 7 COMMENTS· LAST UPDATED JANUARY 25, 2009
+in CENTOS, FEDORA LINUX, IPTABLES
+
+Q. How do I add multiple IPv6 address to eth0 under Red Hat / Fedora / RHEL / CentOS Linux for virtual hosting?
+
+
+A. There are two ways to add network aliaes under Red hat / CentOS Linux system. You need to edit any one of the following file in order to add IPv6 network alias.
+
+/etc/rc.local - Use ifconfig command and shell loop.
+/etc/sysconfig/network-scripts/ifcfg-eth0 - Set special variable called IPV6ADDR_SECONDARIES for eth0 virtual hosting (network alias).
+First, setup IPv6 main server IP address and default router. Once basic IPv6 connectivity established you can setup aliases for NIC.
+
+/etc/rc.local configuration
+
+To add 2607:f0d0:1002:11::10 to 2607:f0d0:1002:11::50 (total 40) virtual aliases, open /etc/rc.local file, enter:
+
+# vi /etc/rc.local
+
+Append following code:
+
+#IP Alias
+
+for ip in {10..40}; do /sbin/ifconfig eth0 inet6 add 2607:f0d0:1002:11::${ip}/64; done
+You can type the same command at a shell prompt to immediately activate network aliases. Or create a shell script and call it from /etc/rc.local itself:
+
+#!/bin/bash
+INETP="2607:f0d0:1002:11::"
+PRE="64"
+START=2
+END=200
+INT_IF="eth0"
+IFCONFIG=/sbin/ifconfig
+echo -n "Adding IPv6 Alias..."
+for i in {$START..$END}
+do
+  $IFCONFIG $INT_IF inet6 add ${INETP}${i}/${PRE}
+done
+echo "Done!"
+sysv style configuration
+
+Open network interface configuration file, enter:
+
+# vi /etc/sysconfig/network-scripts/ifcfg-eth0
+
+Append a list of secondary IPv6 addresses following code (set 5 aliases):
+
+IPV6ADDR_SECONDARIES="2607:f0d0:1002:11::10/64 \
+2607:f0d0:1002:11::11/64 \
+2607:f0d0:1002:11::12/64 \
+2607:f0d0:1002:11::13/64 \
+2607:f0d0:1002:11::14/64"
+
+Save and close the file. Restart networking:
+
+# /etc/init.d/network restart
+
+Test your connectivity using ping6 and other tools:
+
+$ /sbin/ifconfig
+$ /sbin/ifconfig eth0 | less
+$ ping6 2607:f0d0:1002:11::15
+
+You may need to setup simple or complicated IPv6 firewall.
+
+TwitterFacebookGoogle+PDF versionFound an error/typo on this page? Help us!
+Featured Articles:
+30 Cool Open Source Software I Discovered in 2013 
+30 Handy Bash Shell Aliases For Linux / Unix / Mac OS X
+Top 30 Nmap Command Examples For Sys/Network Admins
+25 PHP Security Best Practices For Sys Admins
+20 Linux System Monitoring Tools Every SysAdmin Should Know
+20 Linux Server Hardening Security Tips
+Linux: 20 Iptables Examples For New SysAdmins
+Top 20 OpenSSH Server Best Security Practices
+Top 20 Nginx WebServer Best Security Practices
+20 Examples: Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors
+15 Greatest Open Source Terminal Applications Of 2012
+My 10 UNIX Command Line Mistakes
+Top 10 Open Source Web-Based Project Management Software
+Top 5 Email Client For Linux, Mac OS X, and Windows Users
+The Novice Guide To Buying A Linux Laptop
+{ 7 comments. read them below or add one }
+1 Piyush Sharma January 25, 2009 at 9:55 am
+Great Tutorials......by Cybetciti !!!
+
+REPLY
+
+2 w== April 23, 2010 at 5:52 pm
+great, especially that for sysv ;-)
+
+REPLY
+
+3 ramulu ponnam July 29, 2011 at 6:28 am
+while adding ipv6 address to network ,is that prefix length is fixed to 64 or it can be vary?can anyone explain this?please..thanks in advance.
+
+REPLY
+
+4 phil May 27, 2013 at 4:27 pm
+the for loop is wrong and should rather be
+
+for i in $(eval echo .{$START..$END}.)
+
+or use .while.
+
+REPLY
+
+5 Raman September 10, 2013 at 5:10 pm
+Following your sysv style configuration:
+
+Problem: I don.t have entry starting IPV6ADDR_SECONDARIES=
+
+or did you mean just append as written? Please advise.
+
+My system:
+[root@thinkcentos network-scripts]# pwd
+/etc/sysconfig/network-scripts
+
+vi ifcfg-eth0
+
+DEVICE=eth0
+BOOTPROTO=dhcp
+HWADDR=00:0C:29:29:75:55
+IPV6INIT=yes
+NM_CONTROLLED=yes
+ONBOOT=yes
+TYPE=Ethernet
+UUID=60f24514-5d98-4251-bd19-1e654f3b9479
+
+REPLY
+
+6 phil September 10, 2013 at 6:11 pm
+@Raman : yes, just append IPV6ADDR_SECONDARIES=
+
+REPLY
+7 bkupp October 25, 2013 at 3:41 pm
+Is IPV6ADDR required if using IPV6ADDR_SECONDARIES, or can all the addresses be configured as secondaries?

@@ -1,0 +1,51 @@
+How to reset the administrator password for EMC Networker
+
+AUGUST 2, 2013 BY JONATHAN FRAPPIER
+
+If you ever find yourself without the administrator password for EMC Networker, you can use the steps below to reset the password to the default so you can log in.  This is also in support.emc.com, but I have a bit of trouble with the re-directs they do to SalesForce.com from time to time.
+
+For a Linux OS, start a terminal session (hopefully you at least have that, maybe thats another blog post I should write)
+If you did not log in as root (and hopefully you didn.t) type sudo -i to elevate your priviliges
+
+Type the following
+
+export GST_RESET_PW=1
+
+Stop and start the GST services by typing
+
+/etc/init.d/gst stop
+/etc/init.d/gst start
+
+Launch the mangement console
+You should now be able to log in with the username administrator and default password of administrator
+
+Change the password
+Go back to your SSH session and type
+
+export GST_RESET_PW
+
+Hopefully that gets you logged in!  If your install is on Windows, check out this blog post:  http://geek-digest.blogspot.com/2013/03/how-to-reset-administrator-password-for.html
+
+##############
+Other POST
+---------
+
+Resetting the Administrator password to the default on UNIX & Linux system:
+1. Set GST_RESET_PW to a non-null value:
+#ksh
+# export GST_RESET_PW=1
+2. Stop and restart the gst service with a reboot, or enter:
+# /etc/init.d/gst stop
+# /etc/init.d/gst start
+The password resets.
+3. Log in to the Console server as administrator, with the password of administrator.
+4. A prompt dialogue box for resetting password appears
+5. Set GST_RESET_PW back to null:
+#ksh
+# export GST_RESET_PW=
+6. Stop and restart the gst service with a reboot, or enter:
+# /etc/init.d/gst stop
+# /etc/init.d/gst start
+7. Log in as administrator by using the secure password.
+
+

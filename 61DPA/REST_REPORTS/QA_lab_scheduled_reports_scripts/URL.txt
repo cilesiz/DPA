@@ -1,0 +1,1 @@
+http://hb-wiki.corp.emc.com/display/DPAE/Creating+Scheduled+Reports+and+Scheduled+Control+Panels+using+Script

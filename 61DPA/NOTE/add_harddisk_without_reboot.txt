@@ -1,0 +1,16 @@
+1) fdisk -l
+
+- Shows only the existing disks, there is no sign of the new one.
+
+2) What we need to do is, re-scan the SCSI bus, without rebooting the vm. To do this run the following command:
+
+	echo "- - -" >/sys/class/scsi_host/host#/scan
+
+	Where the # is replaced with the SCSI host value, usually 0
+
+3) Now we re-run the command:
+
+	fdisk -l
+
+- We can now see our additional disk and can carry on configuring it using the usual tools, I.e. fdisk and mkfs or partitioner through yast, etc
+

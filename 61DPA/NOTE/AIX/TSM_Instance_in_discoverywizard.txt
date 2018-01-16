@@ -1,0 +1,5 @@
+Instance :
+----------
+
+TSM = ( same as "SErvername" in dsm.sys & dsm.opt )
+username/passwd = admin / admin1

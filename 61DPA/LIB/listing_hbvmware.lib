@@ -1,0 +1,101 @@
+listing_hbvmware ()
+{
+### ESX hosts in hb-vmware.lss.emc.com
+host1=Test-Cluster
+host2=hb-esx2.corp.emc.com
+host3=hb-esx3.lss.emc.com
+host4=hb-esx4.lss.emc.com
+host5=hb-esx5.lss.emc.com
+
+### Choose ESX Hosts
+echo -n "
+List of ESX Hosts :
+1) $host1
+2) $host2
+3) $host3
+4) $host4
+5) $host5
+
+Choose ESX Hosts [ 1 - 5 ] : "
+read -e chosenhost
+
+if [ -n $chosenhost -a $chosenhost -le 5 2> /dev/null ]
+then
+
+chsnhost=host"$chosenhost"
+esxhost=${!chsnhost}
+else
+echo "
+Wrong Choice - $chosenhost
+"
+exit
+fi
+
+### List of Storages
+
+if [ $esxhost = $host1 ]
+then
+strg1="hb-esx6 local 1"
+strg2="hb-esx7:local1"
+strg3="hb-esx7:local2"
+strg4="ESX Shared 1"
+strg5="ESX Shared 2"
+nopilihan=5
+elif [ $esxhost = $host2 ]
+then
+strg1="hb-esx2:storage1"
+strg2="hb-esx2:storage2"
+strg3="hb-esx2:storage3"
+strg4="hb-esx2:storage4"
+strg5="hb-esx2:storage5"
+strg6="hb-esx2:storage6"
+strg7="hb-esx2:storage7"
+nopilihan=7
+elif [ $esxhost = $host3 ]
+then
+strg1="hb-esx3:storage1"
+strg2="hb-esx3:storage2"
+strg3="hb-esx3:storage3"
+strg4="hb-esx3:storage4"
+strg5="hb-esx3:storage5"
+strg6="hb-esx3:storage6"
+strg7="ESX Shared 1"
+strg8="ESX Shared 2"
+nopilihan=8
+elif [ $esxhost = $host4 ]
+then
+strg1="ESX Shared 1"
+strg2="ESX Shared 2"
+nopilihan=2
+elif [ $esxhost = $host5 ]
+then
+strg1="hb-esx5 local 1"
+strg2="ESX Shared 1"
+strg3="ESX Shared 2"
+nopilihan=3
+fi
+
+echo "
+List of Storages : "
+for i in `seq 1 1 "$nopilihan"`
+do
+strgdisp=strg"$i"
+strgdisplay=${!strgdisp}
+echo "$i) $strgdisplay"
+done
+
+echo -n "
+Choose Datastore [ 1 - $nopilihan ] : "
+read -e chosenstrg
+
+if [ -n $chosenstrg -a $chosenstrg -le $nopilihan 2> /dev/null ]
+then
+chsnstrg=strg"$chosenstrg"
+esxstrg=${!chsnstrg}
+else
+echo "
+Wrong choice - $chosenstrg
+"
+exit
+fi
+}

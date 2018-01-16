@@ -1,0 +1,10 @@
+Lindsay Braine added a comment - 02/Jan/13 5:00 PM
+
+Egor
+
+To create a response script for silent installation please type:
+<installer_binary_name> -r installer.properties
+
+To use this response file for a slient install place the installer.properties file in the same directory as the installation binary and type:
+<installer_binary_name> -i silent
+L

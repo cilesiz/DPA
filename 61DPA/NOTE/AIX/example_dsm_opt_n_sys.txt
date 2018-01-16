@@ -1,0 +1,76 @@
+AIX 10.64.212.46 (mikeyaix1)
+============================
+
+bash-3.2# cat /usr/tivoli/tsm/client/ba/bin64/dsm.sys
+************************************************************************
+* Tivoli Storage Manager                                               *
+*                                                                      *
+* Sample Client System Options file for AIX and SunOS (dsm.sys.smp)    *
+************************************************************************
+
+*  This file contains the minimum options required to get started
+*  using TSM.  Copy dsm.sys.smp to dsm.sys.  In the dsm.sys file,
+*  enter the appropriate values for each option listed below and
+*  remove the leading asterisk (*) for each one.
+
+*  If your client node communicates with multiple TSM servers, be
+*  sure to add a stanza, beginning with the SERVERNAME option, for
+*  each additional server.
+
+************************************************************************
+
+* SErvername  w2k3tsm61
+SErvername w2k8x64tsm64
+   COMMMethod         TCPip
+   TCPPort            1500
+*   TCPServeraddress   w2k3tsm61.wysdm.lab.emc.com
+   TCPServeraddress   w2k8x64tsm64.wysdm.lab.emc.com
+
+SCHEDMODE polling
+NODEname mikeyaix1
+* PASSWORDACCESS GENERATE
+domain ALL-LOCAL
+bash-3.2#
+bash-3.2# cat /usr/tivoli/tsm/client/ba/bin64/dsm.opt
+************************************************************************
+* Tivoli Storage Manager                                               *
+*                                                                      *
+* Sample Client User Options file for AIX and SunOS (dsm.opt.smp)      *
+************************************************************************
+
+*  This file contains an option you can use to specify the TSM
+*  server to contact if more than one is defined in your client
+*  system options file (dsm.sys).  Copy dsm.opt.smp to dsm.opt.
+*  If you enter a server name for the option below, remove the
+*  leading asterisk (*).
+
+************************************************************************
+
+* SErvername       A server name defined in the dsm.sys file
+
+* NODENAME        mikeyaix1
+* TCPSERVERADDRESS w2k3tsm61.wysdm.lab.emc.com
+* TCPPORT       1500
+
+* SErvername  w2k3tsm61
+SErvername  w2k8x64tsm64
+bash-3.2#
+
+
+AIX 10.64.205.85/255.95 ( snowstorm / snowstorm.wysdm.lab.emc.com )
+===================================================================
+
+bash-3.2# cat /usr/tivoli/tsm/client/ba/bin64/dsm.sys
+Servername        server1
+TCPPort           1500
+*TCPServeraddress  10.64.255.145
+TCPServeraddress  10.64.205.104
+InclExcl          /usr/tivoli/tsm/client/ba/bin/inclexcl.list
+Compression       OFF
+bash-3.2#
+bash-3.2# cat /usr/tivoli/tsm/client/ba/bin64/dsm.opt
+LANGUAGE     AMENG
+NUMBERFormat 1
+TAPEPROMPT   NO
+TIMEFORMAT   1
+bash-3.2#

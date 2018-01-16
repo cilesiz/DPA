@@ -1,0 +1,12 @@
+1) On DS node :
+
+dpa ds query "select f_report_name,f_total_time,f_run_origin,f_starttime,f_endtime,f_result_status,f_user_name from dpa.reporterjob"
+
+OR
+
+2) On AS nodes :
+
+GUI = Run Reports > Select Scope > Configuration > Servers > DPA Server  
+                  > Select Report Template > DPA > History > Report History 
+	          > Select Time Period > Predefined period > Last Month / Last Week (or any time appropriate)
+      		  Finish

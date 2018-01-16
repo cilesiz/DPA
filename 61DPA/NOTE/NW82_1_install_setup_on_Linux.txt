@@ -1,0 +1,116 @@
+NW82 server install
+===================
+
+Pre-install setup
+-----------------
+1) backup some files 
+- cp /etc/rpc /etc/rpc.org
+- cp /etc/ld.so.conf /etc/ld.so.conf.org
+2) ensure PATH for root and users contains /usr/sbin
+3) selinux setup (if run selinux)
+- run semanage cmd = semanage fcontect -a -t textrel_shlib_t "/usr/lib/nsr/lib.*\.so"
+- update = restorecon -R /usr/lib/nsr
+4) if semanage or restorecon not exist, install - policycoreutils-python package
+
+Installing Networker server 
+---------------------------
+rpm -ivh lgtoclnt*.rpm lgtonode*.rpm lgtoserv*.rpm lgtoman*.rpm
+
+Installaing Network Client
+--------------------------
+rpm -ivh lgtoclnt*.rpm
+
+Installing the Console server
+-----------------------------
+1) rpm -ivh lgtonmc*.rpm
+2) if you already have installed NW, confirm the nsrexecd is started
+
+ps -ef | grep -i nsr
+
+start if required = service networker start
+
+Configure Console server
+------------------------
+1) Start the configuation script
+
+/opt/lgtonmc/bin/nmc_config
+
+2) specify a non-root user/group (or just accept default nobody/nobody)
+
+[nobody/nobody]
+
+3) webserver port for NW (default=9000, or else use 1024-49151)
+
+4) Console server port (default=9001, or else use 1024-49151)
+
+5) specify directory for lgtonmc database (default=/opt/lgtonmc/lgto_gstdb)
+
+6) if the installation detects an existing db, press y
+
+7) specify location of NW binaried = /usr/sbin
+
+8) when prompt to start console server,
+- type y = if db conversion is successful
+- type n = if db conversion encountered errors
+
+9) to continue with installation of the console server package, type y
+
+10) update MANPATH
+
+MANPATH=$MANPATH:/opt/lgtonmc/man
+export MANPATH
+
+11) if there's no plan to update or reinstall NW, run below to remove Networker configuration files
+
+dpkg-P lgtoclnt
+
+(Note - credential = administrator / H0meBaserisckey
+
+### get from internet = http://www.itsys-consulting.com/english/html/technicalArticles/architecture/install_legato7_1.html#_Client_Installation
+
+12) Configure Device
+
+To perform a test backup using a directory as device: 
+
+Configure a device of type file. 
+a.From NetWorker Administrator program menu > Devices > Device Configuraion Wizard > Select Device Type > AFTD
+b.Enter a name for the device, for example /backup in "Manual enter local or remote device paths"
+c.In the media type, specify .file. 
+
+Label the volume in the Default label pool: 
+a.Select a device.
+b.Select Label from the main window. The NetWorker Administrator program displays the preconfigured label templates.
+c.Select the Default pool and click OK. 
+
+Mount the volume in the drive by selecting Mount from the main window. 
+
+13) Configure the NetWorker client: 
+
+a.From the Clients menu, select Client Setup. The Clients dialog box appears.
+b.For the Clients attribute, select the NetWorker server host.
+c.For the Save Set attribute, specify the path of a single file that requires backing up and click Change. For example, /etc/hosts.
+d.Click Apply. 
+
+14) Test the group backup: 
+a. Select Group Control from the main window. The Group Control window appears with the Default group highlighted.
+b. Select Start. 
+
+15) To view the progress of the test backup, select Details from the Group Control window. Messages appear in the panels of the main window as the backup progresses. 
+
+16) To view the client file index entries, select Indexes from the main window. These entries were created during the test backup. Entries under Save Sets indicate what data was backed up. 
+
+
+NOTE:
+=====
+
+1) to test
+
+/usr/sbin/save -s nw82suse11.homebase.corp.emc.com -g Default -LL -m haproxy.homebase.corp.emc.com -l full -q -W 78 -N /root /root 
+
+/usr/sbin/save -s nw82suse11.homebase.corp.emc.com -g Default -LL -m haproxy.homebase.corp.emc.com -q -W 78 -N /etc /etc &
+
+2) NMC username/pswd = administrator / H0meBaserisckey
+
+3) URL NW server = http://10.64.213.48:9000/
+
+4) 

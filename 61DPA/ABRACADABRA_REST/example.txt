@@ -1,0 +1,27 @@
+dpa.sh app query [options]
+==========================
+
+Usage: <main class> [options]
+  Options:
+    -a, --authorization   Interactive authorize on DPA. DPA user password
+    -b, --body            Body of request link to a file with body or text
+                          string. [Valid only for PUT and POST requests]
+    -c, --configuration   Path to the dpaCLRestClient configuration file
+    -hd, --header         List of headers header name and header value are
+                          separated by ":" headers are separated form each other by using
+                          "::". Example: hd "header_name_0 : header_value_0 ::
+                          header_name_1 :: header_value_1]"
+    -h, --help            Usage of this tool
+                          Default: false
+    -t, --host            Host where DPA is installed with a port
+                          (http://localhost:9004)
+    -l, --login           DPA user name
+    -m, --method          Method of the http request [Get, DELETE, PUT, POST]
+    -o, --output          Output file. If this parameter doesn't exist request
+                          result will be shown on the screen
+    -ot, --outputType     Output type, XML or CSV
+                          Default: XML
+    -p, --path            DPA host url with port
+    -api, --restAPIName   Based predefined restAPI name to execute or override
+
+1) dpa.sh app query -m GET -t https://10.64.213.63:9002 -p dpa-api/license -l administrator -a

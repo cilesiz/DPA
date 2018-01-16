@@ -1,0 +1,3 @@
+./maintrunk_b71_GA_DPA-Server-Linux-x86_64-6.0.1.73288.bin -i silent -f /root/rosli/61DPA/NOTE/example_server_answerfile1.txt
+
+./maintrunk_b76_DPA-Server-Linux-x86_64-6.2.0.81418.bin -i silent -f /root/rosli/61DPA/NOTE/server_silent/dpa601_standalone_installer.properties

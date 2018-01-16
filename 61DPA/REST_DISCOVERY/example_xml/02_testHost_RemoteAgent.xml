@@ -1,0 +1,37 @@
+<!-- A simple host with system monitoring only, remote collector -->
+<discoveryJob>
+	<task>
+		<primaryObject exists="false">
+			<node type="host" version="1">
+				<name>mytesthost_remote</name>
+				<aliases>
+					<alias>mytesthost_remote.corp.emc.com</alias>
+				</aliases>
+			</node>
+			<dataCollectionParameter>
+				<hostMonitoring>true</hostMonitoring>
+				<replicationMonitoring>false</replicationMonitoring>
+				<agent local="false">
+					<!-- specify the remote collector. Can supply id or name. This node 
+						must already exist -->
+					<node type="host" version="1">
+						<name>myhost</name>
+					</node>
+					<!-- If this remote agent was created as an earlier part of the wizard, 
+						the following optional monitoring options can be added so that this remote 
+						agent can monitor itself -->
+					<hostMonitoring>false</hostMonitoring>
+					<replicationMonitoring>false</replicationMonitoring>
+				</agent>
+			</dataCollectionParameter>
+			<parents>
+				<parent primary="true">
+					<node type="group">
+						<!-- Either id or name can be specified here -->
+						<name>Servers</name>
+					</node>
+				</parent>
+			</parents>
+		</primaryObject>
+	</task>
+</discoveryJob>

@@ -1,0 +1,33 @@
+<!-- A simple host with system monitoring only, local collector -->
+<discoveryJob>
+	<task>
+		<primaryObject exists="false">
+			<node type="host" version="1">
+				<name>myhost</name>
+				<aliases>
+					<alias>myhost.corp.emc.com</alias>
+				</aliases>
+				<timeZone>Australia/Brisbane</timeZone>
+				<operatingSystem>
+					<family>WINDOWS</family>
+					<version>6.1</version>
+					<processorType>amd64</processorType>
+				</operatingSystem>
+			</node>
+			<dataCollectionParameter>
+				<hostMonitoring>true</hostMonitoring>
+				<replicationMonitoring>false</replicationMonitoring>
+				<agent local="true">
+				</agent>
+			</dataCollectionParameter>
+			<parents>
+				<parent primary="true">
+					<node type="group">
+						<!-- Either id or name can be specified here -->
+						<name>Servers</name>
+					</node>
+				</parent>
+			</parents>
+		</primaryObject>
+	</task>
+</discoveryJob>

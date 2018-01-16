@@ -1,0 +1,76 @@
+-----------------------------------------------------------------------------------
+Unable to connect to server: Authentication error; why = GSS-API credential problem
+-----------------------------------------------------------------------------------
+
+Resolution1
+===========
+
+If the server rejected the credentials, it is obvious that it could answer. So name resolution and servers file should be fine.
+I would recommend to
+  - add nw_server_hostname to /nsr/res/servers file in the client
+  - shutdown the NW listener on the client
+	# service networker stop
+  - delete the nsr/res/nsrladb directory path
+	# cd /nsr/res
+	# rm -rf nsrladb
+  - restart the NW listener on the client
+	# service networker start
+
+(Nampak gayanya Resolution1 is working :) )
+
+
+-------------------------------------------------------------------------------------------------------
+Unable to authenticate with server 10.64.213.62: Authentication error; why = Server rejected credential
+-------------------------------------------------------------------------------------------------------
+
+Resolution1
+===========
+
+- Delete the NSR Peer Information of the NetWorker Server on the client/storage node.
+- Then delete the NSR Peer Information for the client/storage node from the NetWorker Server.
+
+Please follow the steps given below to delete the NSR peer information on NetWorker Server and on the Client.
+
+1) At NetWorker client command line, go to the location /nsr/res
+
+- Type the command:
+  nsradmin -p nsrexec
+  nsradmin>print type:nsr peer information; name:<nw_server_hostname>
+  nsradmin>delete        
+  	   y
+  nsradmin>quit
+
+- restart networker service = new nsrladb was created
+
+USUALLY, only do it on client (delete certificate), but sometimes you need to do it on both CLIENT & SERVER
+
+2) At the NetWorker server command line, go to the location /nsr/res
+
+- Type the command:
+  nsradmin -p nsrexec
+  nsradmin>print type:nsr peer information; name:<nw_client_hostname>
+  nsradmin>delete        
+  	   y
+  nsradmin>quit
+
+- restart networker service = new nsrladb was created
+
+3) If do (1) and (2), need to recreate certificate (register again client)
+
+On NW Server NMC :
+
+NMC > Clients > New Clients Wizard > 
+
+- Client Name: (hostname --fqdn) or (ip_address)
+- Traditional NetWorker client
+
+4) if issue still persist
+
+disable GSS strong auth
+
+On the client:
+  nsradmin -p nsrexec
+  nsradmin>update auth methods:"0.0.0.0/o,oldauth"
+
+5) add nw_server_hostname to /nsr/res/servers file in the client. If the "servers" file doesnt exist under /nsr/res, create it
+

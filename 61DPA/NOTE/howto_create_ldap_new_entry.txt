@@ -1,0 +1,44 @@
+1 - 10.64.213.7  no_ssl port=389
+2 - 10.64.213.8  ssl  port=636
+
+### Add new ldap users 
+1) useradd testusermain
+2) passwd testusermain
+cat /etc/passwd | grep testusermain
+3) cat /etc/passwd | grep testusermain > testusermain.psswd
+cat testusermain.psswd
+4) /usr/share/openldap/migration/migrate_passwd.pl testusermain.psswd > testusermain.ldif
+cat testusermain.ldif
+5) ldapadd -x -W -D "cn=Manager,dc=homebase,dc=corp,dc=emc,dc=com" -f testusermain.ldif -h 10.64.213.7
+or
+ldapadd -x -W -D "cn=Manager,dc=homebase,dc=corp,dc=emc,dc=com" -f testusermain.ldif
+## passwd for Manager = risckey (root passwd)
+
+## other
+ldapmodify -x -W -D "cn=Manager,dc=homebase,dc=corp,dc=emc,dc=com" -f testusermain.ldif -h 10.64.213.7
+or
+ldapmodify -x -W -D "cn=Manager,dc=homebase,dc=corp,dc=emc,dc=com" -f testusermain.ldif
+
+
+### Add new group
+1) cp /etc/group twogrp.grp
+2) vi twogrp.grp -- (edit and delete unneeded line)
+3) /usr/share/openldap/migration/migrate_group.pl twogrp.grp > twogrp.ldif
+4) vi twogrp.ldif -- (modify some parameters if necessary)
+5) ldapadd -x -W -D "cn=Manager,dc=homebase,dc=corp,dc=emc,dc=com" -f twogrp.ldif
+
+### Add new organizationalUnit (ou)
+1) vi testrosli.ldif
+dn: ou=ROSLI,ou=People,dc=homebase,dc=corp,dc=emc,dc=com
+objectClass: organizationalUnit
+ou: ROSLI
+userPassword: {crypt}x
+
+2) ldapadd -x -W -D "cn=Manager,dc=homebase,dc=corp,dc=emc,dc=com" -f testrosli.ldif
+
+(NOTES) 
+=======
+- bindDN = -D "cn=Manager,dc=homebase,dc=corp,dc=emc,dc=com" is a MUST (pswd=risckey)
+- use option -d1 to get debug info level 1
+ldapadd -x -W -d1 -D "ou=People,dc=homebase,dc=corp,dc=emc,dc=com" -f guenther.ldif
+

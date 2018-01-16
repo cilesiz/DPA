@@ -1,0 +1,98 @@
+1) CentOS
+=========
+
+/etc/sysconfig/network-scripts/ifcfg-eth1
+
+DEVICE="eth1"
+BOOTPROTO="none"
+NM_CONTROLLED="no"
+ONBOOT="yes"
+TYPE="Ethernet"
+IPADDR="192.168.213.61"
+NETMASK="255.255.255.0"
+IPV6INIT="yes"
+IPV6ADDR='2001:0db8:0000:0000:0000:0000:0000:0061/64'
+USERCTL="no"
+
+Format :
+--------
+IPV6INIT=yes
+IPV6ADDR=<IPv6-IP-Address>
+IPV6_DEFAULTGW=<IPv6-IP-Gateway-Address>
+
+
+2) SuSE
+=======
+
+2.1) /etc/sysconfig/network/ifcfg-eth1
+
+ONBOOT='yes'
+IPV6INIT='yes'
+BOOTPROTO='static'
+BROADCAST=''
+ETHTOOL_OPTIONS=''
+IPADDR=''
+MTU=''
+NETMASK=''
+NETWORK=''
+REMOTE_IPADDR=''
+STARTMODE='auto'
+USERCONTROL='no'
+IPADDR_0='2001:0db8:0000:0000:0000:0000:0000:0048/64'
+LABEL_0='eth1'
+NAME='82545EM Gigabit Ethernet Controller (Copper)'
+
+Format :
+--------
+IPV6INIT='yes'
+LABEL_0=<interface>
+IPADDR_0=<IPv6-IP-Address-with-64-prefixes>
+or
+IPADDR_0=<IPv6-IP-Address-only>
+PREFIXLEN_0='64'
+
+2.2) /etc/sysconfig/network/routes
+
+default 2607:f0d0:1002:0011:0000:0000:0000:0001 - -
+
+Format :
+--------
+default <IPv6-GW-IP> - -
+
+3) Check connection
+===================
+
+ping6 ipv6.google.com
+traceroute6 ipv6.google.com
+route -n -A inet6
+
+4) Other usefull information
+============================
+
+# ip address show
+
+[root@dbnodeone ~]# ip address show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:50:56:ad:31:a2 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.213.11/24 brd 192.168.213.255 scope global eth1
+    inet6 fe80::250:56ff:fead:31a2/64 scope link
+       valid_lft forever preferred_lft forever
+3: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:50:56:ad:6a:2f brd ff:ff:ff:ff:ff:ff
+    inet 10.64.213.58/24 brd 10.64.213.255 scope global eth0
+    inet6 fe80::250:56ff:fead:6a2f/64 scope link
+       valid_lft forever preferred_lft forever
+[root@dbnodeone ~]#
+
+so that you can use = fe80::250:56ff:fead:31a2%2 
+
+[root@dbnodeone ~]# ping6 fe80::250:56ff:fead:31a2%2
+PING fe80::250:56ff:fead:31a2%2(fe80::250:56ff:fead:31a2) 56 data bytes
+64 bytes from fe80::250:56ff:fead:31a2: icmp_seq=1 ttl=64 time=0.041 ms
+64 bytes from fe80::250:56ff:fead:31a2: icmp_seq=2 ttl=64 time=0.069 ms
+

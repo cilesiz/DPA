@@ -1,0 +1,345 @@
+Talib, Rosli
+hi Mike
+
+
+12:55Talib, Rosli
+I'm testing DPA-31185. I hav installed TSM client v 6.1 to one of our AIX6 box here. then I installl Ashwini's agent build, but DPA server can't discover TSM server w2k3tsm61.wysdm.lab.emc.com using my AIX6 box as remote agent
+it give error
+Failed to determine TSM server version of db2
+I use Instance setting - db2 username = db2username & password = db2password
+
+
+12:58Skilbeck, Michael
+hi rosli, you need to add the tsm server in the options file for tsm client
+
+
+12:59Talib, Rosli
+how to do that?
+
+
+13:01Skilbeck, Michael
+under /opt/Tivoli/TSM/baclient/dsm.opt
+NODENAME         seri
+TCPSERVERADDRESS  W2k3x64tsm63
+*TCPSERVERADDRESS 10.64.205.118
+*DOMAIN "\\seri\c$"
+*TCPPORT 1501
+*TCPSERVERADDRESS W2K3TSM61
+*DOMAIN "\\seri\c$"
+*TCPPORT 1501
+*NODENAME         seri
+*TCPSERVERADDRESS 10.64.205.106
+*DOMAIN "\\seri\c$"
+*TCPPORT 1501
+*NODENAME         seri
+specify the tsm server you want to connect to andtheport
+does that help
+?
+
+
+13:05Talib, Rosli
+I install tsm client 6.1, but it didn't have TSM directory under /opt/Tivoli. Only lcf directory. do we need to create it ourself? or something not properly install?
+
+
+13:07Skilbeck, Michael
+if you installed tsm client then it should create the baclient directory somewhere
+i normally choose /opt
+where did you install it?
+
+
+13:08Talib, Rosli
+under /opt
+
+
+13:09Skilbeck, Michael
+can you search /opt for baclient recursively
+
+
+13:10Talib, Rosli
+oh ok... I found it...
+
+
+13:10Skilbeck, Michael
+
+
+13:10Talib, Rosli
+it's under /usr/tivoli/tsm/client/ba/bin64
+
+
+13:10Skilbeck, Michael
+phew
+
+
+13:10Talib, Rosli
+the sample file dsm.opt.smp
+
+
+13:11Skilbeck, Michael
+is the dsm.opt file there
+
+
+13:11Talib, Rosli
+yeah
+
+
+13:11Skilbeck, Michael
+ok add the name ofthe serveryouwanto connect to and port
+i normally also login to tsm server and add the backup client there so I can back itup
+regnode nodename admin
+
+
+13:14Talib, Rosli
+so the variables that I should put is TCPSERVERADDRESS & TCPPORT ?
+do I need to put DOMAIN and NODENAME?
+
+
+13:16Skilbeck, Michael
+probably
+they will be set to the aix host
+
+
+14:31Talib, Rosli
+hi Mike, I still can't get away from Test failed in Pre-Requisites Test
+it still gave error Failed to determine TSM server version
+
+
+14:32Skilbeck, Michael
+can you connect to tsm server
+from client
+
+
+14:32Talib, Rosli
+how to check the connection
+from client?
+it can ping
+
+
+14:33Skilbeck, Michael
+dsmadmc -tcp server servername
+will get syntax
+
+
+14:39Talib, Rosli
+it gave error :
+bash-3.2# dsmadmc -tcp server w2k8x64tsm64
+ANS8017E Command line parameter 1: 'tcp' is not valid.
+ANS8019E Id and password must be supplied in Batch mode.
+bash-3.2#
+
+
+14:40Skilbeck, Michael
+yes you have to do unand pw
+
+
+14:41Talib, Rosli
+yes, I can login now :
+bash-3.2# dsmadmc
+IBM Tivoli Storage Manager
+Command Line Administrative Interface - Version 6, Release 1, Level 5.5
+ Copyright by IBM Corporation and other 1990, 2013. All Rights Reserved.
+
+Enter your user id:  admin
+
+Enter your password:
+
+Session established with server W2K8X64TSM64: Windows
+  Server Version 6, Release 3, Level 4.0
+  Server date/time: 01/31/14   14:39:25  Last access: 01/21/14   14:21:00
+
+
+tsm: W2K8X64TSM64>
+
+is it mean my AIX box is fine?
+
+
+14:43Skilbeck, Michael
+do regnode nodename admin
+for cliente
+and then q node
+then try discovery again
+normally you have to say instance is server1
+what did you put as instance name
+?
+
+
+14:46Talib, Rosli
+TSM DPA1 (as in URL link)
+for  w2k8x64tsm64
+regnode command, is it in command line? or in tsm prompt?
+
+
+14:48Skilbeck, Michael
+in dsmadmc
+command line
+
+
+14:53Talib, Rosli
+can't get it work
+bash-3.2# dsmadmc do regnode mikeyaix1 admin -un admin -pw admin1
+ANS8019E Id and password must be supplied in Batch mode.
+bash-3.2#
+bash-3.2#
+bash-3.2# dsmadmc do regnode mikeyaix1 admin un admin pw admin1
+ANS8019E Id and password must be supplied in Batch mode.
+bash-3.2#
+
+
+
+14:55Skilbeck, Michael
+just try:
+regnode mikeyaix1 admin
+in the command window from dsmadmc
+you shouldbe able to do q node
+to get list of nodes
+and then try regnode
+
+
+15:09Talib, Rosli
+tsm: W2K8X64TSM64>q
+ANR2021E QUERY: Missing subcommand keyword.
+ANS8001I Return code 3.
+
+tsm: W2K8X64TSM64>q node
+
+Node Name                     Platform     Policy Domain      Days Since     Days Since     Locked?
+                                           Name               Last Acce-       Password
+                                                                      ss            Set
+-------------------------     --------     --------------     ----------     ----------     -------
+ALSEA                         WinNT        STANDARD                    2            134       No
+ARAWAK.WYSDM.LAB.EMC.COM      WinNT        STANDARD                  116            116       No
+BOGDANVM                      WinNT        STANDARD                   58            121       No
+COLINPVM                      WinNT        STANDARD                  123            128       No
+CROW                          WinNT        STANDARD                  115            135       No
+DEVW2K8X64                    WinNT        STANDARD                  130            130       No
+MENOMINEE                     WinNT        STANDARD                  126            126       No
+MIWOK                         (?)          STANDARD                  130            130       No
+MIWOK.WYSDM.LAB.EMC.COM       (?)          STANDARD                  101            101       No
+QUAPAW.WYSDM.LAB.EMC.COM      WinNT        STANDARD                  130            130       No
+SERI                          (?)          STANDARD                  130            130       No
+W2K3X64TSM63                  (?)          STANDARD                  129            129       No
+W2K8X64AUTO                   (?)          STANDARD                  130            130       No
+W2K8X64TSM64                  WinNT        STANDARD                  116            135       No
+WICHITA                       WinNT        STANDARD                  123            123       No
+
+tsm: W2K8X64TSM64>
+
+
+
+15:10Skilbeck, Michael
+q node
+
+
+15:10Talib, Roslitsm: W2K8X64TSM64>q node
+
+Node Name                     Platform     Policy Domain      Days Since     Days Since     Locked?
+                                           Name               Last Acce-       Password
+                                                                      ss            Set
+-------------------------     --------     --------------     ----------     ----------     -------
+ALSEA                         WinNT        STANDARD                    2            134       No
+ARAWAK.WYSDM.LAB.EMC.COM      WinNT        STANDARD                  116            116       No
+BOGDANVM                      WinNT        STANDARD                   58            121       No
+COLINPVM                      WinNT        STANDARD                  123            128       No
+CROW                          WinNT        STANDARD                  115            135       No
+DEVW2K8X64                    WinNT        STANDARD                  130            130       No
+....................
+
+
+
+15:10Skilbeck, Michael
+cool
+now
+
+
+15:10Talib, Rosli
+q node didn't list my aix box
+
+
+15:10Skilbeck, Michael
+reg node mikeyaix admin
+
+
+15:11Talib, Rosli
+ok, now it in the list
+
+
+15:11Skilbeck, Michael
+ok now retry tsm monitoring on discovery wizard
+
+
+15:12Talib, Rosli
+still gave error = Failed to determine TSM server version of server1
+server1 is my instance now
+
+---------------------------------
+
+Email :
+======
+
+Hi Mike,
+
+I have successfully discover the TSM server after changes the Instance to w2k8x64tsm64 from server1 (.SErvername. value that I put in dsm.sys, not server1). I have put some comment about error on mode test in the ticket DPA-31185. So, look like I can.t gather backdated TSM data.
+
+Fortunately, this morning, look like it can gather data fine and showed many jobs that have run from client .alsea.. I have attached screenshot.
+
+Thanks,
+-rosli-
+
+================================
+
+
+bash-3.2#
+bash-3.2# cat /usr/tivoli/tsm/client/ba/bin64/dsm.sys
+************************************************************************
+* Tivoli Storage Manager                                               *
+*                                                                      *
+* Sample Client System Options file for AIX and SunOS (dsm.sys.smp)    *
+************************************************************************
+
+*  This file contains the minimum options required to get started
+*  using TSM.  Copy dsm.sys.smp to dsm.sys.  In the dsm.sys file,
+*  enter the appropriate values for each option listed below and
+*  remove the leading asterisk (*) for each one.
+
+*  If your client node communicates with multiple TSM servers, be
+*  sure to add a stanza, beginning with the SERVERNAME option, for
+*  each additional server.
+
+************************************************************************
+
+* SErvername  w2k3tsm61
+SErvername w2k8x64tsm64
+   COMMMethod         TCPip
+   TCPPort            1500
+*   TCPServeraddress   w2k3tsm61.wysdm.lab.emc.com
+   TCPServeraddress   w2k8x64tsm64.wysdm.lab.emc.com
+
+SCHEDMODE polling
+NODEname mikeyaix1
+* PASSWORDACCESS GENERATE
+domain ALL-LOCAL
+bash-3.2#
+bash-3.2# cat /usr/tivoli/tsm/client/ba/bin64/dsm.opt
+************************************************************************
+* Tivoli Storage Manager                                               *
+*                                                                      *
+* Sample Client User Options file for AIX and SunOS (dsm.opt.smp)      *
+************************************************************************
+
+*  This file contains an option you can use to specify the TSM
+*  server to contact if more than one is defined in your client
+*  system options file (dsm.sys).  Copy dsm.opt.smp to dsm.opt.
+*  If you enter a server name for the option below, remove the
+*  leading asterisk (*).
+
+************************************************************************
+
+* SErvername       A server name defined in the dsm.sys file
+
+* NODENAME        mikeyaix1
+* TCPSERVERADDRESS w2k3tsm61.wysdm.lab.emc.com
+* TCPPORT       1500
+
+* SErvername  w2k3tsm61
+SErvername  w2k8x64tsm64
+bash-3.2#
+bash-3.2#

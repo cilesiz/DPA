@@ -1,0 +1,44 @@
+Skilbeck, Michael
+Hi Rosli
+
+
+12:07Talib, Rosli
+hi Mike
+
+
+12:08Skilbeck, Michael
+are you going to delete change default request options test cases.
+?
+so we have 3 per app and device
+
+
+12:10Talib, Rosli
+ok, I'll do that. that's in other story?
+
+
+12:10Skilbeck, Michael
+yes will be covered in DPA-31782
+currently the discovery wizard doesn't respect the default requests at all. 
+it overrides everything
+why we didn't pick this up in DCP testing I don't know
+we should have raised this.
+but now shyam has left
+anyway what is done is done
+so must move on.
+
+
+12:14Talib, Rosli
+yeah. thanks
+I pick up DPA-31794
+is the secondary storage refer to protection storage?
+I just guess
+
+
+12:15Skilbeck, Michael
+let us do that last
+it is whatever it left after we have done the other tasks
+
+
+12:16Talib, Rosli
+ok, will unassign it
+For me, I need to design QC testcases first

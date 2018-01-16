@@ -1,0 +1,49 @@
+Step1
+=====
+1) Run Discover a EMC FileStorage (Celerra) test using remote agent
+- discover object manually
+- Name = uncle-mgmt.wysdm.lab.emc.com 
+- Credential = dpa / serverg0d (create new one if not exist - this is uncle-mgmt's credential)
+2) Start Test = should successfull
+3) press "<Back" button and change to local agent and some other details (valid details)
+4) Start Test = should successfull
+5) Object should be created
+
+Expected
+--------
+Host should be created
+
+Step2
+=====
+Check effective request REST API (won't be visible from UI)
+- URIs = 
+/dpa-api/nodes/{nodeid}/datacollectionpolicy/all-requests
+/dpa-api/nodes/{nodeid}/datacollectionpolicy/applicable-requests
+/dpa-api/nodes/{nodeid}/datacollectionpolicy/valid-requests
+
+Expected
+--------
+- Need to ensure only the requests which were assigned as per DCP are assigned
+- all gave OK result
+
+Step3
+=====
+
+Check DB table (using PGAdmin or "dpa ds query" )
+-QUERY=
+"select * from dpa.request_default;"
+"select * from dpa.request_option_default;"
+"select * from dpa.assigned_request;"
+
+Expected
+--------
+- if defaults request settings have been over ridden, they will be written to assigned_request table
+- if defaults request settings are reused, the field in the assigned request table will be blank and the API will get data from request_default and request_options_default
+
+Step4
+=====
+Ensure the agent has been reloaded and the sub-nodes are created on the tree
+
+Expected
+--------
+sub-nodes are created on the tree

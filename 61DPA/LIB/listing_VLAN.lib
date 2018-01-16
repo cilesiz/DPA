@@ -1,0 +1,129 @@
+pilih_vlan ()
+{
+
+tmp1vlan="$tmprundir"/tmp1vlan.txt
+
+ipadd=15
+
+echo -n "
+Choose VLAN :
+-------------
+"
+echo -n > "$tmp1vlan"
+
+for vlanname in `seq 11 1 26`
+do
+nombor=$(( $vlanname - 10 ))
+frstno=$((( $vlanname - 11 ) * 16 ))
+lastno=$(( $frstno + $ipadd ))
+vlannama="VLAN$vlanname"
+firstip="10.64.213.$frstno"
+lasttip="10.64.213.$lastno"
+gww_vlan="10.64.213.$(( $frstno + 1 ))"
+
+##### VLAN SECTION
+if [ $vlanname -lt 20 ]
+then
+echo -n "$nombor) $vlannama - $firstip-$lastno"
+echo "#$nombor)#$vlannama - $firstip-$lastno#$firstip#$lasttip#$gww_vlan#255.255.255.240#" >> "$tmp1vlan"
+else
+echo -n "$nombor) $vlannama- $firstip-$lastno"
+echo "#$nombor)#$vlannama- $firstip-$lastno#$firstip#$lasttip#$gww_vlan#255.255.255.240#" >> "$tmp1vlan"
+fi
+
+##### OWNER SECTION
+if [ $vlannama == VLAN14 -o $vlannama == VLAN20 ]; then
+echo " - *ROSLI*"
+elif [ $vlannama == VLAN11 ]; then
+echo " - Servers VLAN"
+elif [ $vlannama == VLAN12 ]; then
+echo " - Demo VLAN"
+elif [ $vlannama == VLAN13 ]; then
+echo " - Ruth"
+elif [ $vlannama == VLAN15 ]; then
+echo " - David"
+elif [ $vlannama == VLAN16 ]; then
+echo " - Rob"
+elif [ $vlannama == VLAN17 ]; then
+echo " - Tony"
+elif [ $vlannama == VLAN18 ]; then
+echo " - Elaine"
+elif [ $vlannama == VLAN19 ]; then
+echo " - Jonathan"
+elif [ $vlannama == VLAN21 ]; then
+echo " - JT"
+elif [ $vlannama == VLAN22 ]; then
+echo " - Ian"
+elif [ $vlannama == VLAN23 ]; then
+echo " - Ashwini"
+elif [ $vlannama == VLAN24 ]; then
+echo " - Kasun"
+elif [ $vlannama == VLAN25 ]; then
+echo " - Rinmy"
+elif [ $vlannama == VLAN26 ]; then
+echo " - Victor"
+else
+echo
+fi
+
+done
+
+echo "other) Lab Network"
+
+echo -n "
+Your choice [ 1 - $nombor ] : "
+read -e vlan_nk
+
+#########
+if [ $vlan_nk -gt 0 -a $vlan_nk -lt $(( $nombor + 1 )) 2>/dev/null ]
+then
+vlan_vlan=`cat "$tmp1vlan" | grep -i "#$vlan_nk)#" | awk -F"#" '{print $3}'`
+netmask_vlan=`cat "$tmp1vlan" | grep -i "#$vlan_nk)#" | awk -F"#" '{print $7}'`
+gw_vlan=`cat "$tmp1vlan" | grep -i "#$vlan_nk)#" | awk -F"#" '{print $6}'`
+bcast_vlan=`cat "$tmp1vlan" | grep -i "#$vlan_nk)#" | awk -F"#" '{print $5}'`
+
+else
+echo "
+Wrong Choice - $vlan_nk
+
+Set to Default as follow :
+"
+netmask_vlan=255.255.255.0
+vlan_vlan="Lab Network"
+gw_vlan=10.64.212.1
+bcast_vlan=10.64.212.255
+fi
+
+echo "
+VLAN = $vlan_vlan
+netmask = $netmask_vlan
+gateway = $gw_vlan
+broadcast = $bcast_vlan
+"
+
+rm -rf "$tmp1vlan"
+}
+
+function validate_ip()
+{
+    local  ip=$1
+    # local  ipstat=1
+
+    if [[ $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+        OIFS=$IFS
+        IFS='.'
+        ip=($ip)
+        IFS=$OIFS
+        [[ ${ip[0]} -lt 255 && ${ip[1]} -lt 255 \
+            && ${ip[2]} -lt 255 && ${ip[3]} -lt 255 ]]
+        # ipstat=$?
+        # echo "PERTAMA $stat"
+        else
+        echo "
+        Wrong IP address --> EXIT
+        "
+        rm -rf "$tmprundir"
+        exit
+    fi
+    return $stat
+}

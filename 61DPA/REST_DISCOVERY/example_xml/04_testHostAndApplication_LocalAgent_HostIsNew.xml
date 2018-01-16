@@ -1,0 +1,39 @@
+<!-- Test host and application, local collector, host doesn't exist -->
+<discoveryJob>
+	<task>
+		<primaryObject exists="false">
+			<node type="host" version="1">
+				<name>mynewhostforanapplication</name>
+			</node>
+			<dataCollectionParameter>
+				<hostMonitoring>true</hostMonitoring>
+				<replicationMonitoring>false</replicationMonitoring>
+				<agent local="true">
+				</agent>
+			</dataCollectionParameter>
+			<parents>
+				<parent primary="true">
+					<node type="group">
+						<!-- Either id or name can be specified here -->
+						<name>Servers</name>
+					</node>
+				</parent>
+			</parents>
+		</primaryObject>
+		<dependentObjects>
+			<dependentObject>
+				<node type="networkerBackupApplication" version="1">
+					<name>default</name>
+				</node>
+				<dataCollectionParameter>
+					<!-- 'local' infers to use the applications owning host -->
+					<agent local="true">
+					</agent>
+				</dataCollectionParameter>
+				<options>
+					<option name="timeout">900</option>
+				</options>
+			</dependentObject>
+		</dependentObjects>
+	</task>
+</discoveryJob>

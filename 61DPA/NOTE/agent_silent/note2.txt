@@ -1,0 +1,1 @@
+./maintrunk_b76_DPA-Agent-Linux-x86-6.2.0.81418.bin -i silent -DVAR_AGENT_APPLICATION_ADDRESS="10.64.205.139"

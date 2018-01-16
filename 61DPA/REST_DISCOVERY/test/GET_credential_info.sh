@@ -1,0 +1,1 @@
+link /root/rosli/61DPA/REST_CREDENTIAL/GET_credential_info.sh

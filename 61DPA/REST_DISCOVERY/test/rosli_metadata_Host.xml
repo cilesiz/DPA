@@ -1,0 +1,53 @@
+   <apolloNodeMetadata>
+      <name>Host</name>
+      <topLevel>true</topLevel>
+      <description>this is a host</description>
+      <allowedDirectChildNodeTypeNames>
+         <nodeTypeNameXML nodeTypeName="SharedResource"/>
+         <nodeTypeNameXML nodeTypeName="PostgreSQLApplication"/>
+         <nodeTypeNameXML nodeTypeName="DataProtector"/>
+         <nodeTypeNameXML nodeTypeName="ArcServe"/>
+         <nodeTypeNameXML nodeTypeName="BackupExec"/>
+         <nodeTypeNameXML nodeTypeName="SystemApplication"/>
+         <nodeTypeNameXML nodeTypeName="OracleApplication"/>
+         <nodeTypeNameXML nodeTypeName="HostFileSystem"/>
+         <nodeTypeNameXML nodeTypeName="ECC"/>
+         <nodeTypeNameXML nodeTypeName="VolumeGroup"/>
+         <nodeTypeNameXML nodeTypeName="Homebase"/>
+         <nodeTypeNameXML nodeTypeName="BackupDevice"/>
+         <nodeTypeNameXML nodeTypeName="Avamar"/>
+         <nodeTypeNameXML nodeTypeName="HostDisk"/>
+         <nodeTypeNameXML nodeTypeName="NetWorker"/>
+         <nodeTypeNameXML nodeTypeName="HostProcessor"/>
+         <nodeTypeNameXML nodeTypeName="VCenter"/>
+         <nodeTypeNameXML nodeTypeName="ExchangeApplication"/>
+         <nodeTypeNameXML nodeTypeName="HostEthernetPort"/>
+         <nodeTypeNameXML nodeTypeName="ISCSI"/>
+         <nodeTypeNameXML nodeTypeName="BackupGroup"/>
+         <nodeTypeNameXML nodeTypeName="Processor"/>
+         <nodeTypeNameXML nodeTypeName="SolutionsEnablerApplication"/>
+         <nodeTypeNameXML nodeTypeName="HostPhysicalTapeDrive"/>
+         <nodeTypeNameXML nodeTypeName="BackupPool"/>
+         <nodeTypeNameXML nodeTypeName="HPCommandView"/>
+         <nodeTypeNameXML nodeTypeName="BackupApplication"/>
+         <nodeTypeNameXML nodeTypeName="CommVault"/>
+         <nodeTypeNameXML nodeTypeName="BlockExport"/>
+         <nodeTypeNameXML nodeTypeName="BackupScript"/>
+         <nodeTypeNameXML nodeTypeName="HostFibreChannelPort"/>
+         <nodeTypeNameXML nodeTypeName="TSM"/>
+         <nodeTypeNameXML nodeTypeName="PhysicalDisk"/>
+         <nodeTypeNameXML nodeTypeName="SharepointApplication"/>
+         <nodeTypeNameXML nodeTypeName="DPAApplication"/>
+         <nodeTypeNameXML nodeTypeName="MSSQLApplication"/>
+         <nodeTypeNameXML nodeTypeName="DPADataStore"/>
+         <nodeTypeNameXML nodeTypeName="BackupResource"/>
+         <nodeTypeNameXML nodeTypeName="PureDisk"/>
+         <nodeTypeNameXML nodeTypeName="FibreChannel"/>
+         <nodeTypeNameXML nodeTypeName="OracleRMAN"/>
+         <nodeTypeNameXML nodeTypeName="NetBackup"/>
+         <nodeTypeNameXML nodeTypeName="Application"/>
+         <nodeTypeNameXML nodeTypeName="BackupClient"/>
+         <nodeTypeNameXML nodeTypeName="BackupDomain"/>
+         <nodeTypeNameXML nodeTypeName="BackupLibrary"/>
+         <nodeTypeNameXML nodeTypeName="ACSLS"/>
+      </allowedDirectChildNodeTypeNames>

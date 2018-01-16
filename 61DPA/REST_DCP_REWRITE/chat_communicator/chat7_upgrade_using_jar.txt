@@ -1,0 +1,34 @@
+Talib, Rosli
+
+how to install using jar? Last time Ruth has taught me, but I forgot 
+
+
+23:03Skilbeck, Michael
+
+take a copy of you dpa.ear, ui.war and apollo.war from your applications folder under server
+then stop your application server
+then replace ears and war file
+then restart server
+sometimes it is cleaner to drop cascaded the dbs apollo,dpa and dpara
+and rarely you may also want to delete data and tmp directories under standalone directory
+but not for this
+however may be good to drop the dbs so you can rediscrover all your hosts
+
+Skilbeck, Michael
+
+victor has fixed host discovery issue
+so maybe better to continue tomorrow morning when we get jars for that
+we don't want to burn out
+
+23:16Talib, Rosli
+
+is it still a jar or installer build?
+
+23:16Skilbeck, Michael
+
+yes
+you install build using installer
+then copy in new jars
+and restart server
+server build is still broken
+so no changes getting into

@@ -1,0 +1,1 @@
+link /root/rosli/61DPA/REST_NODES/GET_nodes.sh

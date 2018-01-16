@@ -1,0 +1,13 @@
+how to create Alerts?
+
+
+14:32Bandarupally, Himabindu 
+we need to create New or Assign Default Analysis Policy to the objects on which we need to generate Alerts 
+Appy to the objects via Applied analaysis policies tab 
+Advisor Section--> Alerts -> alerts with a new state will be generated to display we have applied the analysis on node so and so 
+based on the rule specified in the analysis policy -alerts will be generated in alerts tab 
+
+14:38Bandarupally, Himabindu
+example alert : when any backup job fails -backup failed alert will be generated 
+for that you need to monitor any backup module and apply analysis policy to the backup module node 
+try it out ask me if any questions 

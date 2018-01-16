@@ -1,0 +1,220 @@
+Cascading replication vi CLI
+============================
+Step1
+-----
+To Set up cascading replication we need 4 machines (e.g. the Horizon replication group). Install AS and three datastores. During install - set all to NOT START. Do not choose any replication options.
+AS=Application Server
+DS1=Master
+DS2=Replicating_slave
+DS3=slave
+
+Step2
+-----
+Start with the Master DS1.
+dpa ds stop
+dpa ds rep --role master
+dpa ds rep --addSlave (IP of DS2)
+dpa ds start
+
+Expected
+Master setup successfully
+
+Step3
+-----
+Set up Replicating slave DS2.
+dpa ds stop
+dpa ds rep --role replicating_slave (IP of DS1/Master)
+dpa ds rep --addSlave (IP of DS3 slave)
+dpa ds start
+
+Expected
+Replicating slave is set up as shown by dpa ds rep.
+No errors.
+
+Step4
+-----
+Set up slave DS3.
+dpa ds stop
+dpa ds rep --role slave (IP of DS2)
+dpa ds start
+
+Expected
+Slave is set up ok as shown by dps ds rep.
+No errors.
+
+Step5
+-----
+Install/start the AS - point it at the Master DS1.
+Discover a node e.g. Avamar 
+
+Expected
+Avamar is discovered. Requests run. A report can be produced.
+Check the datastores are all in sync by running dpa ds query "select * from apollo.node;" on each.
+Each should return the same number of rows.
+
+Cascade upgrade
+===============
+
+Step1
+-----
+Upgrade the cascading replication group set up in the previous test.
+
+- Stop all servers starting with AS then DS1, DS2, DS3.
+- Upgrade in this order: DS3, DS2, DS1, AS. Ensure each is up before starting the next.
+
+Expected
+Ensure after upgrade that a node can be discovered, that reports can be run and that all DS nodes are in sync -
+ dpa ds query "select * from apollo.node;"
+All nodes return the same number of rows.
+
+Failover tests
+==============
+
+Step1
+-----
+Using the same cascading replication group, stop the AS for the duration of the test.
+
+Stop DS1 (Master) - this has now 'failed' for this test.
+
+Expected
+AS and DS1 stopped.
+
+Step2
+-----
+On DS2:
+dpa ds rep --failover
+
+Expected
+Check is now master via dpa ds rep
+
+Step3
+-----
+Point the AS to the new master via:
+dpa app con -m <ip of DS2 (new master) >
+dpa app start
+
+Expected
+User can log in and discover/run reports etc. using the new master DS.
+
+Step4
+-----
+The slave has been orphaned by the failover so needs to be 're-primed' - i.e. we need to export a copy DS from the new master (DS2) to the slave (DS3).
+
+Stop the AS again
+DS2: 
+dpa ds rep --export c:\ds
+Copy ds directory to DS3 machine
+The slave has been orphaned by the failover so needs to be 're-primed' - i.e. we need to export a copy DS from the master to the slave.
+
+DS2: 
+dpa ds rep --export c:\ds
+Copy ds directory to DS3 machine
+DS3: dpa ds rep (shows it is still slave to the master)
+dpa ds stop
+dpa ds rep --import c:\ds
+dpa ds start
+
+Check the DS3 and DS2 are in sync dpa ds select * etc
+
+Step5
+-----
+Check a further node can be doscovered anfd that cascading replication is still working.
+
+Expected
+The replica DSs stay in sync even when new nodes are discovered. (DPA ds query " select * etc."
+
+
+
+FROM DPA-WIKI
+=============
+http://dpa-wiki.corp.emc.com/display/DPAE/DPA+6+Application+Clustering+and+Datastore+Replication
+
+Full working test Setup created by Rosli
+----------------------------------------
+
+Note - this has been added as an aid for QA testers who are testing replication. 
+DS1 = 10.64.213.58
+DS2 = 10.64.213.62
+DS3 = 10.64.213.57
+AS = 10.64.213.61
+
+Setup :
+
+1) Install DS without replication to 3 nodes and all point to AS node as application server
+2) Master replication (DS1)
+dpa ds stop
+dpa ds rep --role master
+dpa ds rep --addSlave <ip_DS2/replicating_slave>
+dpa ds restart
+3) Replicating_Slave (DS2)
+dpa ds stop
+dpa ds rep --role replicating_slave <ip_DS1/master>
+dpa ds rep --addSlave <ip_DS3/slave>
+dpa ds restart
+4) Slave (DS3)
+dpa ds stop
+dpa ds rep --role slave <ip_DS2/replicating_slave>
+dpa ds restart
+5) Install Application server and point to ip_DS1 as Datastore server
+6) Run discovery (e.g. Avamar)
+7) Check all DS nodes has same data
+dpa ds query "select f_name,f_display_name from apollo.node;"
+
+Upgrade (from Ruth email) :
+
+Note - the upgrade order for cascading replication will be more important for customers to know about when 6.2 SP1 and later are available.
+1) AS - dpa svc stop
+2) DS1 - dpa svc stop
+3) DS2 - dpa svc stop
+4) DS3 - dpa svc stop
+5) Upgrade DS3 / Slave Rep -> get it up and running
+6) Upgrade DS2 / Replicating_Slave Rep -> get it up and running
+7) Upgrade DS1 / Master Rep -> get it up and running
+8) Upgrade AS -> get it up and running
+
+Failover test :
+
+1) Shutdown DS1/Master Rep - dpa svc stop (simulate DS down)
+2) DS2 -> dpa ds rep --failover
+3) Point AS to DS2
+dpa app stop
+dpa app con -m <ip_DS2>
+dpa app start
+4) Check DS2 & DS3 have same number of nodes 
+dpa ds query "select f_name,f_display_name from apollo.node;"
+5) Run discovery (e.g. XSIGO switch)
+Check DS2 & DS3 have different number of nodes (this is because it didn't sync anymore)
+dpa ds query "select f_name,f_display_name from apollo.node;"
+6) Reprime the Slave (rep --export / --import)
+AS -> dpa app stop
+DS2 -> dpa ds rep --export /testexport
+transfer all files in /testexport to DS3 directory (eg. /testimport )
+DS3
+dpa ds rep (make sure it's Slave to DS2)
+dpa ds stop
+dpa ds rep --import /testimport
+dpa ds start
+check nodes -> dpa ds query "select f_name,f_display_name from apollo.node;"
+should be same with DS2
+AS -> dpa svc start
+Run discovery (e.g. datadomain)
+Check DS2 and DS3 should have same nodes
+dpa ds query "select f_name,f_display_name from apollo.node;"
+7) Change DS1 (old Master) to become Slave of DS2 (new Master)
+DS2 (new Master) - dpa ds rep --addSlave <ip_DS1>
+reprime (step 6)
+AS - dpa app stop
+DS2 
+dpa ds rep --export /testexport
+(transfer file to DS1's /testimport)
+DS1
+dpa ds stop
+dpa ds rep --role slave <ip_DS2>
+dpa ds rep --import /testimport
+dpa ds start
+check nodes - dpa ds query "select f_name,f_display_name from apollo.node;"
+(nodes should be same with DS2)
+AS - dpa app start
+
+(Other - To reconfigure DS1 and DS3 to become Replicating_Slave & Slave, follow step 3 and 4 in Setup)
+

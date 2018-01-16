@@ -1,0 +1,450 @@
+<dashboards>
+   <dashboard version="1" lastModified="2014-04-15T23:09:22.907+01:00">
+      <id>695a6a40-25ab-4739-b5cf-02c68b699322</id>
+      <name>Summary</name>
+      <description>Default Summary Dashboard</description>
+      <system>true</system>
+      <viewlets>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.908+01:00">
+            <id>7f549b5e-b5e6-4297-8ca7-6c2f802b39a0</id>
+            <layout row="1" column="0" width="200" height="200"/>
+            <viewletTemplate>
+               <id>d466ad1e-ce9e-4d35-99e3-73479a85d1c1</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks>
+               <nodeLink type="Group">
+                  <id>00000000-0000-0000-0000-000000000001</id>
+                  <name>Root</name>
+                  <child type="Group">
+                     <id>00000000-0000-0000-0000-000000000010</id>
+                     <name>Groups</name>
+                     <child type="Group">
+                        <id>8ad04346-9abd-4466-8bd8-05306b63519d</id>
+                        <name>Configuration</name>
+                     </child>
+                  </child>
+               </nodeLink>
+            </nodeLinks>
+            <parameters>
+               <parameter name="timePeriod">Now</parameter>
+            </parameters>
+         </viewlet>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.908+01:00">
+            <id>39f51d64-6f49-4924-baca-9190401f4f3e</id>
+            <layout row="0" column="0" width="200" height="200"/>
+            <viewletTemplate>
+               <id>b0f6b44f-cda1-43c8-9418-21ea118fbba6</id>
+            </viewletTemplate>
+            <nodeLinks/>
+            <parameters>
+               <parameter name="timePeriod">Last Month</parameter>
+            </parameters>
+         </viewlet>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.908+01:00">
+            <id>b1efbd74-b255-43f7-99cc-2a93689d861d</id>
+            <layout row="1" column="1" width="200" height="200"/>
+            <viewletTemplate>
+               <id>aeb3ad9d-4344-4449-9f71-6a5b72e74eea</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks>
+               <nodeLink type="Group">
+                  <id>00000000-0000-0000-0000-000000000001</id>
+                  <name>Root</name>
+                  <child type="Group">
+                     <id>00000000-0000-0000-0000-000000000010</id>
+                     <name>Groups</name>
+                     <child type="Group">
+                        <id>8ad04346-9abd-4466-8bd8-05306b63519d</id>
+                        <name>Configuration</name>
+                     </child>
+                  </child>
+               </nodeLink>
+            </nodeLinks>
+            <parameters>
+               <parameter name="timePeriod">Now</parameter>
+            </parameters>
+         </viewlet>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.908+01:00">
+            <id>de1b4783-1e44-4880-b2c4-968d29fb2313</id>
+            <layout row="0" column="1" width="200" height="200"/>
+            <viewletTemplate>
+               <id>1b334bef-17b7-4763-87f5-e6ad902edf5b</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks>
+               <nodeLink type="Group">
+                  <id>00000000-0000-0000-0000-000000000001</id>
+                  <name>Root</name>
+                  <child type="Group">
+                     <id>00000000-0000-0000-0000-000000000010</id>
+                     <name>Groups</name>
+                     <child type="Group">
+                        <id>8ad04346-9abd-4466-8bd8-05306b63519d</id>
+                        <name>Configuration</name>
+                        <child type="Group">
+                           <id>307c9831-e611-453d-bbb8-89ff3e0248b7</id>
+                           <name>Servers</name>
+                           <child type="Group">
+                              <id>c5723b8f-c5b7-4237-af29-b689203fbc44</id>
+                              <name>Backup Servers</name>
+                           </child>
+                        </child>
+                     </child>
+                  </child>
+               </nodeLink>
+            </nodeLinks>
+            <parameters>
+               <parameter name="includeDecimalPlace">true</parameter>
+               <parameter name="includeBackups">true</parameter>
+               <parameter name="timePeriod">weeklyLast</parameter>
+            </parameters>
+         </viewlet>
+      </viewlets>
+      <authorization>
+         <read>
+            <users/>
+            <userRoles>
+               <userRole>
+                  <id>93b714c6-5a65-406c-a4b7-e4e268b0187e</id>
+               </userRole>
+               <userRole>
+                  <id>36ad0bd5-dfa6-47c3-bf7b-a48140c93a8f</id>
+               </userRole>
+               <userRole>
+                  <id>5bf819ce-f99e-488c-a7f3-eac5fe7684b5</id>
+               </userRole>
+               <userRole>
+                  <id>15084245-2119-4e51-8a52-3dd9e302c5ee</id>
+               </userRole>
+            </userRoles>
+         </read>
+         <readWrite>
+            <users/>
+            <userRoles>
+               <userRole>
+                  <id>5bf819ce-f99e-488c-a7f3-eac5fe7684b5</id>
+               </userRole>
+               <userRole>
+                  <id>36ad0bd5-dfa6-47c3-bf7b-a48140c93a8f</id>
+               </userRole>
+            </userRoles>
+         </readWrite>
+      </authorization>
+   </dashboard>
+   <dashboard version="1" lastModified="2014-04-15T23:09:22.964+01:00">
+      <id>5ebaf6f1-8e92-48b9-b4d1-01f010a7e380</id>
+      <name>Backup</name>
+      <description>Default Backup Dashboard</description>
+      <system>true</system>
+      <viewlets>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.964+01:00">
+            <id>a1f59fae-0d19-4f4d-8224-75748c2f9771</id>
+            <layout row="1" column="0" width="200" height="200"/>
+            <viewletTemplate>
+               <id>8d77d101-b292-4c5c-b4be-2f6f8cabc46d</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks>
+               <nodeLink type="Group">
+                  <id>00000000-0000-0000-0000-000000000001</id>
+                  <name>Root</name>
+                  <child type="Group">
+                     <id>00000000-0000-0000-0000-000000000010</id>
+                     <name>Groups</name>
+                     <child type="Group">
+                        <id>8ad04346-9abd-4466-8bd8-05306b63519d</id>
+                        <name>Configuration</name>
+                        <child type="Group">
+                           <id>307c9831-e611-453d-bbb8-89ff3e0248b7</id>
+                           <name>Servers</name>
+                           <child type="Group">
+                              <id>c5723b8f-c5b7-4237-af29-b689203fbc44</id>
+                              <name>Backup Servers</name>
+                           </child>
+                        </child>
+                     </child>
+                  </child>
+               </nodeLink>
+            </nodeLinks>
+            <parameters>
+               <parameter name="timePeriod">Last Month</parameter>
+            </parameters>
+         </viewlet>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.964+01:00">
+            <id>de4e3078-e740-442b-8235-9f76c8bb46f7</id>
+            <layout row="0" column="1" width="200" height="200"/>
+            <viewletTemplate>
+               <id>edc9bad5-f13b-4f94-8ae4-1c2e14d36719</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks/>
+            <parameters>
+               <parameter name="timePeriod">Last Month</parameter>
+            </parameters>
+         </viewlet>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.964+01:00">
+            <id>a2759524-19be-4e08-bea8-367f00e1255d</id>
+            <layout row="0" column="0" width="200" height="200"/>
+            <viewletTemplate>
+               <id>50615e97-2fbe-4f43-8ea3-63c798eed08f</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks/>
+            <parameters>
+               <parameter name="nearTarget">90.0</parameter>
+               <parameter name="targetThreshold" cast="String">true</parameter>
+               <parameter name="defineBackupSuccess" cast="String">true</parameter>
+               <parameter name="meetsTarget">99.9</parameter>
+               <parameter name="timePeriod">Last Month</parameter>
+            </parameters>
+         </viewlet>
+      </viewlets>
+      <authorization>
+         <read>
+            <users/>
+            <userRoles>
+               <userRole>
+                  <id>36ad0bd5-dfa6-47c3-bf7b-a48140c93a8f</id>
+               </userRole>
+               <userRole>
+                  <id>15084245-2119-4e51-8a52-3dd9e302c5ee</id>
+               </userRole>
+               <userRole>
+                  <id>93b714c6-5a65-406c-a4b7-e4e268b0187e</id>
+               </userRole>
+               <userRole>
+                  <id>5bf819ce-f99e-488c-a7f3-eac5fe7684b5</id>
+               </userRole>
+            </userRoles>
+         </read>
+         <readWrite>
+            <users/>
+            <userRoles>
+               <userRole>
+                  <id>36ad0bd5-dfa6-47c3-bf7b-a48140c93a8f</id>
+               </userRole>
+               <userRole>
+                  <id>5bf819ce-f99e-488c-a7f3-eac5fe7684b5</id>
+               </userRole>
+            </userRoles>
+         </readWrite>
+      </authorization>
+   </dashboard>
+   <dashboard version="1" lastModified="2014-04-15T23:09:22.994+01:00">
+      <id>2d8cf104-f825-4218-a90b-1099b133273e</id>
+      <name>Replication</name>
+      <description>Default Replication Dashboard</description>
+      <system>true</system>
+      <viewlets>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.997+01:00">
+            <id>ea614197-b703-4ffc-b1eb-df5698975e6c</id>
+            <layout row="0" column="0" width="200" height="200"/>
+            <viewletTemplate>
+               <id>06506eb8-fbcb-4e0e-92f2-22528858ec71</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks/>
+            <parameters>
+               <parameter name="timePeriod">Now</parameter>
+            </parameters>
+         </viewlet>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.994+01:00">
+            <id>5b8250cc-3093-4bf2-84d0-4ef0abdd2de1</id>
+            <layout row="0" column="1" width="200" height="200"/>
+            <viewletTemplate>
+               <id>d196cfa5-8a1e-476b-986a-d79c09892fe7</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks>
+               <nodeLink type="Group">
+                  <id>00000000-0000-0000-0000-000000000001</id>
+                  <name>Root</name>
+                  <child type="Group">
+                     <id>00000000-0000-0000-0000-000000000010</id>
+                     <name>Groups</name>
+                     <child type="Group">
+                        <id>8ad04346-9abd-4466-8bd8-05306b63519d</id>
+                        <name>Configuration</name>
+                     </child>
+                  </child>
+               </nodeLink>
+            </nodeLinks>
+            <parameters>
+               <parameter name="timePeriod">Last Month</parameter>
+            </parameters>
+         </viewlet>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.998+01:00">
+            <id>47b5df38-0ab7-4cec-9c1e-e0496db11482</id>
+            <layout row="1" column="1" width="200" height="200"/>
+            <viewletTemplate>
+               <id>02163120-24db-427c-b523-4fd65800bf3f</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks/>
+            <parameters>
+               <parameter name="timePeriod">Last Month</parameter>
+            </parameters>
+         </viewlet>
+         <viewlet version="1" lastModified="2014-04-15T23:09:22.994+01:00">
+            <id>3804099a-0f77-4ff6-a182-e6f2ee767719</id>
+            <layout row="1" column="0" width="200" height="200"/>
+            <viewletTemplate>
+               <id>4c34dede-8afb-4775-a921-d8d70254a229</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks>
+               <nodeLink type="Group">
+                  <id>00000000-0000-0000-0000-000000000001</id>
+                  <name>Root</name>
+                  <child type="Group">
+                     <id>00000000-0000-0000-0000-000000000010</id>
+                     <name>Groups</name>
+                     <child type="Group">
+                        <id>8ad04346-9abd-4466-8bd8-05306b63519d</id>
+                        <name>Configuration</name>
+                     </child>
+                  </child>
+               </nodeLink>
+            </nodeLinks>
+            <parameters>
+               <parameter name="timePeriod">Now</parameter>
+            </parameters>
+         </viewlet>
+      </viewlets>
+      <authorization>
+         <read>
+            <users/>
+            <userRoles>
+               <userRole>
+                  <id>5bf819ce-f99e-488c-a7f3-eac5fe7684b5</id>
+               </userRole>
+               <userRole>
+                  <id>36ad0bd5-dfa6-47c3-bf7b-a48140c93a8f</id>
+               </userRole>
+               <userRole>
+                  <id>15084245-2119-4e51-8a52-3dd9e302c5ee</id>
+               </userRole>
+               <userRole>
+                  <id>93b714c6-5a65-406c-a4b7-e4e268b0187e</id>
+               </userRole>
+            </userRoles>
+         </read>
+         <readWrite>
+            <users/>
+            <userRoles>
+               <userRole>
+                  <id>36ad0bd5-dfa6-47c3-bf7b-a48140c93a8f</id>
+               </userRole>
+               <userRole>
+                  <id>5bf819ce-f99e-488c-a7f3-eac5fe7684b5</id>
+               </userRole>
+            </userRoles>
+         </readWrite>
+      </authorization>
+   </dashboard>
+   <dashboard version="1" lastModified="2014-04-15T23:09:23.20+01:00">
+      <id>d1e448fd-e363-48e9-bf69-70e48fc010a7</id>
+      <name>RecoverPoint Protected Capacity</name>
+      <description>Default Protected Capacity Dashboard</description>
+      <system>true</system>
+      <viewlets>
+         <viewlet version="1" lastModified="2014-04-15T23:09:23.20+01:00">
+            <id>c3a06fe6-e5dd-4513-aac7-2b52bd571929</id>
+            <layout row="0" column="1" width="200" height="200"/>
+            <viewletTemplate>
+               <id>a0830e16-2f22-4da9-89c3-15109b60293c</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks/>
+            <parameters>
+               <parameter name="timePeriod">Last Day</parameter>
+            </parameters>
+         </viewlet>
+         <viewlet version="1" lastModified="2014-04-15T23:09:23.20+01:00">
+            <id>6fcc132b-4efc-4b3a-aaf6-723e07d3a0bb</id>
+            <layout row="0" column="0" width="200" height="200"/>
+            <viewletTemplate>
+               <id>a0830e16-2f22-4da9-89c3-15109b60292c</id>
+            </viewletTemplate>
+            <schedule>
+               <id>ed7606a9-1477-4da6-9405-b0b84bcea350</id>
+               <name>runAt5:0:0EveryDay</name>
+            </schedule>
+            <runAt>18000</runAt>
+            <nodeLinks/>
+            <parameters>
+               <parameter name="timePeriod">Last Day</parameter>
+            </parameters>
+         </viewlet>
+      </viewlets>
+      <authorization>
+         <read>
+            <users/>
+            <userRoles>
+               <userRole>
+                  <id>5bf819ce-f99e-488c-a7f3-eac5fe7684b5</id>
+               </userRole>
+               <userRole>
+                  <id>15084245-2119-4e51-8a52-3dd9e302c5ee</id>
+               </userRole>
+               <userRole>
+                  <id>36ad0bd5-dfa6-47c3-bf7b-a48140c93a8f</id>
+               </userRole>
+               <userRole>
+                  <id>93b714c6-5a65-406c-a4b7-e4e268b0187e</id>
+               </userRole>
+            </userRoles>
+         </read>
+         <readWrite>
+            <users/>
+            <userRoles/>
+         </readWrite>
+      </authorization>
+   </dashboard>
+</dashboards>

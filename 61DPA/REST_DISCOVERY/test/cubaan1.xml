@@ -1,0 +1,40 @@
+<discoveryJob>
+  <task>
+    <primaryObject exists="false">
+      <node version="1" type="Host">
+        <name>avamar70.wysdm.lab.emc.com</name>
+        <displayName>avamar70.wysdm.lab.emc.com</displayName>
+<!-- <os_type>LINUX</os_type> -->
+        <operatingsystem>LINUX</operatingsystem>
+      </node>
+     <dataCollectionParameter>
+	<hostMonitoring>false</hostMonitoring>
+	<replicationMonitoring>false</replicationMonitoring>
+	<agent local="false">
+	<node type="Host">
+		<id>4017b843-d7de-4b8e-be8b-0f680e896e28</id>
+	</node>
+	</agent>
+     </dataCollectionParameter>
+     <parents>
+      <parent primary="true">
+         <node type="Group">
+           <name>EMC Avamar</name>
+         </node>
+      </parent>
+     </parents>
+    </primaryObject>
+    <dependentObjects>
+      <dependentObject>
+        <node version="1" type="Avamar">
+          <displayName>Avamar</displayName>    
+        </node>
+        <dataCollectionParameter>
+          <credential version="1">
+	    <name>Default Avamar Credentials</name>
+          </credential>
+        </dataCollectionParameter>      
+      </dependentObject>
+    </dependentObjects>
+  </task>
+</discoveryJob>

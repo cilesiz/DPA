@@ -1,0 +1,1 @@
+http://dpa-wiki.corp.emc.com/display/DPAE/Discovery+Service#DiscoveryService-GetingTestResults

@@ -1,0 +1,66 @@
+Create a New Smart Group
+========================
+Step1
+-----
+Description:
+Go to Inventory, select create a smart group, leave the default settings
+Choose a report such as All  Backup Clients
+Leave the filter blank
+Select an appropriate scope - eg backup servers
+Select for the last day
+Select to generate on demand
+
+Expected:
+The smart group should be created without error and should expand to display the expected group members once created
+(note if the install is fresh the discovery runs might not have completed as immediately so this is best run on a fairly established system).
+
+Step2
+-----
+Description:
+Ensure the smart group is visible from the run reports section and policies section
+
+Expected:
+The smart group is visible in both
+
+Delete Smart Group
+==================
+Step1
+-----
+Description:
+1. Select and delete a smart group.
+2. Able to Rename smart group.
+3. Able to Remove from Group and again add.
+4. Able to Cut, Copy and Past smart group.
+
+Expected:
+Ensure it is no longer visible in the inventory - also it dissapears from reports and policies.
+Able to rename, remove from group, cut copy and paste successfully.
+
+Edit a Smart Group
+==================
+Step1
+-----
+Description:
+Go to Inventory, select a smart group
+1. set a filter for the group - eg name contains a xx
+save the smartgroup
+expand it
+2. Change the default time zone. The changed time zone should be reflected on UI.
+3. The Sub name and type fields should be changed with respect to object selection.
+
+Expected:
+The smart group should be edited successfully and the smart group altered to display only the filtered information.
+Should display changed time zone and object related fields should be updated correctly with respect to object selection.
+
+Schedule Smart Group
+====================
+Description:
+Take an existing smart group - set a filter to change the group displayed
+Set the time for the smart group to be created to a time soon
+Save
+Check the group is changed in the timeframe
+Repeat usign the schedule option
+
+Expected:
+The smart group shoud be shown to display correctly on the time schedules defined
+

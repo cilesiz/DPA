@@ -1,0 +1,55 @@
+##1
+  <license>
+    <name>DPA base license for mike (962925)</name>
+    <code>EMC-DPA-ENT</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>1390312200</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MCwCFDo6oOJ1C47qRrnWyiqo/sFJZ0SmAhQHGOYYQwQfF43IhkOn11+uOIPQHA==</sig>
+  </license>
+##2
+  <license>
+    <name>5 TB NetWorker source capacity license for mike (561291)</name>
+    <code>DPA-BC-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>5</instances>
+    <expiry>1390312200</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MCwCFBLdudu3jbIp9SCgp1lqLqwwtK9LAhRDhLgshoN1adgnsTtB3QlRQ2ijJg==</sig>
+  </license>
+##3
+  <license>
+    <name>100 backup client licenses for mike (81154)</name>
+    <code>DPA-BCM-1</code>
+    <type>SysDM V1.1 License</type>
+    <instances>100</instances>
+    <expiry>1390312200</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MC0CFBTQWwf8E/hyordTDmc6un0yoq+9AhUAgUSHDBOg4F0+2n1+rrCrlI5A4hs=</sig>
+  </license>
+##4
+  <license>
+    <name>5TB avamar backend capacity license for mike (590206)</name>
+    <code>DPA-BDC-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>5</instances>
+    <expiry>1390312200</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MCwCFCPBlOc6Nj8mudka4xPbqFA2pB1LAhRmyM13N+h38BgTfNaRxqYZgnKqAg==</sig>
+  </license>
+##5
+  <license>
+    <name>5 Virtualization server licenses for mike (773290)</name>
+    <code>DPA-VMS-1</code>
+    <type>SysDM V1.1 License</type>
+    <instances>5</instances>
+    <expiry>1390312200</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MCwCFEstk8PpeBFFFh5xbJZx1bSkn1tKAhRU7rqceAxyL/dt5oQCk3xpYJzpvw==</sig>
+  </license>

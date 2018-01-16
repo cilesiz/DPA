@@ -1,0 +1,14 @@
+| |SE hosts|Credential|RemoteAgent|prefered SE host|Discvr Arrays|Subtree(*)|Result|
+|1|w2k3sqlqa(/)|(/)|w2k3sqlqa/local|w2k3sqlqa|(/)|NA|(/)|
+|2|w2k3sqlqa(/)|(x)|w2k3sqlqa/local|w2k3sqlqa|(x)|NA| |
+|3|w2k3sqlqa(/)|(/)|(empty)/agentless|w2k3sqlqa|(x)|NA|DPA-32493|
+|4|w2k3sqlqa(/)|(x)|(empty)/agentless|w2k3sqlqa|(x)|NA|DPA-32493|
+|5|w2k3sqlqa(/)|(/)|aleut/remote|w2k3sqlqa|(/)|NA|(/)|
+|6|w2k3sqlqa(/)|(x)|aleut/remote|w2k3sqlqa| |NA| |
+|7|aleut(x)|(/)|aleut/local|aleut|(x)|NA|(/)|aleut acting as false SEhost 
+|8|aleut(x)|(x)|aleut/local|aleut|(x)|NA|(/)|aleut acting as false SEhost 
+|9|aleut(x)|(x)|(empty)/agentless|aleut|(x)|NA|(/)|
+|10|rt-suse11x86(x)|(/)|aleut/remote|rt-suse11x86|(x)|NA|(/)|rt-suse11x86 acting as SEhost
+|11|rt-suse11x86(x)|(x)|aleut/remote|rt-suse11x86|(x)|NA|(/)|rt-suse11x86 acting as SEhost
+
+Subtree(*) = will be covered in DPA-31808

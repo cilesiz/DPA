@@ -1,0 +1,34 @@
+<nodes>
+   <node version="1" type="Host">
+      <id>00f90741-9369-4096-8ebd-0f458d16dcd2</id>
+      <name>rt-centos64x64</name>
+      <displayName>rt-centos64x64</displayName>
+      <globalName>rt-centos64x64</globalName>
+      <lastSeen>2014-04-16T16:23:29.0+01:00</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases>
+         <alias>rt-centos64x64.wysdm.lab.emc.com</alias>
+         <alias>10.64.205.107</alias>
+      </aliases>
+      <attributes>
+         <assignedAttribute>
+            <id>594cee7e-8907-44cf-a175-f0a4c9fbb29a</id>
+            <objAttrId>67fb3d80-c699-11e1-9b21-0800200c9a66</objAttrId>
+            <attributeValue type="Flag">false</attributeValue>
+            <attributeCategory>Apollo</attributeCategory>
+         </assignedAttribute>
+         <assignedAttribute>
+            <id>6c26ffca-50e0-4f32-892f-0f823d6bf5f7</id>
+            <objAttrId>67fb1670-c699-11e1-9b21-0800200c9a66</objAttrId>
+            <attributeValue type="OS">
+               <family>LINUX</family>
+               <version>2.6.32-358.el6.x86_64</version>
+               <processorType>amd64</processorType>
+            </attributeValue>
+            <attributeCategory>Apollo</attributeCategory>
+         </assignedAttribute>
+      </attributes>
+      <timeZone>GB-Eire</timeZone>
+      <isReporting>true</isReporting>
+   </node>
+</nodes>

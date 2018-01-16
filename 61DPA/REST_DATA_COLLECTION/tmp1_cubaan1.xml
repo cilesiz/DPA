@@ -1,0 +1,1692 @@
+<dataCollectionPolicy system="true" hidden="false" version="1" lastModified="2014-01-30T15:46:26.642Z">
+  <name>Default Data Collection Policy</name>
+  <requests>
+    <request version="1" inherited="false">
+      <module>fcswitch</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>oracledb</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>1800</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>networker</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>hpvls</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>recoverpoint</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>tapelibrary</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>tsm</module>
+      <function>volstatus</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>hpvls</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>recoverpoint</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>backupexec</module>
+      <function>volstatus</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>networker</module>
+      <function>clientstatus</function>
+      <frequency type="Period">
+        <period>3600</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>tapelibrary</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>hparray</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>netbackup</module>
+      <function>occupancy</function>
+      <frequency type="Period">
+        <period>86400</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>netbackup</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>xsigo</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>commvault</module>
+      <function>occupancy</function>
+      <frequency type="Period">
+        <period>86400</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>clariion_vnx</module>
+      <function>clarAPI_PolicyImport</function>
+      <frequency type="Period">
+        <period>3600</period>
+      </frequency>
+      <agent type="None"/>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>false</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>mssqldb</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>1800</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>vmware</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>commvault</module>
+      <function>volstatus</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>datadomain</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>tsm</module>
+      <function>jobmonitor</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>celerra</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>fcswitch</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>netbackup</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>datadomain</module>
+      <function>sshstatus</function>
+      <frequency type="Period">
+        <period>3600</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>networker</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>acsls</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>host</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>dataprotector</module>
+      <function>idbstatus</function>
+      <frequency type="Period">
+        <period>86400</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>networker</module>
+      <function>occupancy</function>
+      <frequency type="Period">
+        <period>86400</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>tsm</module>
+      <function>occupancy</function>
+      <frequency type="Period">
+        <period>3600</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>oracledb</module>
+      <function>oracleapplicationdiscovery</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="None"/>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>postgresdb</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>mssqldb</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>backupscript</module>
+      <function>jobmonitor</function>
+      <frequency type="Disabled"/>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>backupexec</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>vmware</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>commvault</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>rman</module>
+      <function>jobmonitor_reccat</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>avamar</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>tsm</module>
+      <function>processmonitor</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>netbackup</module>
+      <function>mediaserverstatus</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>webserver</module>
+      <function>response</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>host</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>datadomain</module>
+      <function>sshperf</function>
+      <frequency type="Period">
+        <period>1800</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>netbackup</module>
+      <function>vaultstatus</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>postgresdb</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>1800</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>mssqldb</module>
+      <function>mssqlapplicationdiscovery</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="None"/>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>tsm</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>vmware</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>arcserve</module>
+      <function>volstatus</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>recoverpoint</module>
+      <function>perfcs</function>
+      <frequency type="Period">
+        <period>10800</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>puredisk</module>
+      <function>jobmonitor</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>puredisk</module>
+      <function>occupancy</function>
+      <frequency type="Period">
+        <period>3600</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>hparray</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>cluster</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>oracledb</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>ipswitch</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>datadomain</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>backupexec</module>
+      <function>jobmonitor</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>puredisk</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>tsm</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>edl</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>acsls</module>
+      <function>jobmonitor</function>
+      <frequency type="Period">
+        <period>3600</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>avamar</module>
+      <function>jobmonitor</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>netbackup</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>nearstore</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>vplex</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>3600</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>acsls</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>recoverpoint</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>3600</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>netbackup</module>
+      <function>volstatus</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>dataprotector</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>webserver</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>exchangedb</module>
+      <function>exchangeapplicationdiscovery</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="None"/>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>cluster</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>networker</module>
+      <function>ddupstatus</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>symmetrix</module>
+      <function>symAPI_PolicyImport</function>
+      <frequency type="Period">
+        <period>3600</period>
+      </frequency>
+      <agent type="None"/>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>false</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>commvault</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>backupexec</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>commvault</module>
+      <function>jobmonitor</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>datadomain</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>arcserve</module>
+      <function>jobmonitor</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>networker</module>
+      <function>jobmonitor</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>networker</module>
+      <function>volstatus</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>xsigo</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>host</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>celerra</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>nearstore</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>nearstore</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>ipswitch</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>networker</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>fcswitch</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>xsigo</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>celerra</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>edl</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>ipswitch</module>
+      <function>config</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>dataprotector</module>
+      <function>status</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>dataprotector</module>
+      <function>svcstatus</function>
+      <frequency type="Period">
+        <period>900</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>avamar</module>
+      <function>configuration</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>netbackup</module>
+      <function>jobmonitor</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>dataprotector</module>
+      <function>occupancy</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>dataprotector</module>
+      <function>volstatus</function>
+      <frequency type="Period">
+        <period>43200</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>7884000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>rman</module>
+      <function>jobmonitor_ctlfile</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>31536000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>edl</module>
+      <function>perf</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>2628000</retention>
+      <enabled>true</enabled>
+    </request>
+    <request version="1" inherited="false">
+      <module>dataprotector</module>
+      <function>jobmonitor</function>
+      <frequency type="Period">
+        <period>300</period>
+      </frequency>
+      <agent type="Local">
+        <node version="1">
+          <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+          <name>rt-suse11x64</name>
+        </node>
+      </agent>
+      <options/>
+      <retention>-1</retention>
+      <enabled>true</enabled>
+    </request>
+  </requests>
+  <enabled>true</enabled>
+  <id>e4700103-7d4a-47f0-ae87-6e288909ed32</id>
+</dataCollectionPolicy>

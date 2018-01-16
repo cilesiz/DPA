@@ -1,0 +1,235 @@
+### http / 9004 ( OR ) https / 9002
+
+echo; echo "./<binary> <http/https> <adminpswd> <DPA_svr>"
+
+sslornot="$1"
+adminpswd="$2"
+serverip="$3"
+
+if [ x"$sslornot" == xhttp -o x"$sslornot" == x9004 ]; then
+urlssl="http://"
+portssl=9004
+else
+urlssl="https://"
+portssl=9002
+fi
+
+### declaration of masa and mkdir tmprundir
+
+masa=`date +%Y%m%d_%H%M%S`
+tmprundir=/tmp/tmp_"$masa"
+mkdir "$tmprundir"
+
+### get_eth_ipaddr function
+
+get_eth_ipaddr() 
+{
+ipaddr=`/sbin/ifconfig -a | grep -i cast | grep -i mask | head -1 | awk '{print $2}' | sed -e 's/[A-Za-z]//g' | sed -e 's/://g'`
+echo "${ipaddr}"
+}
+
+### choose_server function
+
+choose_server () 
+{
+
+if [ x"$serverip" != x ]
+then
+# dpaserver="$serverip"
+HB_DPA="$serverip"
+
+else
+
+tmpnodelist="$tmprundir"/tmp1nodelist
+
+###### FOR Cluster - declare 1st Node and how many cluster ########
+
+nodecluster1=10.64.213.56
+bilangannode=4
+
+######
+
+echo "1) node1 ($nodecluster1)" > "$tmpnodelist"
+ipnodecluster1=`echo "$nodecluster1" | awk -F"." '{print $NF}'`
+blnknodecluster1=`echo "$nodecluster1" | awk -F"=" '{print $NF}' | awk -F"." '{print $1"."$2"."$3}'`
+
+for ii in `seq 2 1 "$bilangannode"`
+do
+local nodecluster"$ii"="$blnknodecluster1"."$(( $ipnodecluster1 + $ii - 1 ))"
+echo -n "$ii) node$ii " >> "$tmpnodelist"
+ippilih="nodecluster$ii"
+echo "(${!ippilih})" >> "$tmpnodelist"
+done
+
+echo -n "
+CHOOSE DPA SERVER TO CONNECT : 
+1) rt-dpa1 (10.64.213.61)
+2) rt-dpa2 (10.64.213.62)
+3) rt-dpa3 (10.64.213.63)
+4) dbnodeone (10.64.213.58)
+5) dbnodetwo (10.64.213.57)
+6) dbnodetri (10.64.213.56)
+7) Cluster haproxy (10.64.213.59)
+8) aleut.wysdm.lab.emc.com (10.64.255.193)
+9) rt-suse11x64 (10.64.205.144)
+10) rt-win2k8r2 (10.64.213.60)
+11) miwok.wysdm.lab.emc.com (10.64.205.106)
+12) rt-centos70 (10.64.213.49)
+13) rt-suse11p3 (10.64.213.51)
+14) 2nd Cluster haproxy (10.64.213.50)
+l) THIS MACHINE (Local)
+a) AUTOMATION
+c) CLUSTER
+o) OTHER DPA SERVER
+x) EXIT
+
+Your choice : "
+read -e dpasvr
+
+if [ x"$dpasvr" == xl ]
+then
+HB_DPA=`get_eth_ipaddr`
+elif [ x"$dpasvr" == x1 ]
+then
+HB_DPA=10.64.213.61
+elif [ x"$dpasvr" == x2 ]
+then
+HB_DPA=10.64.213.62
+elif [ x"$dpasvr" == x3 ]
+then
+HB_DPA=10.64.213.63
+elif [ x"$dpasvr" == x4 ]
+then
+HB_DPA=10.64.213.58
+elif [ x"$dpasvr" == x5 ]
+then
+HB_DPA=10.64.213.57
+elif [ x"$dpasvr" == x6 ]
+then
+HB_DPA=10.64.213.56
+elif [ x"$dpasvr" == x7 ]
+then
+HB_DPA=10.64.213.59
+elif [ x"$dpasvr" == x8 ]
+then
+HB_DPA=aleut.wysdm.lab.emc.com
+elif [ x"$dpasvr" == x9 ]
+then
+HB_DPA=10.64.205.144
+elif [ x"$dpasvr" == x11 ]
+then
+HB_DPA=miwok.wysdm.lab.emc.com
+elif [ x"$dpasvr" == x10 ]
+then
+HB_DPA=10.64.213.60
+elif [ x"$dpasvr" == x12 ]
+then
+HB_DPA=10.64.213.49
+elif [ x"$dpasvr" == x13 ]
+then
+HB_DPA=10.64.213.51
+elif [ x"$dpasvr" == x14 ]
+then
+HB_DPA=10.64.213.50
+elif [ x"$dpasvr" == xc -o x"$dpasvr" == xC ]
+then
+echo
+echo "For Cluster, choose node : 
+"
+cat "$tmpnodelist"
+echo "other) other DPA server" 
+
+echo
+echo -n "Choose server : "
+read -e dpasvr
+
+if [ $dpasvr -le "$bilangannode" 2> /dev/null ]
+then
+nodepilih="nodecluster$dpasvr"
+HB_DPA=${!nodepilih}
+elif [ x"$dpasvr" == xo -o x"$dpasvr" == xO -o x"$dpasvr" == xother ]
+then
+echo
+echo -n "Give DPA server IP address : "
+
+read -e HB_DPA
+else
+rm -rf "$tmprundir"
+exit
+fi
+elif [ x"$dpasvr" == xo -o x"$dpasvr" == xO -o x"$dpasvr" == xother ]
+then
+echo
+echo -n "Give DPA server IP address : "
+
+read -e HB_DPA
+elif [ x"$dpasvr" == xa -o x"$dpasvr" == xA -o x"$dpasvr" == xAUTOMATION ]
+then
+echo
+echo -n "
+10) suse11x64dpa.wysdm.lab.emc.com
+11) rhel5x64qa.wysdm.lab.emc.com
+12) w2k8x64srvauto.wysdm.lab.emc.com
+
+Choose DPA : "
+
+read -e dpasvr
+if [ x"$dpasvr" == x10 -o x"$dpasvr" == xsuse11x64dpa.wysdm.lab.emc.com ]
+then
+HB_DPA=suse11x64dpa.wysdm.lab.emc.com
+elif [ x"$dpasvr" == x11 -o x"$dpasvr" == xrhel5x64qa.wysdm.lab.emc.com ]
+then 
+HB_DPA=rhel5x64qa.wysdm.lab.emc.com
+elif [ x"$dpasvr" == 12 -o x"$dpasvr" == xw2k8x64srvauto.wysdm.lab.emc.com ]
+then 
+HB_DPA=w2k8x64srvauto.wysdm.lab.emc.com
+fi
+else
+echo
+echo "$dpasvr NOT in the list"
+echo
+echo "================"
+echo "====  EXIT  ===="
+echo "================"
+echo
+rm -rf "$tmprundir"
+exit
+fi
+fi
+
+if [ x"$adminpswd" != x ]; then
+login1=administrator
+paswd1="$adminpswd"
+else
+login1=administrator
+paswd1=administrator
+fi
+
+echo
+echo "DPA SERVER = $HB_DPA"
+echo
+dpaserver="$HB_DPA"
+
+HB_DPA="$urlssl""$HB_DPA:$portssl"
+
+rm -rf "$tmpnodelist"
+}
+
+### confirmdpa function
+
+confirmrest()
+{
+answer=n
+echo -n "
+PRESS [ y ] TO CONTINUE : "
+read -e answer
+echo
+
+if [ x"$answer" != xy ]; then
+echo "
+You pressed $answer --> STOPPING
+"
+rm -rf "$tmprundir"
+exit
+fi
+}

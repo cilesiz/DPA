@@ -1,0 +1,85 @@
+1) TSM client install
+2) wiki 
+- TSM Notes
+- IBM Tivoli Storage Manager
+
+- 7.1 version
+
+1st
+---
+- install client > typical
+-- allow us to backup & monitor server
+- need to install Administrative Client CLI
+- makesure TSM has 3 module
+
+2nd
+---
+- TSM server
+cd c:\Prog...\Tivoli\tsm
+bacliment
+
+> dsmadmc
+userid : admin
+pswd : admin1
+
+> q node 
+-- list all nodes
+> reg node arikara.wysdm.lab.emc.com Serverg0d! domain=STANDARD
+
+> q node
+
+3rd
+---
+- TSM client
+launch backup GUI
+-> create nodename (same name with reg above)
+
+4th
+---
+-- server address : win64tsm71
+-- port : 1500
+--> Utilities > Setup Wizard
+--> edit
+---> client ref
+---> communication
+recommended
+-----------
+doing backup/restore from TSM server (not from TSM client)
+
+DPA register
+------------
+Instance
+- server1 (anyname)
+- admin
+- admin1
+
+5th
+---
+Server TSM
+> help defind sch
+> define schedule standard arikara_hourly type=client starttime='15:30:00' action=backup
+> query schedule
+> define assoc standard arikara_hourly arikara.wysdm.lab.emc.com
+> update schedule standard arikara_hourly obj:'C:\\tmp' starttime='15:35:00' duration=10 duru=M peru=H
+
+-- * need to update in TSM client
+
+TSM client
+----------
+cd <inst_dir>/tsm > dsmc schedule
+> arikara.wysdm.lab.emc.com
+
+TSM server
+----------
+> query status
+
+DPA server
+----------
+Report > TSM >
+- TSM Define Server Status
+- Client Details
+- Backup All Jobs / Backup Summary
+
+
+
+

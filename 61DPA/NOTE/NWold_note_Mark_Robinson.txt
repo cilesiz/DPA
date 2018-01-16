@@ -1,0 +1,62 @@
+1) License
+
+Mark Robinson "top secret" license (I still have your top secret license email -  09268b-c9f57d-8df053 - dated Mon 09/08/2010 11:03).
+
+2) recover command with verbose (example)
+
+recover -vvvv -D9 -a -iN -s RHEL61-NW8 -c rhel57-src2 /test123 > recover_log.out 2>&1
+
+3) Email form Mark Robinson
+
+Rosli
+
+I.ve taken a look at the recover debug log and I suspect the issue is due to nsrexecd not being registered correctly with rpcbind on RedHat 6 due to the requirement to maintain compatibility with older versions of RedHat Linux.
+
+Can you please try starting rpcbind in insecure mode on the NetWorker server and let me know if it makes a difference to the problem ?
+
+To do this:
+
+Create a file in /etc/sysconfig called rpcbind with the following contents:
+
+RPCBIND_ARGS=-i
+
+Restart rpcbind on the Linux system
+Restart the NetWorker daemons
+
+If this still doesn.t work then please collect a new copy of the recover debug output and have someone raise a bug with NetWorker engineering.
+
+Regards
+
+Mark
+
+4) "53363:recover: Recover of rsid 2003451431 failed: Program not registered" 
+
+Rosli
+
+Thanks for letting me know.
+
+If Scott and Michael are already aware then they should be able to deal with raising a bug for the problem.
+
+It looks to me as if the authentication of the RPC connection on the NetWorker server to the different NetWorker processes is failing and I suspect it has something to do with rpcbind.
+
+The messages from the previous log look to the issue being caused by nsrexecd not being bound to the localhost which is a requirement with RedHat rpcbind on 6.x whereas it could be bound to any of the addresses for the server with previous versions.
+
+Regards
+
+Mark
+
+
+From: Talib, Rosli 
+Sent: 19 March 2012 17:49
+To: Robinson, Mark
+Cc: Martin, Victor
+Subject: RE: HB-9542 - NW8 restore problem "53363:recover: Recover of rsid 2003451431 failed: Program not registered"
+
+Hi Mark,
+
+Sorry for late reply. I.m busy testing DPA at the moment. This is the recover_log.out file after set the RPCBIND_ARGS.
+Jonathan has emailed Scott Bingham and Michael Kaufman about this problem.
+
+Thanks,
+-rosli-
+

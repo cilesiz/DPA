@@ -1,0 +1,99 @@
+Skilbeck, Michael
+hi rosli
+
+
+16:02Talib, Rosli
+hi Mike
+
+
+16:02Skilbeck, Michael
+are you joining us
+for planning part 2?
+
+
+16:03Talib, Rosli
+ok
+
+
+10:14Talib, Rosli
+hi Mike
+
+
+10:14Skilbeck, Michael
+Hi
+
+
+10:14Talib, Rosli
+is the 611-DCP installer available from uncle?
+
+
+10:18Skilbeck, Michael
+no
+alex still needs to set it up
+he will email us when ready
+
+
+10:19Talib, Rosli
+ok
+
+
+10:25Talib, Rosli
+for time being, should I pick up any testing available under Other Issues?
+
+
+10:25Skilbeck, Michael
+yes please
+
+
+10:25Talib, Rosli
+ok
+
+
+10:26Skilbeck, Michael
+try the running requests in default ones
+right mouse click on run button from node properties
+and select run in debug
+and gather historic data
+
+
+10:28Talib, Rosli
+6.2?
+
+
+10:29Skilbeck, Michael
+yes
+you can use install on w2k8x64auto
+bindu installed this morning
+
+
+10:29Talib, Rosli
+ok, will do that
+
+
+10:30Skilbeck, Michael
+the initial issue is whether we can run recoverpoint perf cs in debug
+and gather historic data
+also the date in the agent wasn't being set correctly so we never got data back for all apps
+for eg avamar
+
+
+10:32Talib, Rosli
+about recover point, yesterday I setup my own RP simulator and successfully discovered
+
+
+10:32Skilbeck, Michael
+so when you run in debug the agent files get save to the modtest dir
+
+
+10:32Talib, Rosli
+but I don't know wheter it's ok or not (I don't hv much experience on it)
+
+
+10:32Skilbeck, Michael
+and when you gather historic data the data should be sent to listener and end up in db
+initially configure avamar and run historic data for big date range
+see if lots of jobs are in modtest
+then gathere historic data for jobmonitor request
+jobs should be in db
+
+

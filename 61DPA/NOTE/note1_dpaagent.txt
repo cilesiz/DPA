@@ -1,0 +1,49 @@
+1) Demo time :
+
+<inst_dir>/agent/bin/dpaagent_modavamar -f jobmonitor -t <avamar_server_ip> -U viewuser -P viewuser1 -B 'start_time' -c
+
+/opt/emc/dpa/agent/bin/dpaagent_modavamar -f jobmonitor -t avamar70.wysdm.lab.emc.com -U viewuser -P viewuser1 -B '01/09/2013 00:00:00' -c
+
+
+./dpaagent_modavamar -f funcname
+  [ -t target ]
+  [ -O outputfile ]
+  [ -d loglevel ]
+  [ -l logfile ]
+  [ -C ]
+  [ -a]
+  [ -u nodeuuid ]
+  [ -U username ]
+  [ -P password ]
+  [ -o option-name [ -v option-value ] ] ...
+  [ -B starttime ]
+  [ -E endtime ]
+  [ -I lifetime ]
+  [ -c ]
+  where: -f  = function name
+         -t  = target host name
+         -a = target specified is the local host
+         -U  = username for function
+         -P  = password for function
+         -o  = option name
+         -v  = option value
+         -d  = log level (default: Debug low)
+         -O  = output file (default: stdout)
+         -C  = (gzip) compress output (default: no)
+         -l  = log filename (default: agent.log)
+         -B  = Start time of jobs (Unix or 'dd/mm/yyyy HH:MM:SS')
+         -E  = End time of jobs (same format as -B, default: now)
+         -I  = Lifetime of data (in seconds, default: 3600)
+         -c  = commit data to the DPA server instead of printing on stdout
+         -V  = show version information
+
+
+SERVER
+======
+
+Avamar server
+
+10.64.205.220	avamar70.wysdm.lab.emc.com	avamar70	-U viewuser -P viewuser1
+10.64.206.111	hb-avamar5.corp.emc.com		hb-avamar5
+10.64.206.112	hb-avamar6.corp.emc.com		hb-avamar6
+10.64.255.72	dpaavamar.wysdm.lab.emc.com	dpaavamar

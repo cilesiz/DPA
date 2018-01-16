@@ -1,0 +1,152 @@
+12:11Talib, Rosli
+hi Bindu
+
+12:11Bandarupally, Himabindu
+Hi Rosli
+
+12:12Talib, Rosli
+I'm testing DPA-32916
+I can't see anything in RA tab
+
+12:12Bandarupally, Himabindu
+ok
+did you assign the analysis policy ?
+Assign the policy to the group on which you want to show the alerts 
+
+12:15Talib, Rosli
+can you give me the instructions on how to do that?
+
+12:15Bandarupally, Himabindu
+ok sure 
+do you have DPA with any backup applications monitoring
+
+12:16Talib, Rosli
+I hv one with avamar
+
+12:17Bandarupally, Himabindu
+ok discover any networker like w2k3nw80 
+so that we can have some alerts on backup jobs 
+
+12:19Talib, Rosli
+ok, I hv discovered w2k3nw80 to my centos
+
+12:19Bandarupally, Himabindu
+ok cool 
+now from  Policies --> Analysis policy --> create policy or assign default policy to the group
+
+12:23Talib, Rosli
+how to assign policy to the group?
+
+12:25Talib, Rosli
+oh... is it under Applied Analysis Policies tab?
+
+12:26Bandarupally, Himabindu
+yes you can assign the default policy to agroup from applied policy tab 
+apply/trun it ON
+turn*
+
+12:29Talib, Rosli
+what will happened if at "Backup Server" I put "Default Analysis Policy", but it's subtree "EMC Networker" I put my own "test1policy" ?
+
+12:31Bandarupally, Himabindu
+netwoker will have direct assignation policy test1policy
+the last assigned policy on EMC networker will be applied
+
+12:32Talib, Rosli
+oh
+ok
+
+12:32Bandarupally, Himabindu
+but other nodes in "Backup Server" have default policy
+you can verify that 
+
+12:33Talib, Rosli
+yeah
+
+12:34Bandarupally, Himabindu
+perfect
+now when you apply the test1 policy 
+to EMC networker
+when any alerts on the backup servers will be displayed in the RA Tab tree
+
+12:41Talib, Rosli
+it didn't display anything... it just empty
+
+12:41Bandarupally, Himabindu
+ok run some failed jobs in networker 
+and run the jobmonitor request on networker to pick the latest job data --DPA should give an alert on failed jobs 
+
+15:55Talib, Rosli
+after run some failed job, how to run job monitor request? 
+
+15:56Bandarupally, Himabindu
+go to networker application node and run the request from data collection tab 
+
+15:56Talib, Rosli
+ok, run the Networker Job monitor 
+
+15:57Bandarupally, Himabindu
+ok run bakup failed jobs report
+you should see the failed job you ran
+
+15:58Talib, Rosli
+ok
+
+15:59Bandarupally, Himabindu
+then we will be sure that the DPA has latest job data 
+and we can see the alerts section , it hsould have an alert 
+
+15:59Talib, Rosli
+yes, it has alert
+
+16:00Bandarupally, Himabindu
+and RA tab also shoud have refreshed the tree
+
+16:02Talib, Rosli
+is it refresh by itself?
+
+16:04Bandarupally, Himabindu
+yes 
+
+16:05Talib, Rosli
+ok, yeah
+but how to get as Avia describe in DPA-32916... when open node props in RA tab - no DC requests are presented... what DC request did she talking about?
+
+16:10Bandarupally, Himabindu
+in the RA tab we have configuration tree same as inventory 
+when we see properties on node we see the datacollection tab and requests assigned to it 
+Avia was seeing empty data collection tab with no requests
+
+18:05Talib, Rosli
+so, mean that the issue has resolved. Because i can see propertie on node and data collection tab with requests
+
+18:06Bandarupally, Himabindu
+do you see the requests in RA tab 
+
+18:08Talib, Rosli
+yeah... under rhel55-networker - Host Status (11), Host Monitoring - Configuration (13) and Host Performance 
+( 8 )
+
+18:09Bandarupally, Himabindu
+ok cool 
+
+18:09Talib, Rosli
+also recover Point
+
+18:10Bandarupally, Himabindu
+great gtry comparing the inventory-->node preperties  and RA Tab node properties
+try*
+if seems ok then issue has resolved 
+
+
+18:14Talib, Rosli
+rhel55-networker in Object Library > Hosts is exactly same with RA tab's rhel55-networker
+
+18:14Bandarupally, Himabindu
+ok thats it 
+
+18:15Talib, Rosli
+ok, thanks alot Bindu
+
+18:16Bandarupally, Himabindu
+np Rosli

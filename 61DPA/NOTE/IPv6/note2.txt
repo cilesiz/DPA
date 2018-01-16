@@ -1,0 +1,35 @@
+http://www.betweendots.com/topic/3-enable-ipv6-on-your-centos-redhat-server/
+============================================================================
+
+If you want to enter the world of IPv6 with your CentOS server and you don.t know how to enable it on your server, you.ve come to the right place icon_smile.gif?zoom=2&w=570
+ 
+In a CentOS / RedHat installation two files are important for the configuration of your IPv6 connectivity:
+ 
+/etc/sysconfig/network
+/etc/sysconfig/network-scripts/ifcfg-eth0 (might be ifcfg-eth1 or another number for your configuration)
+ 
+You.ll need to add a default GW for your IPv6 IP address(es) and enable IPv6, add the following lines (change the IP address with your own IP address) to /etc/sysconfig/network:
+
+IPV6_DEFAULTGW=2a01:4f8:b12:3020::1
+NETWORKING_IPV6=yes
+IPV6_AUTOCONF=no
+
+Now we are going to assign an IPv6 address to an interface, we.ll edit /etc/sysconfig/network-scripts/ifcfg-eth0 and add these lines:
+
+IPV6INIT=yes
+IPV6ADDR=2a01:4f8:b12:xxxx::2/64
+IPV6FORWARDING=no
+IPV6_AUTOCONF=no
+
+To let the above take effect you.ll need to restart the network service on CentOS / RedHat:
+service network restart
+ 
+Now ping Google.com to see if it.s working:
+ping6 ipv6.google.com
+PING ipv6.google.com(2001:4860:b002::68) 56 data bytes
+64 bytes from 2001:4860:b002::68: icmp_seq=1 ttl=59 time=93.2 ms
+64 bytes from 2001:4860:b002::68: icmp_seq=2 ttl=59 time=95.0 ms
+64 bytes from 2001:4860:b002::68: icmp_seq=3 ttl=59 time=94.2 ms
+. ipv6.google.com ping statistics .
+3 packets transmitted, 3 received, 0% packet loss, time 7010ms
+rtt min/avg/max/mdev = 93.268/94.376/95.268/0.799 ms

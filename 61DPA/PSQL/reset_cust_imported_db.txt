@@ -1,0 +1,10 @@
+If anyone needs to get into a customer db when it has been imported . you can do the following:
+
+Setting the password on a customer imported db
+
+- Use pgAdmin
+- go to apollo  tables user table
+- Change the administrator password field to  : 
+HP1387F709729271A22|956FAE7148C65608DA1B23773E8173E8BBDC2D074D8E47F55D88E20ED1D5254E
+( If you have a system where administrator/administrator is the login . you can see this password field in pgadmin and it is possible just to cut and paste it to reset the password.)
+

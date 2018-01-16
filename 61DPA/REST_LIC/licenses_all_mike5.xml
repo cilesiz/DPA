@@ -1,0 +1,91 @@
+##1
+<licenses>
+  <license>
+    <name>DPA base license for Mike (969395)</name>
+    <code>EMC-DPA-ENT</code>
+    <type>SysDM V1.1 License</type>
+    <instances>1</instances>
+    <expiry>1394208600</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MCwCFHnq4r5+1uiaXyhVHpJzWCIYmIEkAhQWYYFJccyxr0Zb99uSYIpwUXXPLw==</sig>
+  </license>
+</licenses>
+##2
+<licenses>
+  <license>
+    <name>Recoverpoint Bundle Test license</name>
+    <code>DPA-RP-PC</code>
+    <type>EMC DPA License</type>
+    <instances>1</instances>
+    <expiry>0</expiry>
+    <holder>DPA Dev</holder>
+    <featureSet>0</featureSet>
+    <sig>MC0CFQCD8jJ/WekdYOgHYD7Xl+hOHkuwRQIUEd23+3Psx9GqOS7B+zMmUeLJLsU=</sig>
+  </license>
+</licenses>
+##3
+<licenses>
+  <license>
+    <name>5 TB Symmetrix/RecoverPoint capacity licenses for Mike (423690)</name>
+    <code>DPA-SYM-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>5</instances>
+    <expiry>1394208600</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MCwCFHPh6gCA4Lstr+zZOO40lIlmsvlxAhQVaRK4b8dNqL7mEsZTesT9gt8UQw==</sig>
+  </license>
+</licenses>
+##4
+<licenses>
+  <license>
+    <name>5 TB NetWorker source capacity license for Mike (820388)</name>
+    <code>DPA-BC-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>5</instances>
+    <expiry>1394208600</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MCwCFFGi2kYeNABl4FqEQpBvtDBiWc89AhQ3WKqxzvn1XJUz+l/MASaViG/TGA==</sig>
+  </license>
+</licenses>
+##5
+<licenses>
+  <license>
+    <name>5TB avamar backend capacity license for Mike (628428)</name>
+    <code>DPA-BDC-1TB</code>
+    <type>SysDM V1.1 License</type>
+    <instances>5</instances>
+    <expiry>1394208600</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MCwCFAaiWpOgIh0euTWQvebDxB/lZQJrAhQIoX+HJs9KiwqYyWZukYtDcRvYsA==</sig>
+  </license>
+</licenses>
+##6
+<licenses>
+  <license>
+    <name>100 backup client licenses for Mike (885161)</name>
+    <code>DPA-BCM-1</code>
+    <type>SysDM V1.1 License</type>
+    <instances>100</instances>
+    <expiry>1394208600</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MCwCFHKCz4ZwS03iGsHHYhI5BXNIsbSeAhQcsxYvyJnf9DcusSgnyLDXrzGp1w==</sig>
+  </license>
+</licenses>
+##7
+<licenses>
+  <license>
+    <name>5 Virtualization server licenses for Mike (132990)</name>
+    <code>DPA-VMS-1</code>
+    <type>SysDM V1.1 License</type>
+    <instances>5</instances>
+    <expiry>1394208600</expiry>
+    <holder>EMC Corporation</holder>
+    <featureSet>0</featureSet>
+    <sig>MC0CFCKFBh2A599pixpGl3a+lfAq48S5AhUAhpVJCLIRec5ZnYUOu74JSc0YYzM=</sig>
+  </license>
+</licenses>

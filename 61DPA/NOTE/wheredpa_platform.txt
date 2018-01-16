@@ -1,0 +1,22 @@
+AIX
+===
+alias wheredpa='ls -al /etc/*agent* | grep -i dpa | awk '\''{print $NF}'\'' | sed -e "s/\/agent\/etc\/dpa//g"'
+
+snowstorm.wysdm.lab.emc.com	en0=10.64.205.85	en1=10.64.255.95	(AIX5.3)
+mikeyaix1			en0=10.64.212.46				(AIX6.1)
+
+Solaris
+=======
+alias wheredpa='ls -al /etc/init.d/*agent* | grep -i dpa | awk '\''{print $NF}'\'' | sed -e "s/\/agent\/etc\/dpa//g"'
+
+HP
+==
+alias wheredpa='ls -al /sbin/init.d/dpa* | grep -i dpa | awk '\''{print $NF}'\'' | sed -e "s/\/agent\/etc\/dpa//g"'
+
+cloudy.wysdm.lab.emc.com	lan0=10.64.205.81	lan1=10.64.255.96	(IA-64)	
+frosty.wysdm.lab.emc.com	lan0=10.64.205.32				(PA-64)
+
+Linux
+=====
+alias wheredpa='ls -al /etc/init.d/*agent* | grep -i dpa | awk '\''{print $NF}'\'' | sed -e "s/\/agent\/etc\/dpa//g"'
+

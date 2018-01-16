@@ -1,0 +1,71 @@
+UI notes :
+----------
+Object to Discover
+		Avamar
+
+Application Host
+		avamar70.wysdm.lab.emc.com
+		Host System Monitoring disabled
+		Replication Monitoring disabled
+
+Data Collection Agent
+		Remote Data Collection Agent(mikeyaix1)
+
+Destination Group
+		Configuration > Servers > Backup Servers > EMC Avamar
+
+Attributes
+None		
+--------------
+
+57      529109e3-4116-4357-a75b-8632556bf9ec    avamar70.wysdm.lab.emc.com:Avamar
+58      aafb5899-733d-404a-bdfc-054e9c840410    avamar70.wysdm.lab.emc.com:Avamar:/clients:johnsvm64.eng.wysdm.com
+59      9e271416-7ca3-4887-b9cb-a47db5fb3f65    avamar70.wysdm.lab.emc.com:Avamar:/clients:wichita.wysdm.lab.emc.com
+60      51a4fc05-fc33-4b0d-9948-346612405c67    avamar70.wysdm.lab.emc.com:Avamar:/
+61      3876f5f1-40b7-4f98-886e-204e31e32ec3    avamar70.wysdm.lab.emc.com:Avamar:/clients
+62      80398fdb-b9b4-42ac-b28b-9bb8e418754d    avamar70.wysdm.lab.emc.com:Avamar:/:Default Group
+63      1463152f-a4ba-4572-b7a3-db3c69a65fbf    avamar70.wysdm.lab.emc.com:Avamar:/:Default Proxy Group
+64      4dc4d9fe-5922-4aea-a422-1b2c68b67c36    avamar70.wysdm.lab.emc.com:Avamar:/:avamar70
+65      0cf7df8b-e0a0-42f3-8ebd-8c4543e904e5    avamar70.wysdm.lab.emc.com:Avamar:/:dpaavamar_repl
+66      165d996b-fd3a-4575-acf1-b96a059b1a01    avamar70.wysdm.lab.emc.com:Avamar:/clients:johnsvm_group
+67      16265898-8d80-419b-8bac-c54ccf0a4b0f    avamar70.wysdm.lab.emc.com:Avamar:/clients:mytestgroup
+71      d7c12e9c-f48d-4bfb-929f-8851fb975f24    avamar70.wysdm.lab.emc.com
+72      4017b843-d7de-4b8e-be8b-0f680e896e28    mikeyaix1
+
+----------------
+<node version="1" type="Host">
+   <id>d7c12e9c-f48d-4bfb-929f-8851fb975f24</id>
+   <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/d7c12e9c-f48d-4bfb-929f-8851fb975f24"/>
+   <name>avamar70.wysdm.lab.emc.com</name>
+   <displayName>avamar70.wysdm.lab.emc.com</displayName>
+   <globalName>avamar70.wysdm.lab.emc.com</globalName>
+   <lastSeen>2014-02-04T23:18:38.0Z</lastSeen>
+   <aliases/>
+   <attributes>
+      <assignedAttribute>
+         <id>56cb7926-5beb-420d-b5ce-1e1c12428c00</id>
+         <objAttrId>67fb3d84-c699-11e1-9b21-0800200c9a66</objAttrId>
+         <attributeValue type="Flag">true</attributeValue>
+         <attributeCategory>Apollo</attributeCategory>
+      </assignedAttribute>
+      <assignedAttribute>
+         <id>f707db5e-8219-413c-adc0-d99f7e2cb6c3</id>
+         <objAttrId>67fb1670-c699-11e1-9b21-0800200c9a66</objAttrId>
+         <attributeValue type="OS">
+            <family>LINUX</family>
+            <version>1</version>
+         </attributeValue>
+         <attributeCategory>Apollo</attributeCategory>
+      </assignedAttribute>
+      <assignedAttribute>
+         <id>a27c3091-3b69-4f96-bebb-c20caa1802af</id>
+         <objAttrId>67fb3d80-c699-11e1-9b21-0800200c9a66</objAttrId>
+         <attributeValue type="Flag">false</attributeValue>
+         <attributeCategory>Apollo</attributeCategory>
+      </assignedAttribute>
+   </attributes>
+   <timeZone>Europe/Belfast</timeZone>
+   <isReporting>true</isReporting>
+   <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+</node>
+------------------

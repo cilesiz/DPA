@@ -1,0 +1,132 @@
+<windows>
+   <window version="1" lastModified="2014-04-15T23:07:17.116+01:00">
+      <id>6eeb93f7-4c65-4e18-bead-43f47de10ed1</id>
+      <name>Last Day</name>
+      <startTimeId>954c1c7d-71c5-4c34-91ff-eef07884c2e7</startTimeId>
+      <endTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.136+01:00">
+      <id>93c542c9-4748-4b8e-8dd3-ca9e32da9c78</id>
+      <name>Last Hour</name>
+      <startTimeId>18f2543b-c779-4010-ac67-efc3b054c63d</startTimeId>
+      <endTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.155+01:00">
+      <id>70497d12-3cf1-4f84-bcc8-6ad717e8caf5</id>
+      <name>Last Month</name>
+      <startTimeId>e062411e-0f9d-4064-9d3a-5144fb6353ce</startTimeId>
+      <endTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.171+01:00">
+      <id>4f473ab6-4122-4acb-a37a-f09d1be8d966</id>
+      <name>Last Night&apos;s Backup</name>
+      <startTimeId>d79b8e5a-45e6-42a6-b49c-fa937965f8b0</startTimeId>
+      <endTimeId>7cc6cf06-718b-4235-ae8e-09cb97d35a22</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.186+01:00">
+      <id>bd199743-a6af-4350-9d14-0d7f308d3e3f</id>
+      <name>Last Week</name>
+      <startTimeId>75148fbc-2faa-40ba-a765-fdf52a894d2d</startTimeId>
+      <endTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.200+01:00">
+      <id>06344976-2886-4600-8d98-61193ea2c204</id>
+      <name>Last Year</name>
+      <startTimeId>5044ab0c-aa54-4d20-8b7c-d6130496d1ba</startTimeId>
+      <endTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.216+01:00">
+      <id>dfad23d2-3d8f-4ded-a12e-fc8bc68200cb</id>
+      <name>Nine To Five</name>
+      <startTimeId>7cc6cf06-718b-4235-ae8e-09cb97d35a22</startTimeId>
+      <endTimeId>1eb2e4c8-8345-4469-9b04-e68ed5a4d314</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.232+01:00">
+      <id>2e40830a-fbd4-429c-a895-1d5b6fc2d961</id>
+      <name>Now</name>
+      <startTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</startTimeId>
+      <endTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.246+01:00">
+      <id>de45609b-fe6c-4d1f-9e7c-df16e2aec3b8</id>
+      <name>Since Start Of Month</name>
+      <startTimeId>56375b4e-88c1-485c-aa9c-a38ef4bfaef7</startTimeId>
+      <endTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.261+01:00">
+      <id>fd313a4b-e534-41e5-8dee-24273c1e703f</id>
+      <name>Since Start Of Week</name>
+      <startTimeId>2486d0f1-daca-44e2-ba1a-5638e78ddb20</startTimeId>
+      <endTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.275+01:00">
+      <id>ca70d2ec-a87d-41a8-b572-437ba0c910f5</id>
+      <name>Next Week</name>
+      <startTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</startTimeId>
+      <endTimeId>4fb8b5f9-7dc0-46ff-adad-0f1900a30595</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.290+01:00">
+      <id>0450cc73-f905-4f69-a849-ff591632a667</id>
+      <name>Next 2 Months</name>
+      <startTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</startTimeId>
+      <endTimeId>354f48ca-d7a9-4d48-8bcf-eedf7beaeb33</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+   <window version="1" lastModified="2014-04-15T23:07:17.307+01:00">
+      <id>d3ee49e8-dc90-4e09-9683-8dd384985aff</id>
+      <name>3 Month forecast</name>
+      <startTimeId>76e096b5-f6d3-4826-a4ac-2fd37b5c3432</startTimeId>
+      <endTimeId>545fc73b-986b-46a5-a2c3-9d8b90480949</endTimeId>
+      <interval>-1</interval>
+      <enableTimeZone>false</enableTimeZone>
+      <system>true</system>
+      <hidden>false</hidden>
+   </window>
+</windows>

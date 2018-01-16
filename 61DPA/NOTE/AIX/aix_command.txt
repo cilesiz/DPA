@@ -1,0 +1,29 @@
+## Kernel 32/64bit 
+1) getconf KERNEL_BITMODE
+2) bootinfo -K
+3) ls -la /unix (and see the unix boot - unix_64 or unix_32)
+possibilities :
+/unix -> /usr/lib/boot/unix_up 		# 32 bit uniprocessor kernel 
+/unix -> /usr/lib/boot/unix_mp 		# 32 bit multiprocessor kernel
+/unix -> /usr/lib/boot/unix_64 		# 64 bit multiprocessor kernel
+
+## Machine hardware 32/64bit
+getconf HARDWARE_BITMODE
+bootinfo -y
+
+## All information
+
+getconf -a
+
+## memory
+bootinfo -r
+lsattr -El sys0 -a realmem
+
+## no of processors
+
+lscfg | grep proc
+
+## how many disks
+
+lspv
+

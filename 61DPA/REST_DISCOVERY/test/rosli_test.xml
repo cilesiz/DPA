@@ -1,0 +1,1585 @@
+<nodes totalRecords="118">
+   <node version="1" type="Group">
+      <id>6a4032f4-59f5-47a6-b271-b91d4c5c2a0f</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/6a4032f4-59f5-47a6-b271-b91d4c5c2a0f"/>
+      <name>Application Servers</name>
+      <displayName>Application Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Application Servers</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>c5723b8f-c5b7-4237-af29-b689203fbc44</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/c5723b8f-c5b7-4237-af29-b689203fbc44"/>
+      <name>Backup Servers</name>
+      <displayName>Backup Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>82c5c0ea-9d8b-4387-a0d6-d46c9e7f67a1</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/82c5c0ea-9d8b-4387-a0d6-d46c9e7f67a1"/>
+      <name>CA BrightStor ARCserve</name>
+      <displayName>CA BrightStor ARCserve</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:CA BrightStor ARCserve</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>1c33cb88-57c4-436a-96a1-9abdb28cfdbf</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/1c33cb88-57c4-436a-96a1-9abdb28cfdbf"/>
+      <name>CommVault Simpana</name>
+      <displayName>CommVault Simpana</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:CommVault Simpana</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>8ad04346-9abd-4466-8bd8-05306b63519d</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/8ad04346-9abd-4466-8bd8-05306b63519d"/>
+      <name>Configuration</name>
+      <displayName>Configuration</displayName>
+      <globalName>Groups:Configuration</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>a63c4c88-0776-4da8-8912-278f36fc72c1</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a63c4c88-0776-4da8-8912-278f36fc72c1"/>
+      <name>Consistency Groups</name>
+      <displayName>Consistency Groups</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage:EMC Symmetrix:Consistency Groups</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>91bdc85c-f18b-44e6-af7b-cec02625b00d</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/91bdc85c-f18b-44e6-af7b-cec02625b00d"/>
+      <name>DPA Server</name>
+      <displayName>DPA Server</displayName>
+      <globalName>Groups:Configuration:Servers:DPA Server</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>b3ea7f40-ce63-4cf3-b024-fe9fcaadbbd1</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/b3ea7f40-ce63-4cf3-b024-fe9fcaadbbd1"/>
+      <name>Database Servers</name>
+      <displayName>Database Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Database Servers</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>380268f5-f133-4042-a56d-066ca09831e4</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/380268f5-f133-4042-a56d-066ca09831e4"/>
+      <name>Disk Storage</name>
+      <displayName>Disk Storage</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>a58abe61-ad35-4365-ab91-b53afa54e294</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a58abe61-ad35-4365-ab91-b53afa54e294"/>
+      <name>EMC Avamar</name>
+      <displayName>EMC Avamar</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:EMC Avamar</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>e097897c-26ab-4ae2-afd1-cd0b727acc8a</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/e097897c-26ab-4ae2-afd1-cd0b727acc8a"/>
+      <name>EMC ControlCenter</name>
+      <displayName>EMC ControlCenter</displayName>
+      <globalName>Groups:Configuration:Servers:Storage Management Servers:EMC ControlCenter</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>2dbd754e-8e3f-4397-b4cd-d9f11a913fe9</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/2dbd754e-8e3f-4397-b4cd-d9f11a913fe9"/>
+      <name>EMC Data Domain</name>
+      <displayName>EMC Data Domain</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage:EMC Data Domain</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>8ec2d92c-8135-4654-b2d9-6bf1c90f9d39</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/8ec2d92c-8135-4654-b2d9-6bf1c90f9d39"/>
+      <name>EMC Disk Library</name>
+      <displayName>EMC Disk Library</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage:EMC Disk Library</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>941a7bbd-2daf-48c4-be96-c27daea51802</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/941a7bbd-2daf-48c4-be96-c27daea51802"/>
+      <name>EMC File Storage</name>
+      <displayName>EMC File Storage</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage:EMC File Storage</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>24d28b90-0601-465e-9878-9b8ac6ee9a44</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/24d28b90-0601-465e-9878-9b8ac6ee9a44"/>
+      <name>EMC NetWorker</name>
+      <displayName>EMC NetWorker</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:EMC NetWorker</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>f0295141-e006-43d0-9680-daa0ee98faba</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/f0295141-e006-43d0-9680-daa0ee98faba"/>
+      <name>EMC RecoverPoint</name>
+      <displayName>EMC RecoverPoint</displayName>
+      <globalName>Groups:Configuration:Storage:Replication:EMC RecoverPoint</globalName>
+      <lastSeen>2014-01-30T15:45:25.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>c62363f7-1d71-4019-bb4a-3f814f33b1d1</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/c62363f7-1d71-4019-bb4a-3f814f33b1d1"/>
+      <name>EMC Symmetrix</name>
+      <displayName>EMC Symmetrix</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage:EMC Symmetrix</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>e89fc586-0567-4e9d-a143-7719df44b962</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/e89fc586-0567-4e9d-a143-7719df44b962"/>
+      <name>EMC VNX/CLARiiON</name>
+      <displayName>EMC VNX/CLARiiON</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage:EMC VNX/CLARiiON</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>c62563f7-1571-4019-b54a-3f815f33b5d5</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/c62563f7-1571-4019-b54a-3f815f33b5d5"/>
+      <name>EMC VPLEX</name>
+      <displayName>EMC VPLEX</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage:EMC VPLEX</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>c022d97f-2fc2-4415-a93e-9a810ceb619a</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/c022d97f-2fc2-4415-a93e-9a810ceb619a"/>
+      <name>ESX Servers</name>
+      <displayName>ESX Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Virtualization Servers:VMware:ESX Servers</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>261b3743-18ef-4a25-976d-5193fd69508c</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/261b3743-18ef-4a25-976d-5193fd69508c"/>
+      <name>Exchange Servers</name>
+      <displayName>Exchange Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Exchange Servers</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>6e611284-35c2-40e9-97ee-a4cb788b4d96</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/6e611284-35c2-40e9-97ee-a4cb788b4d96"/>
+      <name>Fibre Channel Switches</name>
+      <displayName>Fibre Channel Switches</displayName>
+      <globalName>Groups:Configuration:Switches:Fibre Channel Switches</globalName>
+      <lastSeen>2014-01-30T15:45:25.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>00000000-0000-0000-0000-000000000010</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/00000000-0000-0000-0000-000000000010"/>
+      <name>Groups</name>
+      <displayName>Groups</displayName>
+      <globalName>Groups</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>08544195-c4e3-47a4-a43e-33c9cfdcd15f</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/08544195-c4e3-47a4-a43e-33c9cfdcd15f"/>
+      <name>HP Command View</name>
+      <displayName>HP Command View</displayName>
+      <globalName>Groups:Configuration:Servers:Storage Management Servers:HP Command View</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>6615f41e-9651-4c7f-b210-0f26b4d97e68</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/6615f41e-9651-4c7f-b210-0f26b4d97e68"/>
+      <name>HP DataProtector</name>
+      <displayName>HP DataProtector</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:HP DataProtector</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>72679bc6-572a-4753-aa0c-69c691276d15</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/72679bc6-572a-4753-aa0c-69c691276d15"/>
+      <name>HP Virtual Library System</name>
+      <displayName>HP Virtual Library System</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage:HP Virtual Library System</globalName>
+      <lastSeen>2014-01-30T15:45:25.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>66950b73-aa31-4981-8dea-42e8a7b555d8</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/66950b73-aa31-4981-8dea-42e8a7b555d8"/>
+      <name>IBM Tivoli Storage Manager</name>
+      <displayName>IBM Tivoli Storage Manager</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:IBM Tivoli Storage Manager</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>6f66e159-ce2b-4315-86c3-471f161ce90f</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/6f66e159-ce2b-4315-86c3-471f161ce90f"/>
+      <name>IP Switches</name>
+      <displayName>IP Switches</displayName>
+      <globalName>Groups:Configuration:Switches:IP Switches</globalName>
+      <lastSeen>2014-01-30T15:45:25.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>a4f4ad36-2dd5-4105-91de-aa7e271d634d</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a4f4ad36-2dd5-4105-91de-aa7e271d634d"/>
+      <name>NetApp NearStore</name>
+      <displayName>NetApp NearStore</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage:NetApp NearStore</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>4e59ba08-71ea-4c40-8a44-052ea7d90370</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/4e59ba08-71ea-4c40-8a44-052ea7d90370"/>
+      <name>NetApp SMI-S</name>
+      <displayName>NetApp SMI-S</displayName>
+      <globalName>Groups:Configuration:Servers:Storage Management Servers:NetApp SMI-S</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>0b285066-cee0-4686-a29b-38377d8a5d97</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/0b285066-cee0-4686-a29b-38377d8a5d97"/>
+      <name>NetBackup Master Servers</name>
+      <displayName>NetBackup Master Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:Symantec NetBackup:NetBackup Master Servers</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>024d3e07-3f77-4b29-9e4a-6184b29fc4d7</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/024d3e07-3f77-4b29-9e4a-6184b29fc4d7"/>
+      <name>NetBackup Master and Media Servers</name>
+      <displayName>NetBackup Master and Media Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:Symantec NetBackup:NetBackup Master and Media Servers</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>97eb6a48-e444-45fa-bdf0-73e6e4ba90e1</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/97eb6a48-e444-45fa-bdf0-73e6e4ba90e1"/>
+      <name>NetBackup Media Servers</name>
+      <displayName>NetBackup Media Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:Symantec NetBackup:NetBackup Media Servers</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>e4e9f54e-b98c-4844-a558-bde45a154b52</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/e4e9f54e-b98c-4844-a558-bde45a154b52"/>
+      <name>Node Initiators</name>
+      <displayName>Node Initiators</displayName>
+      <globalName>Groups:Configuration:Storage:Disk Storage:Node Initiators</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>b6e105e0-58e7-4c0b-9bf5-664eee1eef48</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/b6e105e0-58e7-4c0b-9bf5-664eee1eef48"/>
+      <name>Object Library</name>
+      <displayName>Object Library</displayName>
+      <globalName>Object Library</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>58a98fcf-2f9a-421b-83da-9035a0aa8361</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/58a98fcf-2f9a-421b-83da-9035a0aa8361"/>
+      <name>Objects Not In Groups</name>
+      <displayName>Objects Not In Groups</displayName>
+      <globalName>Objects Not In Groups</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>bc78b74b-565a-44be-a7aa-11519e5d7d3b</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/bc78b74b-565a-44be-a7aa-11519e5d7d3b"/>
+      <name>Oracle</name>
+      <displayName>Oracle</displayName>
+      <globalName>Groups:Configuration:Servers:Database Servers:Oracle</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>4e4bd413-a9d2-4d3c-8e5e-08782693b1cc</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/4e4bd413-a9d2-4d3c-8e5e-08782693b1cc"/>
+      <name>PostgreSQL</name>
+      <displayName>PostgreSQL</displayName>
+      <globalName>Groups:Configuration:Servers:Database Servers:PostgreSQL</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>c149c93e-6181-4ced-93c9-f63858f2b428</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/c149c93e-6181-4ced-93c9-f63858f2b428"/>
+      <name>Recently Discovered Objects</name>
+      <displayName>Recently Discovered Objects</displayName>
+      <globalName>Recently Discovered Objects</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>d4441842-d2a4-4d2d-9bbf-0276ba3fb835</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/d4441842-d2a4-4d2d-9bbf-0276ba3fb835"/>
+      <name>Replication</name>
+      <displayName>Replication</displayName>
+      <globalName>Groups:Configuration:Storage:Replication</globalName>
+      <lastSeen>2014-01-30T15:45:25.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>00000000-0000-0000-0000-000000000001</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/00000000-0000-0000-0000-000000000001"/>
+      <name>Root</name>
+      <displayName>Root</displayName>
+      <globalName>Root</globalName>
+      <lastSeen>2014-01-30T15:42:59.0Z</lastSeen>
+      <creatorType>Root</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>fb8d788f-4b7d-4919-b64d-51026455d018</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/fb8d788f-4b7d-4919-b64d-51026455d018"/>
+      <name>SQL Server</name>
+      <displayName>SQL Server</displayName>
+      <globalName>Groups:Configuration:Servers:Database Servers:SQL Server</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>307c9831-e611-453d-bbb8-89ff3e0248b7</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/307c9831-e611-453d-bbb8-89ff3e0248b7"/>
+      <name>Servers</name>
+      <displayName>Servers</displayName>
+      <globalName>Groups:Configuration:Servers</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>fa290fd4-4708-4343-a748-778a49ef0b45</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/fa290fd4-4708-4343-a748-778a49ef0b45"/>
+      <name>Solution Enabler Servers</name>
+      <displayName>Solution Enabler Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Storage Management Servers:Solution Enabler Servers</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>a1d4ab02-13a5-4075-8277-d0eff4f9e787</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a1d4ab02-13a5-4075-8277-d0eff4f9e787"/>
+      <name>Storage</name>
+      <displayName>Storage</displayName>
+      <globalName>Groups:Configuration:Storage</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>31c322c2-09f7-435b-82e7-128b127ba858</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/31c322c2-09f7-435b-82e7-128b127ba858"/>
+      <name>Storage Management Servers</name>
+      <displayName>Storage Management Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Storage Management Servers</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>a1dec6b7-8d61-4422-bb45-244ff9ada290</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a1dec6b7-8d61-4422-bb45-244ff9ada290"/>
+      <name>Sun StorageTek ACSLS</name>
+      <displayName>Sun StorageTek ACSLS</displayName>
+      <globalName>Groups:Configuration:Servers:Storage Management Servers:Sun StorageTek ACSLS</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>d3625627-a959-43c3-b683-f270b4bdc1f9</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/d3625627-a959-43c3-b683-f270b4bdc1f9"/>
+      <name>Switches</name>
+      <displayName>Switches</displayName>
+      <globalName>Groups:Configuration:Switches</globalName>
+      <lastSeen>2014-01-30T15:45:25.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>17862476-51a7-4cf8-82b7-1d51bb94fb41</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/17862476-51a7-4cf8-82b7-1d51bb94fb41"/>
+      <name>Symantec BackupExec</name>
+      <displayName>Symantec BackupExec</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:Symantec BackupExec</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>cb94a2da-af5f-4a75-b623-87753410052e</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/cb94a2da-af5f-4a75-b623-87753410052e"/>
+      <name>Symantec NetBackup</name>
+      <displayName>Symantec NetBackup</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:Symantec NetBackup</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>a98a403f-fece-48ef-9dd6-ee72ec25bd37</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a98a403f-fece-48ef-9dd6-ee72ec25bd37"/>
+      <name>Symantec PureDisk</name>
+      <displayName>Symantec PureDisk</displayName>
+      <globalName>Groups:Configuration:Servers:Backup Servers:Symantec PureDisk</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>d44c7cad-d417-4367-9ffc-977d66212e33</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/d44c7cad-d417-4367-9ffc-977d66212e33"/>
+      <name>Tape Storage</name>
+      <displayName>Tape Storage</displayName>
+      <globalName>Groups:Configuration:Storage:Tape Storage</globalName>
+      <lastSeen>2014-01-30T15:45:25.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>42156da8-3af6-4a89-bf30-1d6fee668875</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/42156da8-3af6-4a89-bf30-1d6fee668875"/>
+      <name>VMware</name>
+      <displayName>VMware</displayName>
+      <globalName>Groups:Configuration:Servers:Virtualization Servers:VMware</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>e94776e6-cc7e-4f15-9189-a6929409034d</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/e94776e6-cc7e-4f15-9189-a6929409034d"/>
+      <name>Virtual Center</name>
+      <displayName>Virtual Center</displayName>
+      <globalName>Groups:Configuration:Servers:Virtualization Servers:VMware:Virtual Center</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>40b280dc-7192-4781-a37b-babd883ce422</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/40b280dc-7192-4781-a37b-babd883ce422"/>
+      <name>Virtualization Servers</name>
+      <displayName>Virtualization Servers</displayName>
+      <globalName>Groups:Configuration:Servers:Virtualization Servers</globalName>
+      <lastSeen>2014-01-30T15:45:24.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Group">
+      <id>710ada81-39bd-42ef-9911-5deb7b0762ed</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/710ada81-39bd-42ef-9911-5deb7b0762ed"/>
+      <name>Xsigo Director</name>
+      <displayName>Xsigo Director</displayName>
+      <globalName>Groups:Configuration:Switches:Xsigo Director</globalName>
+      <lastSeen>2014-01-30T15:45:25.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Celerra">
+      <id>bf8563cf-ef6f-42c2-84e8-e10dbe6d2d7b</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/bf8563cf-ef6f-42c2-84e8-e10dbe6d2d7b"/>
+      <name>uncle-mgmt.wysdm.lab.emc.com</name>
+      <displayName>uncle-mgmt.wysdm.lab.emc.com</displayName>
+      <globalName>uncle-mgmt.wysdm.lab.emc.com</globalName>
+      <lastSeen>2014-02-04T15:38:21.0Z</lastSeen>
+      <creatorType>apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="DPAApplication">
+      <id>7479cc50-9726-44d6-a873-7e95d965d1b1</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/7479cc50-9726-44d6-a873-7e95d965d1b1"/>
+      <name>DPA Application</name>
+      <displayName>rt-suse11x64:DPA Application</displayName>
+      <globalName>rt-suse11x64:DPA Application</globalName>
+      <lastSeen>2014-01-30T15:46:26.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="DPADataStore">
+      <id>112b3d61-6c7b-432a-b789-9fd857e656fe</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/112b3d61-6c7b-432a-b789-9fd857e656fe"/>
+      <name>DPA DataStore</name>
+      <displayName>rt-suse11x64:DPA DataStore</displayName>
+      <globalName>rt-suse11x64:DPA DataStore</globalName>
+      <lastSeen>2014-02-05T00:05:47.0Z</lastSeen>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Host">
+      <id>4017b843-d7de-4b8e-be8b-0f680e896e28</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/4017b843-d7de-4b8e-be8b-0f680e896e28"/>
+      <name>mikeyaix1</name>
+      <displayName>mikeyaix1</displayName>
+      <globalName>mikeyaix1</globalName>
+      <lastSeen>2014-01-31T12:05:50.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases>
+         <alias>10.64.212.46</alias>
+      </aliases>
+      <attributes>
+         <assignedAttribute>
+            <id>1b59cbbe-5065-4b6c-b1a2-076fd9b8ff89</id>
+            <objAttrId>67fb1670-c699-11e1-9b21-0800200c9a66</objAttrId>
+            <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/4017b843-d7de-4b8e-be8b-0f680e896e28/assignedAttributes/67fb1670-c699-11e1-9b21-0800200c9a66"/>
+            <attributeValue type="OS">
+               <family>AIX</family>
+               <processorType>powerpc-64</processorType>
+            </attributeValue>
+            <attributeCategory>Apollo</attributeCategory>
+         </assignedAttribute>
+      </attributes>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Host">
+      <id>9cb46719-90cf-4017-8ffc-0a96b8c6addc</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/9cb46719-90cf-4017-8ffc-0a96b8c6addc"/>
+      <name>rt-suse11x64</name>
+      <displayName>rt-suse11x64</displayName>
+      <globalName>rt-suse11x64</globalName>
+      <lastSeen>2014-02-05T00:12:39.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases>
+         <alias>rt-suse11x64.wysdm.lab.emc.com</alias>
+         <alias>10.64.205.162</alias>
+      </aliases>
+      <attributes>
+         <assignedAttribute>
+            <id>d973d2ef-b11a-44cf-b813-49682e872ffb</id>
+            <objAttrId>67fb1670-c699-11e1-9b21-0800200c9a66</objAttrId>
+            <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/9cb46719-90cf-4017-8ffc-0a96b8c6addc/assignedAttributes/67fb1670-c699-11e1-9b21-0800200c9a66"/>
+            <attributeValue type="OS">
+               <family>LINUX</family>
+            </attributeValue>
+            <attributeCategory>Apollo</attributeCategory>
+         </assignedAttribute>
+         <assignedAttribute>
+            <id>4ed0ccce-67b3-4d0b-acc6-66346c5f2d14</id>
+            <objAttrId>67fb3d80-c699-11e1-9b21-0800200c9a66</objAttrId>
+            <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/9cb46719-90cf-4017-8ffc-0a96b8c6addc/assignedAttributes/67fb3d80-c699-11e1-9b21-0800200c9a66"/>
+            <attributeValue type="Flag">false</attributeValue>
+            <attributeCategory>Apollo</attributeCategory>
+         </assignedAttribute>
+      </attributes>
+      <timeZone>Europe/Belfast</timeZone>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="Host">
+      <id>c51452a5-7fa3-4dfe-96b7-1f4c5c12aefa</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/c51452a5-7fa3-4dfe-96b7-1f4c5c12aefa"/>
+      <name>w2k8x64tsm64.wysdm.lab.emc.com</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com</globalName>
+      <lastSeen>2014-02-05T00:09:08.0Z</lastSeen>
+      <aliases/>
+      <attributes>
+         <assignedAttribute>
+            <id>e99d7b0c-6709-45ca-863a-b5e8e2447603</id>
+            <objAttrId>67fb1670-c699-11e1-9b21-0800200c9a66</objAttrId>
+            <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/c51452a5-7fa3-4dfe-96b7-1f4c5c12aefa/assignedAttributes/67fb1670-c699-11e1-9b21-0800200c9a66"/>
+            <attributeValue type="OS">
+               <family>WINDOWS</family>
+               <version>1</version>
+            </attributeValue>
+            <attributeCategory>Apollo</attributeCategory>
+         </assignedAttribute>
+         <assignedAttribute>
+            <id>1b2fec7c-b22d-4e57-89cf-4aae918c4ee9</id>
+            <objAttrId>67fb3d80-c699-11e1-9b21-0800200c9a66</objAttrId>
+            <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/c51452a5-7fa3-4dfe-96b7-1f4c5c12aefa/assignedAttributes/67fb3d80-c699-11e1-9b21-0800200c9a66"/>
+            <attributeValue type="Flag">false</attributeValue>
+            <attributeCategory>Apollo</attributeCategory>
+         </assignedAttribute>
+         <assignedAttribute>
+            <id>f679ae3a-80a0-418b-ac60-d21bbda724f7</id>
+            <objAttrId>67fb3d84-c699-11e1-9b21-0800200c9a66</objAttrId>
+            <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/c51452a5-7fa3-4dfe-96b7-1f4c5c12aefa/assignedAttributes/67fb3d84-c699-11e1-9b21-0800200c9a66"/>
+            <attributeValue type="Flag">true</attributeValue>
+            <attributeCategory>Apollo</attributeCategory>
+         </assignedAttribute>
+      </attributes>
+      <timeZone>Europe/Belfast</timeZone>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="HostDisk">
+      <id>e1c7c5a2-26f4-496f-a2f0-0ed0ec1eb647</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/e1c7c5a2-26f4-496f-a2f0-0ed0ec1eb647"/>
+      <name>/dev/sda</name>
+      <displayName>rt-suse11x64:/dev/sda</displayName>
+      <globalName>rt-suse11x64:/dev/sda</globalName>
+      <lastSeen>2014-02-05T00:12:39.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="HostEthernetPort">
+      <id>6dc671f2-94dd-4806-8930-8203ddf29d3f</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/6dc671f2-94dd-4806-8930-8203ddf29d3f"/>
+      <name>eth0</name>
+      <displayName>rt-suse11x64:eth0</displayName>
+      <globalName>rt-suse11x64:eth0</globalName>
+      <lastSeen>2014-02-05T00:12:39.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="HostFileSystem">
+      <id>843005c8-9f53-41e6-a4a8-d6e16bcd059b</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/843005c8-9f53-41e6-a4a8-d6e16bcd059b"/>
+      <name>/</name>
+      <displayName>rt-suse11x64:/</displayName>
+      <globalName>rt-suse11x64:/</globalName>
+      <lastSeen>2014-02-05T00:12:39.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="HostProcessor">
+      <id>c747403a-e5a2-4b6c-b78a-877448de9605</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/c747403a-e5a2-4b6c-b78a-877448de9605"/>
+      <name>0</name>
+      <displayName>rt-suse11x64:0</displayName>
+      <globalName>rt-suse11x64:0</globalName>
+      <lastSeen>2014-02-05T00:08:23.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="HostProcessor">
+      <id>dedee0e7-9e49-46bc-95c2-cfbf5f3cb3d0</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/dedee0e7-9e49-46bc-95c2-cfbf5f3cb3d0"/>
+      <name>1</name>
+      <displayName>rt-suse11x64:1</displayName>
+      <globalName>rt-suse11x64:1</globalName>
+      <lastSeen>2014-02-05T00:08:23.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="HostProcessor">
+      <id>77b26a68-ed59-42ca-9d54-c4bf8dfc7e75</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/77b26a68-ed59-42ca-9d54-c4bf8dfc7e75"/>
+      <name>2</name>
+      <displayName>rt-suse11x64:2</displayName>
+      <globalName>rt-suse11x64:2</globalName>
+      <lastSeen>2014-02-05T00:08:23.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="HostProcessor">
+      <id>085cf273-6163-4f4f-a64a-5a91e056c6ec</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/085cf273-6163-4f4f-a64a-5a91e056c6ec"/>
+      <name>3</name>
+      <displayName>rt-suse11x64:3</displayName>
+      <globalName>rt-suse11x64:3</globalName>
+      <lastSeen>2014-02-05T00:08:23.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>e9853c2d-1b39-426f-b81b-c312f37b8602</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/e9853c2d-1b39-426f-b81b-c312f37b8602"/>
+      <name>All Applications</name>
+      <displayName>All Applications</displayName>
+      <globalName>All Applications</globalName>
+      <lastSeen>2014-01-30T15:45:22.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters/>
+      <query predefined="true">all.applications</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>43d89259-9a6d-42a4-8325-265cca57baa5</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/43d89259-9a6d-42a4-8325-265cca57baa5"/>
+      <name>All Hosts</name>
+      <displayName>All Hosts</displayName>
+      <globalName>All Hosts</globalName>
+      <lastSeen>2014-01-30T15:45:22.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters/>
+      <query predefined="true">all.hosts</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>726de8ff-fc13-4c81-b3cc-e10242315ff0</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/726de8ff-fc13-4c81-b3cc-e10242315ff0"/>
+      <name>All Storage</name>
+      <displayName>All Storage</displayName>
+      <globalName>All Storage</globalName>
+      <lastSeen>2014-01-30T15:45:22.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters/>
+      <query predefined="true">all.storages</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>347904b5-7b78-4369-854a-45c9b10ac3c8</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/347904b5-7b78-4369-854a-45c9b10ac3c8"/>
+      <name>All Switches</name>
+      <displayName>All Switches</displayName>
+      <globalName>All Switches</globalName>
+      <lastSeen>2014-01-30T15:45:22.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters/>
+      <query predefined="true">all.switches</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>6cd35878-e05a-448c-a793-d2c696b3af37</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/6cd35878-e05a-448c-a793-d2c696b3af37"/>
+      <name>Applications Discovered in Last X Days</name>
+      <displayName>Applications Discovered in Last X Days</displayName>
+      <globalName>Applications Discovered in Last X Days</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters>
+         <parameter name="lastx">259200</parameter>
+      </parameters>
+      <query predefined="true">lastx.applications</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>e9887ad3-dda0-423f-8468-1d2d470b962d</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/e9887ad3-dda0-423f-8468-1d2d470b962d"/>
+      <name>Applications Not In Group</name>
+      <displayName>Applications Not In Group</displayName>
+      <globalName>Applications Not In Group</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters/>
+      <query predefined="true">nogroup.applications</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>19b27970-f74f-4c78-a20d-e76f005d6dbf</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/19b27970-f74f-4c78-a20d-e76f005d6dbf"/>
+      <name>Hosts Discovered in Last X Days</name>
+      <displayName>Hosts Discovered in Last X Days</displayName>
+      <globalName>Hosts Discovered in Last X Days</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters>
+         <parameter name="lastx">259200</parameter>
+      </parameters>
+      <query predefined="true">lastx.hosts</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>69e11162-5371-4a8b-9540-206c3954642a</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/69e11162-5371-4a8b-9540-206c3954642a"/>
+      <name>Hosts Not In Group</name>
+      <displayName>Hosts Not In Group</displayName>
+      <globalName>Hosts Not In Group</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters/>
+      <query predefined="true">nogroup.hosts</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>407d09cd-8cb6-4b71-b08a-a43e7e6b74c3</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/407d09cd-8cb6-4b71-b08a-a43e7e6b74c3"/>
+      <name>Smart Groups Not In Group</name>
+      <displayName>Smart Groups Not In Group</displayName>
+      <globalName>Smart Groups Not In Group</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters/>
+      <query predefined="true">nogroup.smartgroups</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>3d5f71f3-bda9-42a3-b8ee-f76e3b2f6537</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/3d5f71f3-bda9-42a3-b8ee-f76e3b2f6537"/>
+      <name>Storage Discovered in Last X Days</name>
+      <displayName>Storage Discovered in Last X Days</displayName>
+      <globalName>Storage Discovered in Last X Days</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters>
+         <parameter name="lastx">259200</parameter>
+      </parameters>
+      <query predefined="true">lastx.storages</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>26182bbe-893e-4bcd-971c-870482bb1545</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/26182bbe-893e-4bcd-971c-870482bb1545"/>
+      <name>Storage Not In Group</name>
+      <displayName>Storage Not In Group</displayName>
+      <globalName>Storage Not In Group</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters/>
+      <query predefined="true">nogroup.storages</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>940cb7ac-da2a-4304-ab98-7ba593765b51</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/940cb7ac-da2a-4304-ab98-7ba593765b51"/>
+      <name>Switches Discovered in Last X Days</name>
+      <displayName>Switches Discovered in Last X Days</displayName>
+      <globalName>Switches Discovered in Last X Days</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters>
+         <parameter name="lastx">259200</parameter>
+      </parameters>
+      <query predefined="true">lastx.switches</query>
+   </node>
+   <node version="1" type="InternalSmartGroup">
+      <id>407d09cd-8cb6-4b71-b08a-a43e7e6b74c2</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/407d09cd-8cb6-4b71-b08a-a43e7e6b74c2"/>
+      <name>Switches Not In Group</name>
+      <displayName>Switches Not In Group</displayName>
+      <globalName>Switches Not In Group</globalName>
+      <lastSeen>2014-01-30T15:45:23.0Z</lastSeen>
+      <creatorType>system</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+      <parameters/>
+      <query predefined="true">nogroup.switches</query>
+   </node>
+   <node version="1" type="TSM">
+      <id>e1d86a6b-2181-45c1-bb27-e62dafc339ec</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/e1d86a6b-2181-45c1-bb27-e62dafc339ec"/>
+      <name>w2k8x64tsm64</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64</globalName>
+      <lastSeen>2014-02-05T00:09:08.0Z</lastSeen>
+      <aliases/>
+      <attributes>
+         <assignedAttribute>
+            <id>1b4f8c66-9ada-47c9-8b05-17ce8d5bbb20</id>
+            <objAttrId>67fb3d84-c699-11e1-9b21-0800200c9a66</objAttrId>
+            <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/e1d86a6b-2181-45c1-bb27-e62dafc339ec/assignedAttributes/67fb3d84-c699-11e1-9b21-0800200c9a66"/>
+            <attributeValue type="Flag">true</attributeValue>
+            <attributeCategory>Apollo</attributeCategory>
+         </assignedAttribute>
+      </attributes>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>acf5f152-c024-46c4-a75f-aeb71ef1671b</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/acf5f152-c024-46c4-a75f-aeb71ef1671b"/>
+      <name>alsea</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:alsea</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:alsea</globalName>
+      <lastSeen>2014-02-05T00:03:08.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>22e24307-0a6c-4095-9287-82f8f1d781e6</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/22e24307-0a6c-4095-9287-82f8f1d781e6"/>
+      <name>arawak.wysdm.lab.emc.com</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:arawak.wysdm.lab.emc.com</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:arawak.wysdm.lab.emc.com</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>89da85d3-296e-4eba-9f9c-b57f49078879</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/89da85d3-296e-4eba-9f9c-b57f49078879"/>
+      <name>bogdanvm</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:bogdanvm</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:bogdanvm</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>481a69f2-2307-4500-acf9-7246c5ef4119</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/481a69f2-2307-4500-acf9-7246c5ef4119"/>
+      <name>colinpvm</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:colinpvm</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:colinpvm</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>cc97fb89-2482-4eef-b89f-ac63715a1ac1</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/cc97fb89-2482-4eef-b89f-ac63715a1ac1"/>
+      <name>crow</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:crow</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:crow</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>a9a68c08-8b51-4457-9a1b-27523aef6075</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a9a68c08-8b51-4457-9a1b-27523aef6075"/>
+      <name>devw2k8x64</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:devw2k8x64</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:devw2k8x64</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>3322c2b5-782f-473d-b4e1-ad334c452e34</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/3322c2b5-782f-473d-b4e1-ad334c452e34"/>
+      <name>menominee</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:menominee</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:menominee</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>80fbf2bf-374f-4839-990f-0f1a0770658a</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/80fbf2bf-374f-4839-990f-0f1a0770658a"/>
+      <name>mikeyaix1</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:mikeyaix1</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:mikeyaix1</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>a140da50-84ac-40d9-acda-23136148c1b4</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a140da50-84ac-40d9-acda-23136148c1b4"/>
+      <name>miwok</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:miwok</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:miwok</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>90fe83e8-b996-49ac-9cb5-5e2240679f4c</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/90fe83e8-b996-49ac-9cb5-5e2240679f4c"/>
+      <name>miwok.wysdm.lab.emc.com</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:miwok.wysdm.lab.emc.com</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:miwok.wysdm.lab.emc.com</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>ac8601b2-43fb-4087-96e2-d7bd18b51cf2</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/ac8601b2-43fb-4087-96e2-d7bd18b51cf2"/>
+      <name>quapaw.wysdm.lab.emc.com</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:quapaw.wysdm.lab.emc.com</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:quapaw.wysdm.lab.emc.com</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>65ceb4fb-71c2-4db8-b196-41f68c02bd7d</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/65ceb4fb-71c2-4db8-b196-41f68c02bd7d"/>
+      <name>seri</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:seri</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:seri</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>11a6c388-b86f-4fe5-bf09-e5105ccd518b</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/11a6c388-b86f-4fe5-bf09-e5105ccd518b"/>
+      <name>w2k3x64tsm63</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:w2k3x64tsm63</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:w2k3x64tsm63</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>31639275-0ae3-43dd-a34c-03228424e37c</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/31639275-0ae3-43dd-a34c-03228424e37c"/>
+      <name>w2k8x64auto</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:w2k8x64auto</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:w2k8x64auto</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>2d70c81d-49bf-40f1-a226-aa7bd50a7a5a</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/2d70c81d-49bf-40f1-a226-aa7bd50a7a5a"/>
+      <name>w2k8x64tsm64</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:w2k8x64tsm64</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:w2k8x64tsm64</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupClient">
+      <id>444db1df-e31d-493e-93d3-203a0046484c</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/444db1df-e31d-493e-93d3-203a0046484c"/>
+      <name>wichita</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:wichita</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:wichita</globalName>
+      <lastSeen>2014-02-04T23:42:56.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupDevice">
+      <id>a0c742db-095f-4d39-891d-ab200eb8585d</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a0c742db-095f-4d39-891d-ab200eb8585d"/>
+      <name>FILEDEV1</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:FILEDEV1</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:FILEDEV1</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupDevice">
+      <id>7fcdd6f2-9d1b-4cd6-b20b-0aaa5b892f8e</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/7fcdd6f2-9d1b-4cd6-b20b-0aaa5b892f8e"/>
+      <name>FILEDEV2</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:FILEDEV2</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:FILEDEV2</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupDevice">
+      <id>3c279779-e2ab-4108-968e-af5e2b92f4c7</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/3c279779-e2ab-4108-968e-af5e2b92f4c7"/>
+      <name>FILEDEV21</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:FILEDEV21</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:FILEDEV21</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupDevice">
+      <id>05377292-c8ee-4040-bd0b-af5a3f2a0ffd</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/05377292-c8ee-4040-bd0b-af5a3f2a0ffd"/>
+      <name>W2K3X64TSM63</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:W2K3X64TSM63</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:W2K3X64TSM63</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupGroup">
+      <id>3a7979fd-cb3e-43ef-bacd-0952c2568162</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/3a7979fd-cb3e-43ef-bacd-0952c2568162"/>
+      <name>standard</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:standard</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:standard</globalName>
+      <lastSeen>2014-02-04T23:45:13.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupGroup">
+      <id>4c700994-4e5a-44f2-a52d-ce78a0629401</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/4c700994-4e5a-44f2-a52d-ce78a0629401"/>
+      <name>testdomain</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:testdomain</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:testdomain</globalName>
+      <lastSeen>2014-02-04T12:35:49.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupLibrary">
+      <id>3a1fa8f3-84f2-4e98-8879-4e7c056c410c</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/3a1fa8f3-84f2-4e98-8879-4e7c056c410c"/>
+      <name>FILEDEV2</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:FILEDEV2</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:FILEDEV2</globalName>
+      <lastSeen>2014-02-04T12:35:49.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupLibrary">
+      <id>88342dce-34b0-4567-a1f5-004978971906</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/88342dce-34b0-4567-a1f5-004978971906"/>
+      <name>FILELIB1</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:FILELIB1</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:FILELIB1</globalName>
+      <lastSeen>2014-02-04T12:35:49.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupPool">
+      <id>3a82d731-a980-44ea-982b-702e149cfdc2</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/3a82d731-a980-44ea-982b-702e149cfdc2"/>
+      <name>ARCHIVEPOOL</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:ARCHIVEPOOL</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:ARCHIVEPOOL</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupPool">
+      <id>a3371431-0a74-4917-b1d9-6cec1931de55</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a3371431-0a74-4917-b1d9-6cec1931de55"/>
+      <name>BACKUPPOOL</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:BACKUPPOOL</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:BACKUPPOOL</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupPool">
+      <id>a91fddee-2912-4524-b147-f26a0616a984</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/a91fddee-2912-4524-b147-f26a0616a984"/>
+      <name>MAINFILESTORE</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:MAINFILESTORE</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:MAINFILESTORE</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupPool">
+      <id>4f13ffcc-1307-438d-acbd-6b264bed327a</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/4f13ffcc-1307-438d-acbd-6b264bed327a"/>
+      <name>PRIMARYTESTBACKUP</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:PRIMARYTESTBACKUP</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:PRIMARYTESTBACKUP</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupPool">
+      <id>ec975325-7931-41d4-84fd-b71715e0d390</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/ec975325-7931-41d4-84fd-b71715e0d390"/>
+      <name>Private</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:Private</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:Private</globalName>
+      <lastSeen>2014-02-04T12:35:49.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupPool">
+      <id>f15216e7-8d4a-4f4c-ab8b-6ef912406be4</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/f15216e7-8d4a-4f4c-ab8b-6ef912406be4"/>
+      <name>SPACEMGPOOL</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:SPACEMGPOOL</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:SPACEMGPOOL</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupPool">
+      <id>1aedfd2a-02d0-4244-a2dd-519bcaa6ce0e</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/1aedfd2a-02d0-4244-a2dd-519bcaa6ce0e"/>
+      <name>Scratch</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:Scratch</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:Scratch</globalName>
+      <lastSeen>2014-02-04T12:35:49.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupPool">
+      <id>34193d41-442e-43aa-802c-e244a23be7dc</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/34193d41-442e-43aa-802c-e244a23be7dc"/>
+      <name>TESTACTIVEPOOL</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:TESTACTIVEPOOL</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:TESTACTIVEPOOL</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMBackupPool">
+      <id>dbff3026-d1e0-4e23-97a7-0019d9f237bc</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/dbff3026-d1e0-4e23-97a7-0019d9f237bc"/>
+      <name>TESTBACKUP</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:TESTBACKUP</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:TESTBACKUP</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMDatabase">
+      <id>27cb540c-dcda-46d1-baff-3d9ec018ef04</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/27cb540c-dcda-46d1-baff-3d9ec018ef04"/>
+      <name>Recovery Log</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:Recovery Log</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:Recovery Log</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+   <node version="1" type="TSMDatabase">
+      <id>cd32faab-ec83-4dda-96e8-906c7fc2414b</id>
+      <link rel="self" href="http://10.64.205.162:9004/apollo-api/nodes/cd32faab-ec83-4dda-96e8-906c7fc2414b"/>
+      <name>tsmdb1</name>
+      <displayName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:tsmdb1</displayName>
+      <globalName>w2k8x64tsm64.wysdm.lab.emc.com:w2k8x64tsm64:tsmdb1</globalName>
+      <lastSeen>2014-02-05T00:01:31.0Z</lastSeen>
+      <creatorType>Apollo</creatorType>
+      <aliases/>
+      <attributes/>
+      <isReporting>true</isReporting>
+      <isCreatedBySmartGroup>false</isCreatedBySmartGroup>
+   </node>
+</nodes>

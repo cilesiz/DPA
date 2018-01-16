@@ -1,0 +1,898 @@
+<aeRulesets>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.662+01:00" type="ScheduledBasedRule">
+      <id>2994a72f-948b-460d-a9ae-ae2db2fce20c</id>
+      <templateId>14fc41dc-3ce7-4c40-ba30-80e58fab62d7</templateId>
+      <name>Restore rate lower than required</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if the restore rate lower than required</description>
+      <rulePopulation version="1">
+         <assignableNodeType>Host</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Data Restore Rate</name>
+            <cast>Percentage</cast>
+            <description>Data Restore Rate (%)</description>
+            <defaultValue>0.1</defaultValue>
+         </inputParameterDefinition>
+         <inputParameterDefinition version="1">
+            <name>Job Restore Rate</name>
+            <cast>Percentage</cast>
+            <description>Job Restore Rate (%)</description>
+            <defaultValue>0.1</defaultValue>
+         </inputParameterDefinition>
+         <inputParameterDefinition version="1">
+            <name>Report Period</name>
+            <cast>Duration</cast>
+            <description>Report Period (days)</description>
+            <defaultValue>28</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>Compliance</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Restore Rate Statistics for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Job restore rates are lower than required ${0}% Vs ${1}</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>% of Backups Restored</name>
+               <fieldType>PERCENTAGE</fieldType>
+            </singleValue>
+            <singleValue version="1" type="InputParameterValue">
+               <name>Job Restore Rate</name>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:51.994+01:00" type="ScheduledBasedRule">
+      <id>f2baf3b9-839a-4684-bfcb-65cc79d09974</id>
+      <templateId>3534cf3a-e414-4c75-9d0c-feb336f78766</templateId>
+      <name>Running out of spare disks</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if node will run out of spare disks in the near future</description>
+      <rulePopulation version="1">
+         <assignableNodeType>Disk</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Number of Days to Forecast</name>
+            <cast>Duration</cast>
+            <description>Number of Days to Forecast</description>
+            <defaultValue>28</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>CapacityPlanning</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Spare Disk Count by Use for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Node predicted to run out of spare disks at ${0}</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="InputParameterValue">
+               <name>Number of Days to Forecast</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.55+01:00" type="ScheduledBasedRule">
+      <id>110be243-447c-4849-a21b-3972a87cfadc</id>
+      <templateId>3c430bc9-c049-43b8-8a06-48ec4ace8b9d</templateId>
+      <name>Multiple tapedrive firmware revisions</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if there are multiple firmware revisions on the same model of tape drive</description>
+      <rulePopulation version="1">
+         <assignableNodeType>TapeDrive</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions/>
+      <category>Configuration</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Multiple Tape Drive Firmware Revisions for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>There are ${0} different revision of firmware on tape drives of model ${1}</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Firmware</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+            <singleValue version="1" type="ReportField">
+               <name>Model</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.85+01:00" type="ScheduledBasedRule">
+      <id>f3162a0e-72a0-4264-8928-7a7fb66ed013</id>
+      <templateId>f7035499-5d22-4def-b09a-3b45b58391d3</templateId>
+      <name>Fileserver export and LUN on same volume</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if a fileserver exports filesystems and LUNs from the same volume</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions/>
+      <category>Configuration</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>LUNs And Filesystems On Same Volume for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Both LUNS ad filesystems on the same volume</alertText>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.109+01:00" type="ScheduledBasedRule">
+      <id>0577da36-a58c-41c2-a9aa-c737b8c514c8</id>
+      <templateId>9ae54924-4ccc-470c-b3b8-16a3a2b2b3f9</templateId>
+      <name>Few spare disks</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if there are only a few disks marked as &apos;Spare&apos; on a NetApp filer</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Minimum Spares</name>
+            <cast>Long</cast>
+            <description>Minimum Spares</description>
+            <defaultValue>2</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>Provisioning</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Spare Disk Count for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.145+01:00" type="ScheduledBasedRule">
+      <id>bd0cae7e-02aa-4056-b6c8-71d9d4a0f43a</id>
+      <templateId>5e9c5163-ae4e-4bdd-8981-8fb9e7c5a398</templateId>
+      <name>Recoverability Exposure</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Recoverability Exposure</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions/>
+      <category>Recoverability</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Recoverability Detailed Exposures for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.171+01:00" type="ScheduledBasedRule">
+      <id>4f2b935e-3e8c-426d-900e-e5b41890697d</id>
+      <templateId>30c056e2-267e-45c1-a128-1ee5a57a3a38</templateId>
+      <name>Application recovery point objective missed</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if an application recovery point objective has been missed</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Maximum Threshold</name>
+            <cast>Time</cast>
+            <description>Recovery Point Objective (Hours)</description>
+            <defaultValue>72</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>DataProtection</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Application Exposure for RPO missed ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.197+01:00" type="ScheduledBasedRule">
+      <id>daeffcb4-57c2-4401-ac24-615d50b1af92</id>
+      <templateId>6288f83c-098f-4dc2-880e-77aeba24eb39</templateId>
+      <name>Many backups failed</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Many backups failed</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Max. Number of Failed Backups</name>
+            <cast>Long</cast>
+            <description>Max. Number of Failed Backups</description>
+            <defaultValue>5</defaultValue>
+         </inputParameterDefinition>
+         <inputParameterDefinition version="1">
+            <name>Number of Minutes to Check</name>
+            <cast>Long</cast>
+            <description>Number of Minutes to Check</description>
+            <defaultValue>30</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>DataProtection</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1" lastModified="1970-01-01T01:00:00.1+01:00">
+            <id>bd199743-a6af-4350-9d14-0d7f308d3e3f</id>
+            <name>Last Week</name>
+            <description>last week</description>
+            <startTimeId>75148fbc-2faa-40ba-a765-fdf52a894d2d</startTimeId>
+            <endTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</endTimeId>
+            <enableTimeZone>false</enableTimeZone>
+            <system>true</system>
+            <hidden>false</hidden>
+         </window>
+      </timeConstraints>
+      <reportName>Backup Failed Jobs for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>${0} backups failed in the last ${1} minutes</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Num Failed</name>
+               <fieldType>NUMERIC</fieldType>
+            </singleValue>
+            <singleValue version="1" type="InputParameterValue">
+               <name>Number of Minutes to Check</name>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.235+01:00" type="ScheduledBasedRule">
+      <id>5d224611-f9c6-4e6c-b1c0-7e22e3d0cfe5</id>
+      <templateId>9210b01f-196d-4f57-a30a-257d69bf67f6</templateId>
+      <name>Backup succeeded but failed SLA requirements</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if a backup appeared to be successful but failed to meet its service level requirements</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions/>
+      <category>SLA</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Backup Successful Jobs with failed SLA for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Backup of ${0} succeeded but failed to meet its SLA requirements</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Job</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.260+01:00" type="ScheduledBasedRule">
+      <id>4e27f0f5-9fe2-4d79-824b-8c1f5bfe36bc</id>
+      <templateId>23162855-fc66-4eb6-9d45-bc7f29978341</templateId>
+      <name>Application restore time estimate too high</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if an application restore time estimate is too high</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Recovery Time Objective (Hours)</name>
+            <cast>Time</cast>
+            <description>Recovery Time Objective (Hours)</description>
+            <defaultValue>12</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>DataProtection</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Application Exposure for RTE high ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Application restore time is estimated to be  ${0}</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Estimated restore time</name>
+               <fieldType>TIMESTAMP</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.286+01:00" type="ScheduledBasedRule">
+      <id>eb41d647-cc2b-4dcb-b1bb-01670b595d63</id>
+      <templateId>e3e9a0cb-4008-4a8a-a0aa-25d7639e4148</templateId>
+      <name>Backup exposure time exceeds recovery point objective</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alerts when an applications backup exposure time exceeds its recovery point objective</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions/>
+      <category>SLA</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Exposure Time Exceeds RPO for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Applications current backup exposure time has exceeded its recovery point objective </alertText>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.311+01:00" type="ScheduledBasedRule">
+      <id>179baed4-f3fa-4eae-b4a4-ac0baaefe474</id>
+      <templateId>e13c69fe-f2ac-41f0-b607-f4720dfccc86</templateId>
+      <name>Success rate below threshold</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Success rate below threshold</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions/>
+      <category>Compliance</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1" lastModified="1970-01-01T01:00:00.1+01:00">
+            <id>bd199743-a6af-4350-9d14-0d7f308d3e3f</id>
+            <name>Last Week</name>
+            <description>last week</description>
+            <startTimeId>75148fbc-2faa-40ba-a765-fdf52a894d2d</startTimeId>
+            <endTimeId>ed2ee63b-d8ca-494e-ad97-acf640ecd2ca</endTimeId>
+            <enableTimeZone>false</enableTimeZone>
+            <system>true</system>
+            <hidden>false</hidden>
+         </window>
+      </timeConstraints>
+      <reportName>Success Rate Against Target for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Success Rate versus target is ${0} vs ${1}</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Target</name>
+               <fieldType>NUMERIC</fieldType>
+            </singleValue>
+            <singleValue version="1" type="ReportField">
+               <name>Success Rate</name>
+               <fieldType>NUMERIC</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.338+01:00" type="ScheduledBasedRule">
+      <id>fb0ba0ad-fe5c-46c8-91e0-3c58c371a483</id>
+      <templateId>1a235083-38ca-4ff5-802e-06a6576a2d39</templateId>
+      <name>Three-strike failures</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Three-strike failures</description>
+      <rulePopulation version="1">
+         <assignableNodeType>BackupClient</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions/>
+      <category>Compliance</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Three Strike Failed Clients for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Client has failed at least three days running</alertText>
+      </scheduledAlertTemplate>
+      <additionalAssignableTypes>
+         <string>Host</string>
+      </additionalAssignableTypes>
+      <useAssignableTypes>true</useAssignableTypes>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.363+01:00" type="ScheduledBasedRule">
+      <id>9ebe837f-eb46-4242-9383-53557c205be7</id>
+      <templateId>687170e9-16ed-4dee-97dc-6725b9039566</templateId>
+      <name>Running out of backup client licenses</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert when less than a predefined number of backup client licenses</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Minimum Client Licenses</name>
+            <cast>Long</cast>
+            <description>Minimum Client Licenses</description>
+            <defaultValue>25</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>CapacityPlanning</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>DPA Client License Details for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Only ${0}  DPA backup client licenses available</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="InputParameterValue">
+               <name>Minimum Client Licenses</name>
+               <fieldType>NUMERIC</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.395+01:00" type="ScheduledBasedRule">
+      <id>8fafbe3a-fce9-4e92-8af5-c9fd77905f63</id>
+      <templateId>73276851-0dc7-4871-b7e7-574a64a14280</templateId>
+      <name>Network interface changed state</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if a network interface changes state</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions/>
+      <category>Status</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Network Interface Status for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Interface ${0} has been changed</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Interface</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.424+01:00" type="ScheduledBasedRule">
+      <id>063bd407-408d-46ad-bb8b-9f932f9c41da</id>
+      <templateId>9c3f62d0-d8b9-4944-8568-64bd3d801330</templateId>
+      <name>Many backup devices unavailable</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if many backup devices are unavailable</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Maximum Number of Downed Devices</name>
+            <cast>Long</cast>
+            <description>Maximum Number of Downed Devices</description>
+            <defaultValue>2</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>Status</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Backup Unavailable Device Count for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>${0} backup devices are unavailable</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Unavailable Count</name>
+               <fieldType>NUMERIC</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.460+01:00" type="ScheduledBasedRule">
+      <id>2c09a2a1-820d-4822-bc28-3055eb212dd2</id>
+      <templateId>3b3ec20a-2728-4a39-a6f2-ff898fc077ef</templateId>
+      <name>Less than x% of backup devices available</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if less than x% of backup devices are available on a server</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Maximum Device Availability</name>
+            <cast>Percentage</cast>
+            <description>Maximum Device Availability</description>
+            <defaultValue>75</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>Status</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Device Availability for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Only ${0}% backup devices are available</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Device Availability</name>
+               <fieldType>NUMERIC</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.508+01:00" type="ScheduledBasedRule">
+      <id>8aea2c7f-8cad-459e-89e5-3e91cf904271</id>
+      <templateId>aaaadf78-9682-4439-9830-8f3e48355814</templateId>
+      <name>License nearing expiration</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if a valid license is nearing its expiration</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Minimum Number of Days Before Expiry</name>
+            <cast>Long</cast>
+            <description>Minimum Number of Days Before Expiry</description>
+            <defaultValue>7</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>Provisioning</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Nearly Expired Licenses for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>license will expires within ${0} days</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="InputParameterValue">
+               <name>Minimum Number of Days Before Expiry</name>
+               <fieldType>NUMERIC</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.634+01:00" type="ScheduledBasedRule">
+      <id>03af5870-415a-492a-9c46-54dc0fb4c4c0</id>
+      <templateId>6d5e4561-ded9-4ea3-9645-14747eac72eb</templateId>
+      <name>Too few source ports for LUN</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if there are not enough source ports for a LUN</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Minimum Source Ports</name>
+            <cast>Long</cast>
+            <description>Minimum Source Ports</description>
+            <defaultValue>2</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>Configuration</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>LUN Source Ports for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Lun ${0} only has ${1} source ports, fewer then required</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Name</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+            <singleValue version="1" type="ReportField">
+               <name>Source Ports</name>
+               <fieldType>NUMERIC</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.520+01:00" type="ScheduledBasedRule">
+      <id>16a43fd1-d7aa-42a6-b013-fa5bd7b1406c</id>
+      <templateId>6a225008-cfd9-494b-80d1-0e6c07e141ad</templateId>
+      <name>Storage Array is filling up</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert when there is no space left to allocate a new LUN on the pool and there are no free disks available on the storage array.</description>
+      <rulePopulation version="1">
+         <assignableNodeType>StorageArray</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Initial Consumed Capacity</name>
+            <cast>Long</cast>
+            <description>Initial Consumed Capacity</description>
+            <defaultValue>2</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>CapacityPlanning</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Storage Array Filling Up for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText> There is no space left to allocate a new LUN on ${0} and there are no free disks available to storage array ${1}</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Pool Name</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+            <singleValue version="1" type="ReportField">
+               <name>Array Name</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.552+01:00" type="ScheduledBasedRule">
+      <id>e858b849-9f87-4cca-baa6-527c0afcb739</id>
+      <templateId>edc288eb-c3d5-4545-aaf1-9be707e2e6dd</templateId>
+      <name>Database configuration changed</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if a database configuration changes</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions/>
+      <category>ChangeManagement</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Database Config Changes for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Database ${0} has been changed for ${1}. The change is ${2} on ${3}</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Sub Name</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+            <singleValue version="1" type="ReportField">
+               <name>Type</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+            <singleValue version="1" type="ReportField">
+               <name>Change</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+            <singleValue version="1" type="ReportField">
+               <name>Server</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.578+01:00" type="ScheduledBasedRule">
+      <id>5892bce3-9f10-472a-b34a-c36b2f166afd</id>
+      <templateId>2a1d174b-d66e-4a0a-8e97-86ab25add055</templateId>
+      <name>Backup Application configuration changed</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if a backup application configuration changes</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions/>
+      <category>ChangeManagement</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Backup Application Change Details for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Server ${0} has been changed for ${1}. The change is ${2} on ${3}</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Server</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+            <singleValue version="1" type="ReportField">
+               <name>Type</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+            <singleValue version="1" type="ReportField">
+               <name>Change</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+            <singleValue version="1" type="ReportField">
+               <name>Sub Name</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.605+01:00" type="ScheduledBasedRule">
+      <id>42cf8fe6-6212-4d86-886c-9fa3e092a390</id>
+      <templateId>fc4712e5-aa7d-4678-b030-422e30452923</templateId>
+      <name>Empty tapes running low</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Watch for tape pools with very few empty tapes</description>
+      <rulePopulation version="1">
+         <assignableNodeType>HostFileSystem</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Minimum Number of Empty Tapes</name>
+            <cast>Long</cast>
+            <description>Minimum Number of Empty Tapes</description>
+            <defaultValue>5</defaultValue>
+         </inputParameterDefinition>
+         <inputParameterDefinition version="1">
+            <name>Pool to Check</name>
+            <cast>String</cast>
+            <description>Pool to Check</description>
+            <defaultValue>Scratch</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>CapacityPlanning</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Media Count By Pool and State for ruleset</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>There are only empty number ${0} in pool to check ${1}</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Media Count</name>
+               <fieldType>NUMERIC</fieldType>
+            </singleValue>
+            <singleValue version="1" type="InputParameterValue">
+               <name>Pool to Check</name>
+               <fieldType>NUMERIC</fieldType>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+   <AERuleset version="1" lastModified="2014-04-16T13:16:52.689+01:00" type="ScheduledBasedRule">
+      <id>77edeedc-a1c8-4060-944e-63ec967a4c0d</id>
+      <templateId>1a09ace3-0cba-4d95-ab8d-ee56bb8f3886</templateId>
+      <name>Disk Failed for a Number of Hours</name>
+      <rulesetType>SCHEDULE_BASED</rulesetType>
+      <description>Alert if a disk has not been online for over a given number of hours</description>
+      <rulePopulation version="1">
+         <assignableNodeType>Disk</assignableNodeType>
+      </rulePopulation>
+      <inputParameterDefinitions>
+         <inputParameterDefinition version="1">
+            <name>Maximum Failure Time</name>
+            <cast>Long</cast>
+            <description>Max number of hours a disk can be down before an alert is issued</description>
+            <defaultValue>2</defaultValue>
+         </inputParameterDefinition>
+      </inputParameterDefinitions>
+      <category>Configuration</category>
+      <severity>Error</severity>
+      <isSystem>true</isSystem>
+      <schedule>
+         <name>9am every day</name>
+      </schedule>
+      <timeConstraints type="window">
+         <window version="1"/>
+      </timeConstraints>
+      <reportName>Disk Status</reportName>
+      <isAlertForEachRow>true</isAlertForEachRow>
+      <scheduledAlertTemplate version="1">
+         <alertText>Disk ${0}has been failed for more then ${1} hours</alertText>
+         <orderedAlertParameters>
+            <singleValue version="1" type="ReportField">
+               <name>Device</name>
+               <fieldType>STRING</fieldType>
+            </singleValue>
+            <singleValue version="1" type="InputParameterValue">
+               <name>Maximum Failure Time</name>
+            </singleValue>
+         </orderedAlertParameters>
+      </scheduledAlertTemplate>
+   </AERuleset>
+</aeRulesets>

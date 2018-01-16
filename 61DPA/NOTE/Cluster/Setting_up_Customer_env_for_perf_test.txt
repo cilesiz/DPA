@@ -1,0 +1,107 @@
+URL = http://dpa-wiki.corp.emc.com/display/DPAE/Setting+up+Customer+Environment+for+Performance+Testing
+
+Setting up Customer Environment for Performance Testing
+=======================================================
+
+In order to test and verify large customer escalations or to perform Performance testing we can re-create customer environments in our lab. By putting it under continuous agent load we can perform extensive testing; explore more issues that can occur on customer sites and in turn can add value to DPA performance, stability and quality.
+
+Requirements:
+
+- Customer Database
+- 3 dedicated servers. 2 servers (VMs) with higher specifications for DPA split install and 1 normal VM for generating load.
+- Shpanmulator executable s
+- Agent load files, extracted from Customer database.
+
+Setup:
+
+1) First of all do a split install of required DPA version.
+For instance in case of BNYM customer . installed datastore on psbnymdb.wysdm.lab.emc.com and application server on psbnymap.wysdm.lab.emc.com
+
+2) Once the servers are up and running, stopped the Application service and import the customer database using  dpa ds import command.
+For example on psbnymdb
+[root@apsbnymdb ~]# cd /opt
+[root@apsbnymdb opt]# cd emc/dpa/services/bin
+[root@apsbnymdb bin]# ./dpa.sh ds import <database filename>
+
+Customer databases are located on wysdm share under Databases directory.
+
+3) After the database imported successfully, restart the Application service i.e. on psbnymap.
+
+4) Launch the UI and try to login with administrator user name and password. If login is unsuccessful reset the password for administrator user. Can use the following  ds query to reset the password.
+[root@apsbnymdb bin]# ./dpa.sh ds query "update apollo.user set f_password='xxx' where f_logon_name='administrator';"
+P.S. The password value should be the encrypted administrator password from Apollo user table.
+ 
+5) Now you can easily access DPA with administrator username/password for testing.
+
+6) The next step is to generate agent load but before that need to extract data 
+
+How to extract data?
+
+Install DPA on any VM and import customer database. Then perform following steps:
+
+6.1) To know which hosts you can extract data from use this SQL command:
+(change the "-f_module" to whatever module you need to extract)
+select n.f_global_name, max(f_report_size), count(*)
+
+from dpa.request_history rh, apollo.node n
+where  f_module = 'avamar' and n.f_id = rh.f_target_id
+group by n.f_global_name
+order by 2 desc
+
+6.2) To extract the data use this APi/link:
+
+http://loccalhost:9004/dpa-api/exportShpanmulatorFiles?agentName=&module=&startTime=1387929600
+
+Fill in agent name (results from the SQL query) and module (avamar\data domain) as require
+Fill in the server IP as require
+Fill in the required start time
+
+6.3) The output folder will be created under C:\Program Files\EMC\DPA\agent\tmp\output folder
+
+How to Schedule load?
+
+On the server from where we want to generate load install java and copy latest shpanmulator. For BNYM tututni.wysdm.lab.emc.com is used for generating load.
+Do as follows:
+
+6.4) Create a folder named "shpanmulator" and copy latest shpanmulator.bat, shpanmulator-runner.jar and java.exe .
+
+6.5) Create a subfolder "output" within "shpanmulator" and copy the extracted data files.
+
+
+6.6) Now run shpanmulator command "sim agent" for the required server and specify the directory location where we have copied output file.
+
+For example for BNYM:
+C:\shpanmulator> shpanmulator sim agent -server=psbnymap -dir=C:\shpanmulator\output
+ 
+It will launch the following dialog
+ 
+6.7) In this dialog the Targets will list all the extracted data (module) folders that will be in "Ready" state to schedule.
+6.8) Select the Default Periods checkbox that ensures that default data collection time period for request will be used and then select Schedule button.
+6.9) In the background on command prompt you can see the requests being scheduled.
+6.10) Can schedule one by one or can do multi-select and schedule in one go.
+6.11) If there is no customer database then can also use Push History option to load historic data and can continue scheduling it using specified number of hours.
+ 
+After scheduling agent load environment is ready and can be used for recreating customer issues.
+
+
+MSG FROM JAYA
+=============
+
+- you can find all the output files under wysdm\Databases\Shpanmulations
+- you dont have to do step 6 in that page
+- instead use the output files from the location I mentioned
+- and pump that data in
+
+- you need to unzip it
+- it will create folders 
+- with the xml files inside it
+- It will simulate DPA like a customer database
+- All the xmls in the output folder will get loaded into our DPA databases
+- and the date? is it backdated 10 days from current time?
+- depends on the timestamps in the xmls
+- we can upload historic data and schedule load to be sent like real time data being sent to listener
+- can I run the shpan more than one times? because I can see some of the data can't go through for some reason
+- yes, server will reject them based on the load
+- yeah you should be able to run it
+- also, if I have upgrade my dpa server to 6.2.0, can I shpan it again using shpan (6.2 version) on the xml datas (data are 6.1)?
+- those output folder with xmls will/should work with any version

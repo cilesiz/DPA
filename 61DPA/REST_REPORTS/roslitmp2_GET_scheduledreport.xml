@@ -1,0 +1,131 @@
+#1#57a3f19d-b8e4-4e5c-903c-7e8c9a9dff62##Backup Compliance Overview#Pershing Backup Success rate - Backup Success rate-Radhika##
+#2#0011358d-cf2d-4f75-9a8d-5d613640ba86##Chargeback Overview#TSM-CNJ  Charge Back Report - TSM Occupancy Record##
+#3#86da1f51-6b4d-4a69-baa6-297e060f338c##Chargeback Overview#TSM-CSC Charge Back Report - TSM Occupancy Record##
+#4#a786a542-6f6c-411e-a7b1-63fe917e871b##Chargeback Overview#TSM-FPC  Charge Back Report - TSM Occupancy Record##
+#5#42de5fba-a122-4fbc-a625-4d9db576870e##Chargeback Overview#TSM-NPC Charge Back Report - TSM Occupancy Record##
+#6#0834a7f8-4bd0-437c-84bc-86130cd27c07##Chargeback Overview#TSM-PER Charge Back Report - TSM Occupancy Record##
+#7#321c0be0-2e97-4e0d-8c02-9f3e09c52f68##Chargeback Overview#TSM-TCE Charge Back Report - TSM Occupancy Record##
+#8#70922d00-1870-41ec-b109-6a8568d23c43##Chargeback Overview#TSM-TPC  Charge Back Report - TSM Occupancy Record##
+#9#1c573081-b5f3-4f7e-b78a-d350eab618e9##Standish Clients#Standish Control Panel - Daily Summary of the Standish Clients#0615 Daily#
+#10#6a06098a-6a06-4861-9e16-8f469c672f8a##UK Grid Utilization#UK Utilization Report##
+#11#cb080a99-bd41-4e02-b4e3-2a53ebb4e172#Asia Data Protected by Client w/ Effective Path##Avamar Asia NAS  "Data Protected by Client" - Total Data Protected by Grid and Client#0000 Sunday#
+#12#37a0ca75-1bae-4fcb-bacb-4e64682feb13#Avamar Garbage Collection Jobs##Avamar Garbage Collect Details#1100 Daily#
+#13#aa8e0379-3e96-40ca-bfae-c0da26f18c6f#Avamar Grid Capacity Details##Avamar All Server Capacity - Backup server configuration details for last day#0815 Daily#
+#14#a105dbe0-ab31-4908-865e-06299b819f10#BNY06 - Avamar &amp; NAS File Activity Report##Avamar NAS/DPA volume comparison report - Ava-NAS report at 10:15 AM#0915 Daily#
+#15#6969bc9d-e52f-4454-b373-c8e4fbcb2302#BNY09 - Three Strike Failed Clients - BNYM - With Server Name##TSM_CNJ3strikes#0815 Daily#
+#16#c9c06d63-2688-4cca-8644-34fd9b63cba2#BNY09 - Three Strike Failed Clients - BNYM - With Server Name##TSM_PEN3strikes#0815 Daily#
+#17#bcaf015c-2722-4435-b858-b0bcf8c85dec#BNY09 - Three Strike Failed Clients - BNYM - With Server Name##TSM_TEN3strikes#0815 Daily#
+#18#b7c2e61b-5286-483c-b158-c095db3a19c6#BNY11 - Server Side Process##Avamar Health Check - Maintenance Health Check of all grids#1100 Daily#
+#19#c2e0333d-576e-42ed-9380-914acb352bd0#BNYM - Backup Save Set Configuration##Avamar Weekly Active NAS Volumes - Avamar Weekly Active NAS Volumes#1700 Sunday#
+#20#602b4c2e-11fd-4f32-b68e-e6803538447f#BNYM - Backup Save Set Configuration##NDMP Daily Backup Detail - Detailed report of the daily NDMP backups#0645 Daily#
+#21#9fa13a34-8f6d-4d45-aab0-323895921292#BNYM - Strike Summary - Advanced Drilldown##Exchange 3-Strike Summary#0700 Daily#
+#22#a03a438b-503f-4317-8a6b-777829a3e9d3#BNYM DPA License Details##BNYM Licenses##
+#23#a2c56408-fae2-4952-9e37-2043a4c667c7#BT data backed up daily##Notes Daily Report (Last 7 days) - Owner is Bill Telford#1850 Daily#
+#24#4ecfc4dc-8b68-403d-986c-053fad208fc0#Backup All Clients - Default Group##BNYM Clients using Default Group#0900 Saturday#
+#25#fad7e7e7-e3d0-4d1c-94ad-481070496c97#Backup All Clients colored##Avamar GM Trade Floor Backup Status - All Clients#0915 Daily#
+#26#d4a0478f-c531-4498-b404-1f345be504e6#Backup All Clients##All negtive Avamar backups - Combined report for Ava Uk &amp; US##
+#27#5cc915d5-3ef6-47a1-9aee-495e6fbd4e4f#Backup All Clients##VMDK Report-2 - VMDK#0600 Daily#
+#28#b8240758-8408-4ca3-bca3-c3996ec585b5#Backup All Clients##VMDK from CNJESX01 - Ava VMDK on XNJESX01 Daily Report#0400 Daily#
+#29#ac6d8d34-8259-45e3-91a8-3ea46c3eafc6#Backup All Jobs##AVANPCESX02 - Netapp POC - Daily Report - AVANPCESX02 - Netapp POC - Daily Report#0745 Daily#
+#30#2e4eb467-6c87-4ae8-87ad-43ec95a91611#Backup All Jobs##All AVA_Save Sets - AVA_Save Sets##
+#31#d29ab756-00e5-4122-a6f3-67e3901e3ecf#Backup All Jobs##All SaveSets CSC - LMellon All SaveSets##
+#32#09e06a07-7de8-4f13-a603-b7348f2ddb18#Backup All Jobs##All SaveSets NPC - LMellon All SaveSets##
+#33#a2cef7d9-9e42-4832-9aa1-6d4f69b12007#Backup All Jobs##Avamar Enterprise Vault sumarry report#0700 Daily#
+#34#59a5ff45-61ab-48cc-a276-f1ae7f440087#Backup All Jobs##Avamar UK Daily Client Report - Avamar UK Daily Client Report#0500 Daily#
+#35#3de81ae3-0673-4782-850c-f11af4066403#Backup All Jobs##Avamar USA Daily Client Report - Avamar USA Daily Client Report#0800 Daily#
+#36#b56cd3a2-9f8f-487a-9ecc-256d7df8f10e#Backup All Jobs##Avamar backup report - APAC - Sridevi mail purpose - Radhika Rajagopalan##
+#37#70fe5650-e33a-40fd-a44b-1ab938c85132#Backup All Jobs##Avamar backup report - EMEA - Sridevi reporting purpose - Radhika Rajagopalan##
+#38#f799c383-4c9c-43f7-b46d-7341b15f4d37#Backup All Jobs##Avamar backup report - US - Sridevi reporting purpose - Radhika Rajagopalan##
+#39#e5fe44ca-a4c3-4048-bf4f-b11921f439d3#Backup All Jobs##Avamar daily Save Sets - avaso201 - Save Set report for avaso201 - Detail#0730 Daily#
+#40#ed082b81-4601-4ff7-a44e-56187b0e54b5#Backup All Jobs##Global Exchange All SaveSets#0745 Daily#
+#41#d5dae0da-180e-48a3-a197-0d7187bcfeb6#Backup All Jobs##Northpointe Avamar Daily Report - Northpointe Avamar Daily Report#0730 Daily#
+#42#730ce96b-b880-4118-9e0e-23dde899a380#Backup All Jobs##Prod_dpa_ALL_AVAMAR_SAVESETS - Prod_dpa_ALL_AVAMAR_SAVESETS#0815 Daily#
+#43#619bbb5a-eab4-4493-a602-800d0e0f8f88#Backup All Jobs##QVS Avamar NAS Weekly Report - Special Report for Static NAS Clients#Avamar UK NAS Weekly Backup Report  - 6:15am#
+#44#0399e5b7-30ac-4dab-93cf-9e3345ab8968#Backup All Jobs##TPC05 Avamar Daily Jobs#0715 Daily#
+#45#fb31b44b-9811-425c-8ded-bc2df385b877#Backup All Jobs##TSM backup report - Sridevi swat reporting purpose - Radhika Rajagopalan##
+#46#570e87f3-b613-4113-ac4a-5c1a94f667bc#Backup All Jobs##Troy Avamar Daily Report - Troy Avamar Daily Report#0730 Daily#
+#47#e341134f-c1eb-4869-b530-f76294ac7560#Backup All Jobs##Uniondale Avamar Daily Report - Uniondale Avamar Daily Report#0715 Daily#
+#48#0b3c960a-bcf3-4e9d-b0ee-1952a230a6bb#Backup All Jobs##Walter Scott - Weekly backup of ndmp_asdnpvs02b_data#0000 Sunday#
+#49#54585a2f-9315-419b-b9dc-616923f21152#Backup All Jobs##Weekend TSM Savesets (NJ)#0100 Monday#
+#50#8587a2e2-6cd3-473d-98f4-49d27ffa7525#Backup All Jobs##Weekend TSM Savesets (PEN)#0300 Monday#
+#51#46257ec4-963c-4e11-804d-ba0bc944246e#Backup All Jobs##Weekend TSM Savesets (TEN)#0200 Monday#
+#52#d8b3c7d5-1dcf-48a9-b551-0d201969e638#Backup All Jobs##backup all jobs - NPC test#1416 Tuesday#
+#53#d6b4eeb1-da1f-4435-91b8-c07a0f1c0906#Backup All Jobs##testsch#sch1#
+#54#7c7ce182-5d40-4538-a663-4ee4bb97fc34#Backup All Save Sets Warning Recolored##Avamar Daily Client report for UND41, 2PA01, &amp; SO201#0715 Daily#
+#55#ed251fa3-c0d4-428c-8622-fe245cd987b2#Backup All Save Sets Warning Recolored##Avamar Daily Client report for avajcw01n01 &amp; avaso201#0745 Daily#
+#56#584bc486-7dc2-4199-8840-01bb83dec18d#Backup All Save Sets Warning Recolored##Avamar Philadelphia Clients#0730 Daily#
+#57#2ad7183c-2df0-4ba5-bd85-f7fca7e7f0f3#Backup All Save Sets Warning Recolored##Avamar Regional Services - Remote Office Grids - AVALAH41 AVAEVT41 AVABO341#1100 Daily#
+#58#81c28e51-a77b-404c-a742-f999cdbca0da#Backup All Save Sets Warning Recolored##Boston &amp; Everett Avamar Daily Report - Boston &amp; Everett Avamar Daily Report#0815 Daily#
+#59#abe63483-18a0-45ed-add7-d5e01b82d09f#Backup All Save Sets Warning Recolored##College Station Avamar Daily Report - College Station Avamar Daily Report#0830 Daily#
+#60#4a48b2bf-aa7f-4d20-af6b-81efd42dd217#Backup All Save Sets Warning Recolored##College Station Avamar Special Report - Special Report for Matthew Stoughton##
+#61#537bbf66-d2b2-4aa8-962e-95d5567d8689#Backup All Save Sets Warning Recolored##LAH Avamar Daily Report - LAH Avamar Daily Report#0715 Daily#
+#62#06984314-9353-4f33-88ae-7d389b5bc4d2#Backup All Save Sets Warning Recolored##NAS Backup Volume List - Save Sets report for all NBK grids#1700 Saturday#
+#63#399adc81-28e5-43f5-a5a7-5dc02e03b966#Backup Client Configuration Change Details##Avamar Client Configuration Changes - Changes during the last 7 days.#2300 Sunday#
+#64#08276700-66b3-4cd2-8fad-48cb7610958f#Backup Client Configuration##Prod_dpa_Avamar Comprehensive List of Clients - Prod_dpa_Avamar Comprehensive List of Clients#2300 Daily#
+#65#d04bbe30-2368-4882-a08a-69514a8f3c76#Backup Client Configuration##Prod_dpa_TSM Client Configuration Details - Client Configuration Details for last week#2200 Sunday#
+#66#0ccd1c4c-44dd-4c63-bc9d-48fcd406b723#Backup Client De-Dupe Ratios##Avamar Client De-Dupe Ratios - Avamar Client De-Dupe Ratios##
+#67#f9ea1fb0-0ca4-4d32-9254-2ee1f57541a4#Backup Client Status##Avamar APAC Daily Client Report#1850 Daily#
+#68#8369f7fa-2d4d-430f-aba9-9951a1c13845#Backup Data Backed Up Daily By Media Server##NAS Data Backed Up Daily - Monthly Snapshot of the amount of NDMP data moving each day.##
+#69#d31376c6-871f-4e14-8639-f55537655195#Backup Failed Clients##TSM Failed backup report - List of failed backups - Radhika Rajagopalan##
+#70#56340a59-a447-46fc-8c2d-1f5f2aa5cb8c#Backup Failed Jobs##Avamar LUX Daily Failed Savesets#0515 Daily#
+#71#31bc5c7a-4010-4a31-8a65-0b3a361f9b0c#Backup Failed Jobs##Avamar UK Daily Failed Jobs#0600 Daily#
+#72#2c435c5d-2b38-4d98-a289-1d3f23ca3f1b#Backup Failed Jobs##Avamar USA Daily Failed Save Sets Report - Avamar USA Daily Failed Save Sets Report#0945 Daily#
+#73#d6125553-27b1-45e9-9cb5-af1c08e6234c#Backup Failed Jobs##KVS Failed Save Sets#0745 Daily#
+#74#3ab273f7-a691-461b-8512-3b0c54cb57ea#Backup Failed Jobs##NJ Failed Jobs#0800 Daily#
+#75#4beb6976-b161-4fa4-8a6f-ff0bafecf8da#Backup Job Summary##BNYM - Avamar Save Set Summary - Save set summary report for all of Avamar#1100 Daily#
+#76#e0b94254-626b-4897-8e28-650468ceb8be#Backup Job Summary##Backup Job Summary for Avamar - Report Card Summary on Enterprise Wide Avamar Backups#TEST#
+#77#3b3a0dc9-418f-4d2d-a585-c4f8e8ecbd37#Backup Job Summary##ESX Avamar Daily Report - ESX Avamar Daily Report#0745 Daily#
+#78#0b9b920d-bfda-4fa3-a577-e46974617da9#Backup Job Summary##NDMP Daily Backup Summary - Daily view of the NDMP Backups - High Level#0645 Daily#
+#79#8c8be2cb-9c0e-44fe-9b21-95862064bc68#Backup Job Summary##Nightly Save Set Summary for Sydney - Nightly Save Set Summary for Sydney#0600 Daily#
+#80#92dfe6b9-7c6b-465e-9a8f-53fbc173da3a#Backup Job Summary##TSM Backup Job Summary - BNYM TSM Backup Job Summary for Last Day#9am every day#
+#81#782bc9bb-fe92-4bb2-ac36-5fada8aa94e3#Backup Missed Clients##TSM Missed backup report - List of Missed backups##
+#82#5222c1ef-59a4-4e52-bfe4-15e31eb17dc3#Backup Report Card##Daily Avamar Report Card - Avamar Report Card Previous 7 Days#0730 Daily#
+#83#4a54789f-c06b-4706-b776-e9be2351ffd1#Backup Restore Details##Monthly Restores - All restores performed in the previous 30 days.##
+#84#0254a423-c900-41a9-bfe4-238c629120da#ClearCase Report##Clearcase TSM/NAS Backup Daily Report @ 10:15 AM - NAS backup daily report @ 10:15AM - Moved to Ava backup and no need for this report.  Kan 3/21/2012##
+#85#c7989c12-026b-4ba7-b774-b1065bec0940#Client Occupancy##TSM22_Occ_Report#0730 Daily#
+#86#9c2f2f2d-1722-43c0-827e-9a0dc297a92f#Clone Summary##Avamar Replication Summary Report - Avamar Replication Summary Report#1015 Daily#
+#87#d2408547-8ff7-472d-a70b-f90cab4de5f9#Clone Summary##Daily Replication Summary - Replication summary per Grid##
+#88#fe33e150-adcc-4d74-a3a7-219ccf6a5dbc#Copy of BNYM TSM Backup Client Configuration##TSM_AVA - To map client's existance on multiple grids##
+#89#72d4ca79-d869-48c2-8b07-18ad6cb2d7a4#Custom-BNYM-Three Strike Failed Pending Clients##Three Strike Pending Clients - Pending clients that have failed each of the previous 3 days#0800 Daily#
+#90#ebf7c652-d150-43aa-a01e-a206a6c1bb7c#Data Protected by Client w/ Effective Path##Avamar US NAS  "Data Protected by Client" - Total Data Protected by Grid and Client#0000 Sunday#
+#91#16b44916-e8f8-4ee2-8013-48fd2d74577c#Data Protected by Client##Avamar APAC  "Data Protected by Client" - Total Data Protected by Grid and Client#0000 Sunday#
+#92#5e612ffb-7888-4cfb-a2f7-1cb030848433#Data Protected by Client##Avamar UK  "Data Protected by Client" - Total Data Protected by Grid and Client#0600 Sunday#
+#93#fc73a3cb-8d79-4760-8278-d1ed92f80e7b#Data Protected by Client##Avamar USA "Data Protected by Client" - Total Data Protected by Grid and Client#0900 Saturday#
+#94#485818d8-3672-44b9-b79d-35bc299d0143#EMEA Data Protected by Client w/ Effective Path##Avamar EMEA NAS  "Data Protected by Client" - Total Data Protected by Grid and Client#0000 Sunday#
+#95#2cc58791-7a4e-4fdc-9267-8594d54252bc#Health Check_PATRA##APAC_Grid HealthCheck Report - APAC_Grid HealthCheck Report#TEST#
+#96#4e827b02-0e01-4a5f-870d-9a4c9c298d35#Maintenance Job Details##Avamar Maint-II - Reporting GC, CP and HFSCK job status for all grids#0845 Daily#
+#97#e2660e5c-fab5-4f65-b937-641dcd2e0df3#Maintenance Job Summary##Avamar Maint-I - Avamar Maintenance Job Summary##
+#98#6526d163-95db-409e-9b8d-0b1732f2b836#Memory Utilization By Node##Memory Utilization for DPA host Talk to admin to enable##
+#99#08fccf8b-bc93-4239-a89e-daf75c5b299f#Modified Clients mapped to multiple Backup Server_PATRA##Backup Client Configuration_Patra - To list the Clients got multiple Backup Server association##
+#100#fd4ba801-b784-4da5-b335-cc9ff73b0632#Modified Clients mapped to multiple Backup Server_PATRA##Clients mapped to multiple Backup Server_OverAll View - Clients mapped to multiple Backup Server##
+#101#e965b146-0425-4f0b-95a5-febb327bf8fe#Modified Clients mapped to multiple Backup Server_PATRA##To list Clients mapped to multiple Backup Server - To list Clients mapped to multiple Backup Server##
+#102#5b0c5805-4bfa-4217-a8f4-b9c664b6f462#Newton Asset Managment - wtpcpavbod01 status##Daily Backup Status - Newton Asset Management#0830 Daily#
+#103#46dbeb1a-7ac8-4a83-87e1-43b0baae1432#One Strike and Two Strike##One and Two Strike Failures - TSM - One and Two Strike Failures - TSM - Radhika#0615 Daily#
+#104#237e0426-d117-4abb-b70a-8e803c7fd45e#Patra AVA Client Reg##Patra AVA Client Reg - Patra AVA Client Reg##
+#105#9f6090b7-fc42-41b2-8f2f-35511efdb8e1#Patra Backup All Save Sets##Patra AVA Bkp Act - avamar backup save sets#0730 Daily#
+#106#9371af1c-3dd8-4cf2-8106-e5005bdbd51a#Patra_Capacity##Capacity growth Report - Capacity growth Report##
+#107#f240a65f-9b62-484c-9edf-cea934fde489#Patra_ChargeBack##Patra_Chargeback - Chargeback Reporting##
+#108#bf7fbe72-20b5-4edc-bd93-84a4b0936247#Patra_Replication &amp; Maintenance_APAC##APAC_Replication And Maintenance Report - APAC_Replication And Maintenance Report#0645 Daily#
+#109#0670066e-3459-4260-9c68-5dce38982143#Patra_TEST_TSM Occ##Patra_TEST_TSM Occ - TEST_TSM Occ##
+#110#f530d78b-ff03-432a-84e0-ebfbf3256fcf#Patra_TSM Client Occupancy Reporting##Patra_TSM Client Occupancy Report - TSM Client Occupancy Report##
+#111#5c93d2a7-c3c9-4e26-98e8-0c43a0b45c17#Process CPU Utilization EMC test##DPA only Process CPU Utilization DO NOT USE UNTIL YOU TALK TO ADMINS##
+#112#fe426739-2afa-4892-8e84-702dd149f587#Process CPU Utilization##Process CPU Utilization for host DO NOT USE UNTIL YOU TALK TO ADMINS##
+#113#efa1a034-07fa-4db8-9c6c-580212720204#Process Memory Usage EMC test##Process Memory Usage per process for DPA host DO NOT USE UNTIL  YOU TALK TO ADMINS##
+#114#41228d1d-1267-406e-b1b2-289fcd812277#Processor Utilization By Node##CPU Utilization for host DO NOT USE UNTIL YOU TALK TO ADMIN##
+#115#156c9244-7a0b-4973-a1c9-06b795aef1c3#Publisher Performance##Validate Publisher - DPA Publisher Service Performance Report##
+#116#aac8cf30-6af2-4b21-a760-6e45a76faf1a#Request Summary##Test Summary - DELETE##
+#117#604f87c5-e2d6-4e52-8c86-a83c7d3b04fe#SWAT AVA One Strike_Patra##SWAT AVAMAR One Strike - SWAT AVAMAR One Strike#0300 Daily#
+#118#941fbba3-489e-4ea7-b45c-136fd1110069#SWAT AVA One Strike_Patra##SWAT AVAMAR One Strike EMEA &amp; APAC Region - SWAT AVAMAR One Strike EMEA &amp; APAC Region#0400 Daily#
+#119#1082d438-1065-488d-ab7b-52cd0c17fcf7#SWAT Report AVA_Patra##AVAMAR SWAT report - AVAMAR SWAT report##
+#120#971e4060-47c2-4321-9c69-a416d9129676#SWAT Report AVA_Patra##SWAT Report AVAMAR - SWAT Report AVAMAR#0000 Daily#
+#121#1976ec69-0f58-4a97-b73c-9d435992e8d4#SWAT Report AVA_Patra##SWAT Report AVAMAR EMEA &amp; APAC Region - SWAT Report AVAMAR EMEA &amp; APAC Region#0500 Daily#
+#122#cb8b6aa2-624b-4144-bcbd-f13d9a3afefa#Scheduled Report History##DPA Scheduled Report Summary#1100 Daily#
+#123#f9959823-7d82-483f-bec0-4a6560e8ace1#Strike Summary (No "Default")##US Daily 3-Strike Report - Daily reporting showing backups from the US with 1, 2, and 3 days consecutive failures.#0645 Daily#
+#124#d81fa081-fca9-49a6-8238-aceca9b66fe4#Strike Summary - BNYM##Email Test Report#TEST#
+#125#2a7dc7a1-6a2d-4127-bfdc-8984c8d661ea#Strike Summary##APAC Daily 3-Strike Report - Daily reporting showing backups from APAC with 1, 2, and 3 days consecutive failures.#2200 Daily#
+#126#dd2eeec8-db9c-41d9-acca-d27db0c2191f#Strike Summary##KVS Daily 3-Strike Report - Daily reporting showing backups from the US with 1, 2, and 3 days consecutive failures.#0645 Daily#
+#127#5807a726-67f0-43bf-ac0d-11fb82a94c2e#Strike Summary##UK Daily 3-Strike Report - Daily reporting showing backups from the UK with 1, 2, and 3 days consecutive failures.#0645 Daily#
+#128#ab488293-13ae-41d1-90c8-e7686cf547bf#Three Strike Failed Clients##Pershing Three Strike Failures - Details of 3strike failures-Radhika##
+#129#6e4d3567-2a6e-449e-90d3-6cf31bdc92d4#Total Clients mapped to multiple Backup Server_PATRA##TotalClientsMapped to multipleServers - TotalClientsMapped to multipleServers##
+#130#61bad799-5793-44d8-9579-49bda525f35a#Two Strike Failed Clients##Two Strike Failures - List of two strike failures - Radhika#0730 Daily#
+#131#8199304d-54e6-459a-886b-76ef51fd8ee9#VMDK ALL SAVE SETS CNJESX01##VMDK SAVESETS CNJESX01 - VMDK SAVESETS CNJESX01##

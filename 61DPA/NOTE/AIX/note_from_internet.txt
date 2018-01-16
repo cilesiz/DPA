@@ -1,0 +1,48 @@
+Martin, Make sure that your dsm.sys is properly configured. I have been using the client access daemon with good results - dsmcad
+
+
+
+&lt;dsm.sys>
+
+passwordaccess = generate * To get rid of your tsm login problem
+
+pasworddir = /tsm/password/dir
+
+managed services = schedule
+
+tcpclientaddress = dns.client.name * or the client IP address
+
+tcpclientport = 1502 *I think this is default to get rid of the port number issue
+
+
+
+&lt;rc script>
+
+case "$1" in
+
+"start")
+
+echo "starting TSM daemon"
+
+cd /usr/tivoli/tsm/client/ba/bin
+
+/usr/tivoli/tsm/client/ba/bin/dsmcad &amp; >/dev/null 2>&amp;1
+
+;;
+
+"stop")
+
+echo "stopping TSM daemon"
+
+kill `ps -e -o "%p %c" | awk '/dsmcad/ {print $1}'`
+
+;;
+
+esac
+
+
+
+cheers,
+
+neil:
+

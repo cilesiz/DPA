@@ -1,0 +1,106 @@
+Step1
+=====
+1) setup DPA server 6.1.0 GA
+2) Run discovery of a host with Replication Anaylysis
+3) Run discovery of a SE (w2k3sqlqa) with Clariion array
+4) Start Test = should successful
+5) Object should be created
+
+Expected
+--------
+Host should be created
+
+Step2
+=====
+Check node is created using Agentless connection configuration
+
+1) REST 
+URI = /dpa-api/nodes/{nodeid}/datacollectionpolicy/applicable-requests
+
+2) SQL
+
+"select f_id,f_agent_id,f_function,f_module,f_agent_type,f_credential_id from dpa.data_collection_request;"
+
+3) check the frequency value of the nodes (to use in checking after upgrade)
+
+Expected
+--------
+1) REST has :
+
+ <agent type="None">
+
+2) SQL has :
+
+f_agent_type=None  and f_agent_id=(empty)
+
+3) from REST in (1)
+
+<frequency type="Period">
+      <period>3600</period>
+    </frequency>
+  
+
+Step3
+=====
+
+UI
+
+Expected
+--------
+Object created has subtree (Components) :
+
+Object Library > {Object discover} > Components 
+
+Step4
+=====
+
+Upgrade to 6.1.1 latest
+
+Expected
+--------
+
+Upgrade successfully and all DPA svc start-up successfully
+
+Step5
+=====
+
+Check node configuration is fine (similar to Step 2, but different URI and SQL) nad number of agentless nodes is same
+
+1) REST
+URI = /dpa-api/nodes/{nodeid}/requests
+
+2) SQL
+
+"select * from dpa.request_assigned;"
+
+3) check frequency value of the node and the value remain same with step 2
+
+Expected
+--------
+1) REST has :
+
+ <agent type="None">
+
+2) SQL has :
+
+f_agent_type=None  and f_agent_id=(empty)
+  
+3) from (1)
+
+<frequency type="Period">
+      <period>3600</period>
+    </frequency>
+  
+
+Step6
+=====
+
+Make sure the requests is run
+
+1) Wait about for 2-3 times of frequency value in Step 5 (3) 
+2) check history tab for the nodes in UI
+3) or from SQL = "select * from dpa.request_history;"
+
+Expected
+--------
+Requests is running every frequency value

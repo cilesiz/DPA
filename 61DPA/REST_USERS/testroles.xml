@@ -1,0 +1,101 @@
+##1
+   <userRole version="1">
+      <name>ActiveReport100</name>
+      <description>UserRole for a Active Report 100</description>
+      <permissions>
+      <permission name="apollo.user.readwrite">false</permission>
+      <permission name="apollo.user.read">false</permission>
+      <permission name="apollo.activereports.readwrite">false</permission>
+      <permission name="apollo.activereports.read">true</permission>
+      <permission name="apollo.reporttemplate.read">true</permission>
+      <permission name="apollo.inventory.read">true</permission>
+      </permissions>
+   </userRole>
+##2
+   <userRole version="1">
+      <name>ActiveReport110</name>
+      <description>UserRole for a Active Report 110</description>
+      <permissions>
+      <permission name="apollo.user.readwrite">false</permission>
+      <permission name="apollo.user.read">false</permission>
+      <permission name="apollo.activereports.readwrite">true</permission>
+      <permission name="apollo.activereports.read">true</permission>
+      <permission name="apollo.reporttemplate.read">true</permission>
+      <permission name="apollo.inventory.read">true</permission>
+      </permissions>
+   </userRole>
+##3
+   <userRole version="1">
+      <name>ReportTemplate100</name>
+      <description>UserRole for a Report Template 100</description>
+      <permissions>
+      <permission name="apollo.user.readwrite">false</permission>
+      <permission name="apollo.user.read">false</permission>
+         <permission name="apollo.reporttemplate.read">true</permission>
+         <permission name="apollo.reporttemplate.readwrite">false</permission>
+         <permission name="apollo.inventory.read">true</permission>
+      </permissions>
+   </userRole>
+##4
+   <userRole version="1">
+      <name>ReportTemplate110</name>
+      <description>UserRole for a Report Template 110</description>
+      <permissions>
+      <permission name="apollo.user.readwrite">false</permission>
+      <permission name="apollo.user.read">false</permission>
+         <permission name="apollo.reporttemplate.read">true</permission>
+         <permission name="apollo.reporttemplate.readwrite">true</permission>
+         <permission name="apollo.activereports.read">true</permission>
+         <permission name="apollo.scheduledreports.read">true</permission>
+         <permission name="apollo.inventory.read">true</permission>
+         <permission name="apollo.inventory.readwrite">true</permission>
+      </permissions>
+   </userRole>
+##5
+   <userRole version="1">
+      <name>ScheduleReport100</name>
+      <description>UserRole for a Schedule Report 100</description>
+      <permissions>
+      <permission name="apollo.user.readwrite">false</permission>
+      <permission name="apollo.user.read">false</permission>
+      <permission name="apollo.scheduledreports.read">true</permission>
+      <permission name="apollo.scheduledreports.readwrite">false</permission>
+            <permission name="apollo.reporttemplate.read">true</permission>
+            <permission name="apollo.inventory.read">true</permission>
+      </permissions>
+   </userRole>
+##6
+   <userRole version="1">
+      <name>ScheduleReport110</name>
+      <description>UserRole for a Schedule Report 110</description>
+      <permissions>
+      <permission name="apollo.user.readwrite">false</permission>
+      <permission name="apollo.user.read">false</permission>
+      <permission name="apollo.scheduledreports.read">true</permission>
+      <permission name="apollo.scheduledreports.readwrite">true</permission>
+              <permission name="apollo.reporttemplate.read">true</permission>
+              <permission name="apollo.inventory.read">true</permission>
+      </permissions>
+   </userRole>
+##7
+   <userRole version="1">
+      <name>SystemSetting100</name>
+      <description>UserRole for a System Setting 100</description>
+      <permissions>
+      <permission name="apollo.user.readwrite">false</permission>
+      <permission name="apollo.user.read">false</permission>
+         <permission name="apollo.systemsettings.read">true</permission>
+         <permission name="apollo.systemsettings.readwrite">false</permission>
+      </permissions>
+   </userRole>
+##8
+   <userRole version="1">
+      <name>SystemSetting110</name>
+      <description>UserRole for a System Setting 110</description>
+      <permissions>
+      <permission name="apollo.user.readwrite">false</permission>
+      <permission name="apollo.user.read">false</permission>
+         <permission name="apollo.systemsettings.read">true</permission>
+         <permission name="apollo.systemsettings.readwrite">true</permission>
+      </permissions>
+   </userRole>

@@ -1,0 +1,69 @@
+<discoveryJob>
+  <task>
+    <primaryObject exists="false">
+      <node version="1" type="XSIGOSwitch">
+        <name>10.64.205.71</name>
+        <displayName>XSIGOSwitch</displayName>
+      </node>
+      <dataCollectionParameter>
+        <hostMonitoring>false</hostMonitoring>
+        <replicationMonitoring>false</replicationMonitoring>
+        <agent local="false">
+          <node type="Host">
+            <name>rt-centos64x64</name>
+          </node>
+        </agent>
+        <credential version="1">
+          <name>Xsigo Director SNMP Credentials</name>
+        </credential>
+      </dataCollectionParameter>
+      <parents>
+        <parent primary="true">
+          <node type="Group">
+            <name>Xsigo Director</name>
+          </node>
+        </parent>
+      </parents>
+    </primaryObject>
+  </task>
+</discoveryJob>
+<!--
+<discoveryJob>
+  <task>
+    <primaryObject exists="false">
+      <node version="1" type="Host">
+        <name>10.64.205.71</name>
+        <displayName>10.64.205.71</displayName>
+      </node>
+      <dataCollectionParameter>
+        <hostMonitoring>false</hostMonitoring>
+        <replicationMonitoring>false</replicationMonitoring>
+        <agent local="false">
+          <node type="Host">
+            <name>rt-centos64x64</name>
+          </node>
+        </agent>
+      </dataCollectionParameter>
+      <parents>
+        <parent primary="true">
+          <node type="Group">
+            <name>Xsigo Director</name>
+          </node>
+        </parent>
+      </parents>
+    </primaryObject>
+    <dependentObjects>
+      <dependentObject>
+        <node version="1" type="XSIGOSwitch">
+          <displayName>XSIGOSwitch</displayName>
+        </node>
+        <dataCollectionParameter>
+          <credential version="1">
+            <name>Xsigo Director SNMP Credentials</name>
+          </credential>
+        </dataCollectionParameter>
+      </dependentObject>
+    </dependentObjects>
+  </task>
+</discoveryJob>
+-->

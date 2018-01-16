@@ -1,0 +1,35 @@
+Sometimes DPA server change IP address because it use DHCP :
+
+1) cd /opt/emc/dpa/services/executive
+-> (datastore-service.conf file) change PGHOST to new_IP
+
+[root@qabnym executive]# cat datastore-service.conf
+#Installer version
+#Thu Feb 13 13:59:44 GMT 2014
+PGPORT=9003
+PGUSER=apollosuperuser
+PGPASSWORD=Zkn6iucEmYWjB+TcqDxD3Byw5PwQUFbF+mwqsZTMVAk\=
+PGHOST=10.64.205.217
+PGDATA=/opt/emc/dpa/services/datastore/data
+#Last updated : Fri, 14-Feb-2014 09:51:02 +0000
+[root@qabnym executive]#
+
+2) cd /opt/emc/dpa/services/datastore/data
+-> (pg_hba.conf file) change 'host      all' , 'host      replication' and 'host      postgres' to new_IP 
+
+[root@qabnym data]# cat pg_hba.conf | grep -v ^#
+
+
+
+
+
+local   all             all                                     md5
+host    all             all             127.0.0.1/32            md5
+host      all      all      10.64.205.217/32      md5
+host      replication      apollosuperuser      10.64.205.217/32      md5
+host      postgres      all      10.64.205.217/32      md5
+host    all     all            10.64.0.0/16            md5
+host    all     all            152.62.0.0/16            md5
+[root@qabnym data]#
+
+3) dpa svc restart

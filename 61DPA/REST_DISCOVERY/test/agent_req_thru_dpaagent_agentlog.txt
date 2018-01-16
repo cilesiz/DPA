@@ -1,0 +1,25 @@
+2014-01-31 00:11:41,893 INFO  [stdout] (EJB default - 144) 30571846 [EJB default - 144] DEBUG com.emc.apollo.common.agent.util.process.AuthenticationHelper  - authenticateProcess request -> 
+
+<AXMLREQUEST>
+<AUTHENTICATECONNECTION>
+<AUTHENTICATIONDATA>
+<USERNAME>wysdm_process_user</USERNAME>
+<PASSWORD>CP1AKXRiKZy0EFoBvbGjAVRjZCwCJwMct</PASSWORD>
+<CLIENTID>controller:rt-suse11x64.wysdm.lab.emc.com</CLIENTID>
+</AUTHENTICATIONDATA>
+</AUTHENTICATECONNECTION>
+</AXMLREQUEST>
+
+
+2014-01-31 00:11:41,893 DEBUG [com.emc.apollo.common.agent.util.process.AuthenticationHelper] (EJB default - 144) authenticateProcess request -> 
+
+<AXMLREQUEST>
+<AUTHENTICATECONNECTION>
+<AUTHENTICATIONDATA>
+<USERNAME>wysdm_process_user</USERNAME>
+<PASSWORD>CP1AKXRiKZy0EFoBvbGjAVRjZCwCJwMct</PASSWORD>
+<CLIENTID>controller:rt-suse11x64.wysdm.lab.emc.com</CLIENTID>
+</AUTHENTICATIONDATA>
+</AUTHENTICATECONNECTION>
+</AXMLREQUEST>
+

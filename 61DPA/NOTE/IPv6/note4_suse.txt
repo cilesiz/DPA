@@ -1,0 +1,183 @@
+http://www.cyberciti.biz/faq/configuring-ipv6-in-sles10-opensuse-linux/
+==========================================================================
+
+Suse Linux ( SLES10 ) IPv6 Configuration
+by NIX CRAFT on MARCH 18, 2009 · 9 COMMENTS· LAST UPDATED MARCH 19, 2009
+in HARDWARE, IPV6, LINUX
+
+How do I configure IPv6 networking under SUSE Linux Enterprise Server (SLES v10.2) or OpenSuse Linux by Novell?
+
+IPv6 support under YaST is not upto date. You need to manually edit the configuration files. This is NOT recommended as YaST may get confused later on.
+
+SLES10 IPv6 Configuration From The Command Line
+
+Use the following command to set new IPv6 address using ip command under Suse Linux.
+
+Our Sample IPv6 Setup
+
+IPv6 IP : 2607:f0d0:1002:0011:0000:0000:0000:0002/64
+IPv6 Default Router IP : 2607:f0d0:1002:0011:0000:0000:0000:0001
+Task: Adding An IPv6 Address
+
+Type the following command:
+ip -6 address add {IPv6-Address}/{NetMask} dev {device-name}
+
+To add 2607:f0d0:1002:0011:0000:0000:0000:0002/64 IP to eth0, enter:
+# ip -6 address add 2607:f0d0:1002:0011:0000:0000:0000:0002/64 dev eth0
+
+Task: Adding A Default Route
+
+Type the following command:
+ip -6 route add default via {IP6-Router-IP} dev {device-name}
+
+Add a default IPv6 router IP 2607:f0d0:1002:0011:0000:0000:0000:0001, enter:
+# ip -6 route add default via 2607:f0d0:1002:0011:0000:0000:0000:0001 dev eth0
+
+Task: Display your IPv6 IP addresses configuration
+
+Type the following command:
+# ip -6 address show dev eth0
+
+To review your IPv6 routing table, enter:
+# ip -6 route show
+
+Task: Testing your IPv6 Configuration
+
+Type the following command:
+# ping6 ipv6.google.com
+# ping6 www.cyberciti.biz
+
+Sample output:
+
+PING6(56=40+8+8 bytes) 2607:f0d0:3001:9::2 --> 2607:f0d0:1002:11::4
+16 bytes from 2607:f0d0:1002:11::4, icmp_seq=0 hlim=60 time=34.481 ms
+16 bytes from 2607:f0d0:1002:11::4, icmp_seq=1 hlim=60 time=34.207 ms
+16 bytes from 2607:f0d0:1002:11::4, icmp_seq=2 hlim=60 time=33.994 ms
+Persistence IPv6 Configuration
+
+Above commands will not keep IPv6 configuration across reboots unless the configuration files are updated accordingly. You need to update the following IPv6 configurations under SLES / OpenSuse Linux:
+
+eth0 IPv6 configuration file : /etc/sysconfig/network/ifcfg-eth-id-${ETHIDFILE}
+Default IPv6 routing configuration file : /etc/sysconfig/network/routes
+You can find out the value of ETHIDFILE by typing the following command:
+# ip link show dev eth0 | awk '/link/{ print $2 }'
+# ETHIDFILE=$(ip link show dev eth0 | awk '/link/{ print $2 }')
+
+Now, open configuration file, enter:
+# cp /etc/sysconfig/network/ifcfg-eth-id-${ETHIDFILE} /root/ifcfg-eth-id-${ETHIDFILE}.bak
+vi /etc/sysconfig/network/ifcfg-eth-id-${ETHIDFILE}
+
+Add configuration as follows:
+
+ 
+LABEL_0='0'
+IPADDR_0='2607:f0d0:1002:0011:0000:0000:0000:0002'
+PREFIXLEN_0='64'
+ 
+Save and close the file. Now, update default IPv6 routing:
+# cp /etc/sysconfig/network/routes /root/routes.bak
+# echo 'default 2607:f0d0:1002:0011:0000:0000:0000:0001 - -' >> /etc/sysconfig/network/routes
+
+Finally, restart the networking under SLES10:
+# service network restart
+
+Test your setup, enter:
+# ping6 www.cyberciti.biz
+# ping6 ipv6.google.com
+
+TwitterFacebookGoogle+PDF versionFound an error/typo on this page? Help us!
+Featured Articles:
+30 Cool Open Source Software I Discovered in 2013 
+30 Handy Bash Shell Aliases For Linux / Unix / Mac OS X
+Top 30 Nmap Command Examples For Sys/Network Admins
+25 PHP Security Best Practices For Sys Admins
+20 Linux System Monitoring Tools Every SysAdmin Should Know
+20 Linux Server Hardening Security Tips
+Linux: 20 Iptables Examples For New SysAdmins
+Top 20 OpenSSH Server Best Security Practices
+Top 20 Nginx WebServer Best Security Practices
+20 Examples: Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors
+15 Greatest Open Source Terminal Applications Of 2012
+My 10 UNIX Command Line Mistakes
+Top 10 Open Source Web-Based Project Management Software
+Top 5 Email Client For Linux, Mac OS X, and Windows Users
+The Novice Guide To Buying A Linux Laptop
+{ 9 comments. read them below or add one }
+1 damian March 19, 2009 at 11:09 am
+Thanks!
+I looked for default route setup.
+
+REPLY
+
+2 charan March 19, 2009 at 12:44 pm
+Hi
+your information is so use full to me
+Thanks
+
+REPLY
+
+3 Chris March 19, 2009 at 7:57 pm
+Thanks a bunch! All your tips are so revelant to a wide audience.
+
+REPLY
+
+4 Peter August 30, 2010 at 5:45 am
+Thanks. Any clues if yast has been updated or not. I can.t find anything, just checking in case i.m missing something that someone else has found.
+
+thanks
+P
+
+REPLY
+
+5 Peter August 30, 2010 at 6:08 am
+Actually adding ipv6 address as an additional address comes close.
+this gives us the following in /etc/sysconfig/network/ifcfg-eth0 :
+
+IPADDR_0=.fd00::253:0:0:1:52.
+LABEL_0=.ipv6.
+NETMASK_0=.64.
+
+edit the file and add /64 the end of the ip address on line starting with IPADDR_0
+save and exit
+rcnetwork restart to get it working
+
+ping6 fd00:0:0:253:0:0:1:104
+
+now works. pretty crappy really.
+(worked on both sles10 sp2 and sp3)
+
+p
+
+REPLY
+
+6 Russ February 13, 2012 at 6:20 am
+That.s a lot of interesting information. Just not interesting to me. I don.t have the time nor interest to learn all the ins & outs of ipv6, I don.t need to understand how it works, or it.s history. I just want it to start working without my having to think . I already have more than enough on my mind as it is.
+
+When I was using Kubuntu it was as simple as adding a package, then it just worked. I didn.t need to know how to set anything. THAT.S what I.m looking for: just ONE really SIMPLE thing to do that will automatically set it up on openSUSE and get it working so I can concentrate on the more important things. If it can be so simple on Kubuntu, then there.s absolutely no reason to make it more difficult by making each and every person study documentation and slowly try to figure out how to get it working step-by-step. It should only take a moment to run. A simple shell script should suffice.
+
+In fact, it should already be running on every installation WITHOUT having to read, setup, or install anything; (as it surprisingly already does in crappy Microsoft installations), so why is it that Linux is so far behind in having ipv6 already working on install?
+
+So, what package or simple shell script do I have to install that just gets it working? Where can I find it?
+
+REPLY
+
+7 Russ February 13, 2012 at 3:45 pm
+More on that file for Kubuntu is here:
+http://en.wikipedia.org/wiki/Miredo
+
+Note that it isn.t available in OpenSUSE . or some reason.
+
+REPLY
+8 Don June 18, 2012 at 2:49 pm
+It did not work for me. I got the follow error message.
+
+#### RTNETLINK answers: Invalid argument #####
+
+I think there is something else. I am running SUSE 10 on a VM
+
+REPLY
+
+9 ts May 25, 2013 at 2:16 pm
+thanks.
+
+I have added in my 2 vms just 1 command: add and was able to ping.

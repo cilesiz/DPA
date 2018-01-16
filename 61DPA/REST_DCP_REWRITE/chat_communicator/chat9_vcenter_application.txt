@@ -1,0 +1,85 @@
+17:04Talib, Rosli
+
+I hv problem with DPA-32678
+look like the application not showing 
+
+
+17:04Skilbeck, Michael
+
+ok
+you need to wait two mins
+can you share screen
+
+
+17:04Talib, Rosli
+
+oh...
+
+
+17:04Skilbeck, Michael
+
+and go to object properties
+
+
+17:05Talib, Rosli
+
+let me check it again
+
+
+17:05Skilbeck, Michael
+
+and request history
+I would like to show you
+how to check if the request has run or not
+when it runs it tells you whether applications are autocreated
+and then you can check if request has been assigned to application
+
+
+17:13Talib, Rosli
+
+hi Mike
+the Applications till didn't show Networker
+*still
+
+
+17:14Skilbeck, Michael
+
+application discovery is only for oracle, exchange and sql server
+
+
+17:14Talib, Rosli
+
+oh
+
+
+17:14Skilbeck, Michael
+
+don't think we auto discover networker
+
+
+
+17:15Talib, Rosli
+
+sorry, I don't know that
+
+
+17:15Skilbeck, Michael
+
+so you can discovery seri with wysdm credentials for sql server
+we don't have exchange in our lab
+
+
+17:16Talib, Rosli
+
+yeah... so I can use dpa-vcenter with seri as virtual hosts
+
+
+17:16Skilbeck, Michael
+
+and oracle is often problematic
+
+
+17:16Talib, Rosli
+
+right
+ok

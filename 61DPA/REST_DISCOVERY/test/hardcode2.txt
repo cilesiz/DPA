@@ -1,0 +1,34 @@
+#Backup Application#
+#1#ArcServe#
+#2#CommVault#
+#3#Avamar#
+#4#NetWorker#
+#5#DataProtector#
+#6#TSM#
+#7#ACSLS#
+#8#BackupExec#
+#9#NetBackup#
+#10#PureDisk#
+#Database#
+#11#MSSQLDatabase#
+#12#OracleDatabase#
+#13#PostgreSQLDatabase#
+#Host
+#14#Host#
+#Primary Storage#
+#15#Celerra#
+#16#VPlexManagement#
+#17#Vnx#
+#18#RecoverPoint#
+#19#HPEVA#
+#Protection Storage#
+#20#DataDomain#
+#21#EDL#
+#22#NearStore#
+#23#TapeLibrary#
+#Switch#
+#24#FibreChannel#
+#25#InfinibandPort#
+#26#XSIGOSwitch#
+#VM#
+#27#VCenter#

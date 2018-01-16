@@ -1,0 +1,74 @@
+<node version="1" type="Host">
+   <id>ecb42378-ada9-43ee-bc22-501117e3fb39</id>
+   <link rel="self" href="https://10.64.213.59:9002/apollo-api/nodes/ecb42378-ada9-43ee-bc22-501117e3fb39"/>
+   <name>10.64.213.48</name>
+   <displayName>10.64.213.48</displayName>
+   <globalName>10.64.213.48</globalName>
+   <lastSeen>2014-10-14T22:03:03.0+01:00</lastSeen>
+   <creatorType>unknown</creatorType>
+   <aliases/>
+   <attributes/>
+   <timeZone>GB-Eire</timeZone>
+   <isReporting>true</isReporting>
+</node>
+
+<node version="1" type="Host">
+   <id>cc0d73b4-c1d2-4535-b355-1be8531da011</id>
+   <link rel="self" href="https://10.64.213.59:9002/apollo-api/nodes/cc0d73b4-c1d2-4535-b355-1be8531da011"/>
+   <name>w2k8x64nw82.wysdm.lab.emc.com</name>
+   <displayName>w2k8x64nw82.wysdm.lab.emc.com</displayName>
+   <globalName>w2k8x64nw82.wysdm.lab.emc.com</globalName>
+   <lastSeen>2014-10-14T22:04:09.0+01:00</lastSeen>
+   <creatorType>unknown</creatorType>
+   <aliases/>
+   <attributes>
+      <assignedAttribute>
+         <id>aeee2fc5-17ae-41d6-90b1-4d7c5ddbf1bc</id>
+         <objAttrId>67fb1670-c699-11e1-9b21-0800200c9a66</objAttrId>
+         <attributeValue type="OS">
+            <family>WINDOWS</family>
+            <version>1</version>
+         </attributeValue>
+         <attributeCategory>Apollo</attributeCategory>
+      </assignedAttribute>
+      <assignedAttribute>
+         <id>752cd736-aa4c-478d-a83e-faa281180aa9</id>
+         <objAttrId>67fb3d84-c699-11e1-9b21-0800200c9a66</objAttrId>
+         <attributeValue type="Flag">true</attributeValue>
+         <attributeCategory>Apollo</attributeCategory>
+      </assignedAttribute>
+   </attributes>
+   <timeZone>GB-Eire</timeZone>
+   <isReporting>true</isReporting>
+</node>
+
+<node version="1" type="Host">
+   <id>59b0dca2-3bb8-480a-a8da-0bdc50a2dc98</id>
+   <link rel="self" href="https://10.64.213.59:9002/apollo-api/nodes/59b0dca2-3bb8-480a-a8da-0bdc50a2dc98"/>
+   <name>rhel6x64nw811.wysdm.lab.emc.com</name>
+   <displayName>rhel6x64nw811.wysdm.lab.emc.com</displayName>
+   <globalName>rhel6x64nw811.wysdm.lab.emc.com</globalName>
+   <lastSeen>2014-10-14T22:35:09.0+01:00</lastSeen>
+   <creatorType>unknown</creatorType>
+   <aliases/>
+   <attributes>
+      <assignedAttribute>
+         <id>7c94dab6-441f-48b6-bcc5-44941e37d12c</id>
+         <objAttrId>67fb3d84-c699-11e1-9b21-0800200c9a66</objAttrId>
+         <attributeValue type="Flag">true</attributeValue>
+         <attributeCategory>Apollo</attributeCategory>
+      </assignedAttribute>
+      <assignedAttribute>
+         <id>ac2176ab-d236-49de-9e8a-3c2f080ba73f</id>
+         <objAttrId>67fb1670-c699-11e1-9b21-0800200c9a66</objAttrId>
+         <attributeValue type="OS">
+            <family>LINUX</family>
+            <version>1</version>
+         </attributeValue>
+         <attributeCategory>Apollo</attributeCategory>
+      </assignedAttribute>
+   </attributes>
+   <timeZone>GB-Eire</timeZone>
+   <isReporting>true</isReporting>
+</node>
+

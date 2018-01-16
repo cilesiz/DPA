@@ -1,0 +1,21 @@
+Ubuntu: dpkg-reconfigure tzdata
+Redhat: redhat-config-date
+CentOS/Fedora: system-config-date
+FreeBSD/Slackware: tzselect
+
+
+Other ways....
+
+1) rm /etc/localtime
+2) cp /usr/share/zoneinfo/GB /etc/localtime
+3) date (to check)
+
+Change timezone
+---------------
+1) cat /etc/timezone
+2) change inside timezone file to
+Europe/London
+3) export TZ=Europe/London
+
+note:
+RHEL/CentOS actually copies files from /usr/share/zoneinfo to /etc/localtime based on /etc/sysconfig/clock settings

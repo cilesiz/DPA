@@ -1,0 +1,103 @@
+<effectiveRequests>
+   <effectiveRequest lastModified="2014-03-31T10:15:46.447+01:00" version="1">
+      <id>6bf8e062-ea5b-4e0d-951d-e631e08c4903</id>
+      <link rel="self" href="http://10.64.255.170:9004/dpa-api/nodes/64ab6ef7-a3f5-4912-b609-0f86189f28e4/requests/6bf8e062-ea5b-4e0d-951d-e631e08c4903"/>
+      <target>
+         <node version="1">
+            <id>64ab6ef7-a3f5-4912-b609-0f86189f28e4</id>
+         </node>
+      </target>
+      <module>host</module>
+      <function>perf</function>
+      <frequency type="Period">
+         <period>300</period>
+      </frequency>
+      <agent type="Local">
+         <node version="1">
+            <id>64788491-7070-44ee-a401-db4289fb1b08</id>
+            <name>rt-suse11x64.wysdm.lab.emc.com</name>
+         </node>
+      </agent>
+      <options>
+         <option name="remote" type="STATIC">false</option>
+         <option name="tape" type="STATIC">true</option>
+         <option name="disk" type="STATIC">true</option>
+         <option name="memory" type="STATIC">true</option>
+         <option name="logical" type="STATIC">false</option>
+         <option name="netint" type="STATIC">true</option>
+         <option name="fchba" type="STATIC">true</option>
+         <option name="fs" type="STATIC">true</option>
+      </options>
+      <retention>2592000</retention>
+   </effectiveRequest>
+   <effectiveRequest lastModified="2014-03-31T10:15:46.442+01:00" version="1">
+      <id>233b9a08-7a9d-4a51-9e5e-dd75f4415944</id>
+      <link rel="self" href="http://10.64.255.170:9004/dpa-api/nodes/64ab6ef7-a3f5-4912-b609-0f86189f28e4/requests/233b9a08-7a9d-4a51-9e5e-dd75f4415944"/>
+      <target>
+         <node version="1">
+            <id>64ab6ef7-a3f5-4912-b609-0f86189f28e4</id>
+         </node>
+      </target>
+      <module>host</module>
+      <function>status</function>
+      <frequency type="Period">
+         <period>900</period>
+      </frequency>
+      <agent type="Local">
+         <node version="1">
+            <id>64788491-7070-44ee-a401-db4289fb1b08</id>
+            <name>rt-suse11x64.wysdm.lab.emc.com</name>
+         </node>
+      </agent>
+      <options>
+         <option name="process" type="STATIC">true</option>
+         <option name="remote" type="STATIC">false</option>
+         <option name="host" type="STATIC">true</option>
+         <option name="specific" type="STATIC"></option>
+         <option name="disk" type="STATIC">true</option>
+         <option name="memory" type="STATIC">true</option>
+         <option name="logical" type="STATIC">false</option>
+         <option name="netint" type="STATIC">true</option>
+         <option name="fchba" type="STATIC">true</option>
+         <option name="fs" type="STATIC">true</option>
+         <option name="fullpath" type="STATIC">false</option>
+      </options>
+      <retention>7862400</retention>
+   </effectiveRequest>
+   <effectiveRequest lastModified="2014-03-31T10:15:46.432+01:00" version="1">
+      <id>455f8c78-c1d9-452f-8a57-1db416898efc</id>
+      <link rel="self" href="http://10.64.255.170:9004/dpa-api/nodes/64ab6ef7-a3f5-4912-b609-0f86189f28e4/requests/455f8c78-c1d9-452f-8a57-1db416898efc"/>
+      <target>
+         <node version="1">
+            <id>64ab6ef7-a3f5-4912-b609-0f86189f28e4</id>
+         </node>
+      </target>
+      <module>host</module>
+      <function>config</function>
+      <frequency type="Period">
+         <period>43200</period>
+      </frequency>
+      <agent type="Local">
+         <node version="1">
+            <id>64788491-7070-44ee-a401-db4289fb1b08</id>
+            <name>rt-suse11x64.wysdm.lab.emc.com</name>
+         </node>
+      </agent>
+      <options>
+         <option name="remote" type="STATIC">false</option>
+         <option name="host" type="STATIC">true</option>
+         <option name="VICLIENT_SERVER" type="STATIC">10.64.205.49</option>
+         <option name="Time Offset(seconds)" type="STATIC">0</option>
+         <option name="disk" type="STATIC">true</option>
+         <option name="memory" type="STATIC">true</option>
+         <option name="srm" type="STATIC">true</option>
+         <option name="REPLICATION_MONITORING_OPTION" type="STATIC">false</option>
+         <option name="logical" type="STATIC">false</option>
+         <option name="netint" type="STATIC">true</option>
+         <option name="fchba" type="STATIC">true</option>
+         <option name="fs" type="STATIC">true</option>
+         <option name="ESX Server Credentials" type="STATIC"></option>
+      </options>
+      <retention>31536000</retention>
+   </effectiveRequest>
+</effectiveRequests>

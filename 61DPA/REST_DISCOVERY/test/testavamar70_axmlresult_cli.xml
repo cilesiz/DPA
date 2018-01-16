@@ -1,0 +1,342 @@
+<AXMLRESULT version="6">
+  <STATUS cast="Int">0</STATUS>
+  <MESSAGE cast="String">Okay</MESSAGE>
+  <REPORT module="avamar" function="configuration" starttime="1391160446" runtime="0" endtime="1391246846" target="00000000-0000-0000-0000-000000000000" hostname="avamar70.wysdm.lab.emc.com">
+    <bkup_server_config>
+      <backup_servername>avamar70.wysdm.lab.emc.com</backup_servername>
+      <application>EMC Avamar</application>
+      <capacity scale="1048576">886028</capacity>
+      <usable_capacity scale="1048576">575917</usable_capacity>
+    </bkup_server_config>
+    <client_config>
+      <client_name>johnsvm64.eng.wysdm.com</client_name>
+      <active>1</active>
+      <version>7.0.100-396</version>
+      <remoteip>10.64.255.159</remoteip>
+      <os_type>Windows Server 2003 R2 Standard Server Edition Service Pack 2 64-bit</os_type>
+      <contact/>
+      <client_identifier>johnsvm64.eng.wysdm.com</client_identifier>
+      <os_version/>
+      <domain_name>/clients</domain_name>
+      <regtime/>
+      <lastacctime/>
+      <pwset_time/>
+      <invalid_pw_count/>
+      <compression/>
+      <archdelete/>
+      <backdelete/>
+      <locked/>
+      <reg_admin/>
+      <option_set/>
+      <aggregation/>
+      <url/>
+      <nodetype/>
+      <passexp/>
+      <keep_mp/>
+      <max_mp_allowed/>
+      <auto_fs_rename/>
+      <validateprotocol/>
+      <guid/>
+      <txngroupmax/>
+      <datareadpath/>
+      <datawritepath/>
+      <sessioninitiation/>
+      <client_hla/>
+      <client_lla/>
+      <collocgroup_name/>
+      <proxy_target/>
+      <compression_loc/>
+      <proxy_agent/>
+      <deduplication/>
+      <replication_state/>
+      <replication_mode/>
+      <backup_repl_rule/>
+      <archive_repl_rule/>
+      <space_mgmt_repl_rule/>
+    </client_config>
+    <client_config>
+      <client_name>wichita.wysdm.lab.emc.com</client_name>
+      <active>0</active>
+      <version> unKnown </version>
+      <remoteip/>
+      <os_type>N/A</os_type>
+      <contact/>
+      <client_identifier>wichita.wysdm.lab.emc.com</client_identifier>
+      <os_version/>
+      <domain_name>/clients</domain_name>
+      <regtime/>
+      <lastacctime/>
+      <pwset_time/>
+      <invalid_pw_count/>
+      <compression/>
+      <archdelete/>
+      <backdelete/>
+      <locked/>
+      <reg_admin/>
+      <option_set/>
+      <aggregation/>
+      <url/>
+      <nodetype/>
+      <passexp/>
+      <keep_mp/>
+      <max_mp_allowed/>
+      <auto_fs_rename/>
+      <validateprotocol/>
+      <guid/>
+      <txngroupmax/>
+      <datareadpath/>
+      <datawritepath/>
+      <sessioninitiation/>
+      <client_hla/>
+      <client_lla/>
+      <collocgroup_name/>
+      <proxy_target/>
+      <compression_loc/>
+      <proxy_agent/>
+      <deduplication/>
+      <replication_state/>
+      <replication_mode/>
+      <backup_repl_rule/>
+      <archive_repl_rule/>
+      <space_mgmt_repl_rule/>
+    </client_config>
+    <group_config>
+      <group_name>Default Proxy Group</group_name>
+      <domain_name>/</domain_name>
+      <active>0</active>
+    </group_config>
+    <group_config>
+      <group_name>Default Group</group_name>
+      <domain_name>/</domain_name>
+      <active>0</active>
+    </group_config>
+    <group_config>
+      <group_name>mytestgroup</group_name>
+      <domain_name>/clients</domain_name>
+      <active>1</active>
+    </group_config>
+    <group_config>
+      <group_name>johnsvm_group</group_name>
+      <domain_name>/clients</domain_name>
+      <active>1</active>
+    </group_config>
+    <group_config>
+      <group_name>dpaavamar_repl</group_name>
+      <domain_name>/</domain_name>
+      <active>1</active>
+    </group_config>
+    <group_config>
+      <group_name>avamar70</group_name>
+      <domain_name>/</domain_name>
+      <active>1</active>
+    </group_config>
+    <job_config>
+      <job_name>Windows File System-ALL</job_name>
+      <client_name>johnsvm64.eng.wysdm.com</client_name>
+      <group_name>Default Group</group_name>
+      <domain_name>/</domain_name>
+      <backup_set/>
+    </job_config>
+    <job_config>
+      <job_name>Windows File System-C:/Documents and Settings/Administrator/</job_name>
+      <client_name>johnsvm64.eng.wysdm.com</client_name>
+      <group_name>johnsvm_group</group_name>
+      <domain_name>/clients</domain_name>
+      <backup_set/>
+    </job_config>
+    <job_config>
+      <job_name>Windows File System-ALL</job_name>
+      <client_name>johnsvm64.eng.wysdm.com</client_name>
+      <group_name>mytestgroup</group_name>
+      <domain_name>/clients</domain_name>
+      <backup_set/>
+    </job_config>
+    <bkup_server_mapping>
+      <client_name>johnsvm64.eng.wysdm.com</client_name>
+      <group_name>Default Group</group_name>
+      <job_name>Windows File System-ALL</job_name>
+      <schedule_name>Default Schedule</schedule_name>
+      <domain_name>/</domain_name>
+      <backup_set/>
+    </bkup_server_mapping>
+    <bkup_server_mapping>
+      <client_name>johnsvm64.eng.wysdm.com</client_name>
+      <group_name>johnsvm_group</group_name>
+      <job_name>Windows File System-C:/Documents and Settings/Administrator/</job_name>
+      <schedule_name>johnsvm64_sched</schedule_name>
+      <domain_name>/clients</domain_name>
+      <backup_set/>
+    </bkup_server_mapping>
+    <bkup_server_mapping>
+      <client_name>johnsvm64.eng.wysdm.com</client_name>
+      <group_name>mytestgroup</group_name>
+      <job_name>Windows File System-ALL</job_name>
+      <schedule_name>Default Schedule</schedule_name>
+      <domain_name>/clients</domain_name>
+      <backup_set/>
+    </bkup_server_mapping>
+    <schedule_config>
+      <schedule_name>Default Schedule</schedule_name>
+      <group_name>Default Proxy Group</group_name>
+      <domain_name>/</domain_name>
+      <type>WEEKLY</type>
+      <enabled>1</enabled>
+      <schedule_starttime>1375804314</schedule_starttime>
+      <schedule_endtime/>
+      <windowstart>21600</windowstart>
+      <windowduration>28800</windowduration>
+      <calendar_hours/>
+      <calendar_weekdays>YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY</calendar_weekdays>
+      <calendar_monthdays/>
+      <tz>America/Los_Angeles</tz>
+    </schedule_config>
+    <schedule_config>
+      <schedule_name>Default Schedule</schedule_name>
+      <group_name>Default Group</group_name>
+      <domain_name>/</domain_name>
+      <type>WEEKLY</type>
+      <enabled>1</enabled>
+      <schedule_starttime>1375804314</schedule_starttime>
+      <schedule_endtime/>
+      <windowstart>21600</windowstart>
+      <windowduration>28800</windowduration>
+      <calendar_hours/>
+      <calendar_weekdays>YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY</calendar_weekdays>
+      <calendar_monthdays/>
+      <tz>America/Los_Angeles</tz>
+    </schedule_config>
+    <schedule_config>
+      <schedule_name>Default Schedule</schedule_name>
+      <group_name>mytestgroup</group_name>
+      <domain_name>/</domain_name>
+      <type>WEEKLY</type>
+      <enabled>1</enabled>
+      <schedule_starttime>1375804314</schedule_starttime>
+      <schedule_endtime/>
+      <windowstart>21600</windowstart>
+      <windowduration>28800</windowduration>
+      <calendar_hours/>
+      <calendar_weekdays>YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY</calendar_weekdays>
+      <calendar_monthdays/>
+      <tz>America/Los_Angeles</tz>
+    </schedule_config>
+    <schedule_config>
+      <schedule_name>johnsvm64_sched</schedule_name>
+      <group_name>johnsvm_group</group_name>
+      <domain_name>/clients</domain_name>
+      <type>DAILY</type>
+      <enabled>1</enabled>
+      <schedule_starttime>1375877004</schedule_starttime>
+      <schedule_endtime>-1644902016</schedule_endtime>
+      <windowstart>79200</windowstart>
+      <windowduration>3600</windowduration>
+      <calendar_hours>NNNNNNNNNNNNNNNYNNNNNNNN</calendar_hours>
+      <calendar_weekdays/>
+      <calendar_monthdays/>
+      <tz>Europe/London</tz>
+    </schedule_config>
+    <schedule_config>
+      <schedule_name>Default Replication Schedule</schedule_name>
+      <group_name>dpaavamar_repl</group_name>
+      <domain_name>/</domain_name>
+      <type>DAILY</type>
+      <enabled>1</enabled>
+      <schedule_starttime>1375804314</schedule_starttime>
+      <schedule_endtime/>
+      <windowstart>25200</windowstart>
+      <windowduration>3600</windowduration>
+      <calendar_hours>NNNNNNNNNNNNNNNNNNNNYNNN</calendar_hours>
+      <calendar_weekdays/>
+      <calendar_monthdays/>
+      <tz>Europe/London</tz>
+    </schedule_config>
+    <schedule_config>
+      <schedule_name>Default Replication Schedule</schedule_name>
+      <group_name>avamar70</group_name>
+      <domain_name>/</domain_name>
+      <type>DAILY</type>
+      <enabled>1</enabled>
+      <schedule_starttime>1375804314</schedule_starttime>
+      <schedule_endtime/>
+      <windowstart>25200</windowstart>
+      <windowduration>3600</windowduration>
+      <calendar_hours>NNNNNNNNNNNNNNNNNNNNYNNN</calendar_hours>
+      <calendar_weekdays/>
+      <calendar_monthdays/>
+      <tz>Europe/London</tz>
+    </schedule_config>
+    <ret_policy_config>
+      <name>Monthly Retention</name>
+      <domain_name>/</domain_name>
+      <enabled>1</enabled>
+      <readonly>1</readonly>
+      <override>0</override>
+      <duration>1</duration>
+      <durationtype>months</durationtype>
+    </ret_policy_config>
+    <ret_policy_config>
+      <name>Weekly Retention</name>
+      <domain_name>/</domain_name>
+      <enabled>1</enabled>
+      <readonly>1</readonly>
+      <override>0</override>
+      <duration>1</duration>
+      <durationtype>weeks</durationtype>
+    </ret_policy_config>
+    <ret_policy_config>
+      <name>Default Retention</name>
+      <domain_name>/</domain_name>
+      <enabled>1</enabled>
+      <readonly>1</readonly>
+      <override>1</override>
+      <keepdaysdaily>60</keepdaysdaily>
+      <keepweeksweekly>0</keepweeksweekly>
+      <keepmonthsmonthly>0</keepmonthsmonthly>
+      <keepyearsyearly>0</keepyearsyearly>
+    </ret_policy_config>
+    <ret_policy_config>
+      <name>End User On Demand Retention</name>
+      <domain_name>/</domain_name>
+      <enabled>1</enabled>
+      <readonly>1</readonly>
+      <override>0</override>
+      <duration>60</duration>
+      <durationtype>days</durationtype>
+    </ret_policy_config>
+    <ret_policy_config>
+      <name>Minimal Retention</name>
+      <domain_name>/</domain_name>
+      <enabled>1</enabled>
+      <readonly>1</readonly>
+      <override>0</override>
+      <expiration>2147483647</expiration>
+    </ret_policy_config>
+    <ret_policy_config>
+      <name>johnsvm_retent</name>
+      <domain_name>/clients</domain_name>
+      <enabled>1</enabled>
+      <readonly>0</readonly>
+      <override>0</override>
+      <duration>1</duration>
+      <durationtype>weeks</durationtype>
+    </ret_policy_config>
+    <ret_policy_config>
+      <name>dpaavamar_repl Repl Expiration</name>
+      <domain_name>/</domain_name>
+      <enabled>1</enabled>
+      <readonly>0</readonly>
+      <override>1</override>
+      <keepdaysdaily>5</keepdaysdaily>
+      <keepweeksweekly>10</keepweeksweekly>
+      <keepmonthsmonthly>10</keepmonthsmonthly>
+      <keepyearsyearly>10</keepyearsyearly>
+    </ret_policy_config>
+    <ret_policy_config>
+      <name>avamar70 Repl Expiration</name>
+      <domain_name>/</domain_name>
+      <enabled>1</enabled>
+      <readonly>0</readonly>
+      <override>0</override>
+    </ret_policy_config>
+  </REPORT>
+</AXMLRESULT>

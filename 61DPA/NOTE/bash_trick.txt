@@ -1,0 +1,15 @@
+1) Remove duplicate line = awk '!x[$0]++'
+
+2) grep first character (eg) = grep -i "^#"
+
+3) awk print line = awk '{print NR"   "$1}'
+
+4) awk use last value = awk '{print $NF}'
+
+5) sort process according to memory = top -a
+
+6) memory usage for certain pid = pmap -x <pid_no>
+
+7) sort numbers according to value = sort -n = sort -V = sort -g = sort -k1,1n
+
+8) 

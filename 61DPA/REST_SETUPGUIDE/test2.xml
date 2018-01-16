@@ -1,0 +1,10 @@
+<setupGuideGroup version="1" lastModified="2014-01-30T14:48:41.78Z">
+  <id>af5668c5-733d-4caa-b82e-193efada65a2</id>
+  <link rel="self" href="http://10.64.205.107:9004/dpa-api/setupguidegroups/af5668c5-733d-4caa-b82e-193efada65a2"/>
+  <setupGuideItems>
+    <setupGuideItem version="1" lastModified="2014-01-30T14:48:41.78Z">
+      <id>b9234fef-bac8-4c8a-9a6e-6adb025db977</id>
+      <ticked>false</ticked>
+    </setupGuideItem>
+  </setupGuideItems>
+</setupGuideGroup>

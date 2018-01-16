@@ -1,0 +1,28 @@
+Postgres Sql on suse10x64auto --: use ip address always for this (10.64.255.167)
+
+
+Host Name : 10.64.255.167
+
+Type :linux 
+
+We may need to start up postgresql in /etc/init.d/ if the process postgres isn.t running
+
+For monitoring on dpa 
+
+
+Instance name ostgres
+
+Initial DB : postgres
+
+Username : postgres
+
+Ppd; postgres
+
+Discover all databases with this instance details 
+
+Test successful 
+
+suse10x64auto:/etc/init.d # postgres --version
+
+postgres (PostgreSQL) 8.1.9
+

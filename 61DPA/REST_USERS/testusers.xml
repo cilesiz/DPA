@@ -1,0 +1,89 @@
+##1
+<user version="1" system="false" hidden="false"> 
+  <displayName>ar_ro</displayName> 
+  <logonName>ar_ro</logonName> 
+  <externalName>ar_ro</externalName> 
+  <password>ar_ro</password> 
+  <authenticationType>PASSWORD</authenticationType> 
+  <userRole version="1"> 
+   <id></id> 
+  </userRole> 
+ </user> 
+##2
+<user version="1" system="false" hidden="false"> 
+  <displayName>ar_rw</displayName> 
+  <logonName>ar_rw</logonName> 
+  <externalName>ar_rw</externalName> 
+  <password>ar_rw</password> 
+  <authenticationType>PASSWORD</authenticationType> 
+  <userRole version="1"> 
+   <id></id> 
+  </userRole> 
+ </user> 
+##3
+<user version="1" system="false" hidden="false"> 
+  <displayName>rt_ro</displayName> 
+  <logonName>rt_ro</logonName> 
+  <externalName>rt_ro</externalName> 
+  <password>rt_ro</password> 
+  <authenticationType>PASSWORD</authenticationType> 
+  <userRole version="1"> 
+   <id></id> 
+  </userRole> 
+ </user> 
+##4
+<user version="1" system="false" hidden="false"> 
+  <displayName>rt_rw</displayName> 
+  <logonName>rt_rw</logonName> 
+  <externalName>rt_rw</externalName> 
+  <password>rt_rw</password> 
+  <authenticationType>PASSWORD</authenticationType> 
+  <userRole version="1"> 
+   <id></id> 
+  </userRole> 
+ </user> 
+##5
+<user version="1" system="false" hidden="false"> 
+  <displayName>st_ro</displayName> 
+  <logonName>st_ro</logonName> 
+  <externalName>st_ro</externalName> 
+  <password>st_ro</password> 
+  <authenticationType>PASSWORD</authenticationType> 
+  <userRole version="1"> 
+   <id></id> 
+  </userRole> 
+ </user> 
+##6
+<user version="1" system="false" hidden="false"> 
+  <displayName>st_rw</displayName> 
+  <logonName>st_rw</logonName> 
+  <externalName>st_rw</externalName> 
+  <password>st_rw</password> 
+  <authenticationType>PASSWORD</authenticationType> 
+  <userRole version="1"> 
+   <id></id> 
+  </userRole> 
+ </user> 
+##7
+<user version="1" system="false" hidden="false">
+  <displayName>ss_ro</displayName>
+  <logonName>ss_ro</logonName>
+  <externalName>ss_ro</externalName>
+  <password>ss_ro</password>
+  <authenticationType>PASSWORD</authenticationType>
+  <userRole version="1">
+   <id></id>
+  </userRole>
+ </user>
+##8
+<user version="1" system="false" hidden="false">
+  <displayName>ss_rw</displayName>
+  <logonName>ss_rw</logonName>
+  <externalName>ss_rw</externalName>
+  <password>ss_rw</password>
+  <authenticationType>PASSWORD</authenticationType>
+  <userRole version="1">
+   <id></id>
+  </userRole>
+ </user>
+
