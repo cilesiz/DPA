@@ -1,0 +1,48 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1339428823 (0x4fd60fd7)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=UK, ST=Oxfordshire, L=Milton Park, O=EMC, OU=DPA Crusade, CN=TigaDua Crusade
+        Validity
+            Not Before: Jun 11 15:33:43 2012 GMT
+            Not After : Sep 19 15:33:43 2013 GMT
+        Subject: C=UK, ST=Oxfordshire, L=Milton Park, O=EMC, OU=DPA Crusade, CN=TigaDua Crusade
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:87:e4:cd:83:cd:ff:da:18:c9:13:10:dd:0a:1a:
+                    c3:5d:cd:03:da:05:55:e0:03:f9:83:f1:7c:04:3d:
+                    47:fa:c2:bc:df:cd:72:5d:6f:ec:9f:49:2e:ab:77:
+                    35:c6:b2:bf:4b:0d:08:90:6c:1c:95:90:b7:5e:68:
+                    4b:fc:24:3d:a7:04:64:a4:f6:2b:e6:c7:4b:14:fb:
+                    90:ef:fa:d1:9a:75:cf:b6:83:e0:42:16:33:c1:01:
+                    da:c4:05:ee:57:83:9d:4f:2e:f6:e7:d0:ec:3b:0d:
+                    db:6a:aa:ce:e0:f8:7c:09:fe:c0:ff:d9:94:11:1f:
+                    dc:e2:84:a8:ce:22:17:4c:8f
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha1WithRSAEncryption
+        6f:ca:6e:b6:30:9d:a3:9f:be:00:ac:02:30:fc:bb:33:c1:1d:
+        f4:eb:4f:c9:33:e3:91:eb:e9:cd:cb:e1:a3:a0:b1:09:2f:07:
+        0b:29:40:28:66:8e:c0:e4:98:4f:60:1d:03:92:cc:eb:72:6b:
+        4c:30:58:8a:a1:eb:06:61:ee:1a:13:2b:90:08:9d:50:25:1e:
+        64:a7:60:f8:a0:13:7c:b2:2a:f5:4a:39:24:29:80:bc:d9:2f:
+        7d:b9:76:c2:ae:f7:53:c5:ca:63:6f:c4:1b:99:c3:12:da:e4:
+        97:81:2d:82:a6:b7:a8:30:8c:53:8c:a2:fa:81:dd:e1:8e:ca:
+        ed:24
+-----BEGIN CERTIFICATE-----
+MIICZTCCAc6gAwIBAgIET9YP1zANBgkqhkiG9w0BAQUFADB3MQswCQYDVQQGEwJV
+SzEUMBIGA1UECBMLT3hmb3Jkc2hpcmUxFDASBgNVBAcTC01pbHRvbiBQYXJrMQww
+CgYDVQQKEwNFTUMxFDASBgNVBAsTC0RQQSBDcnVzYWRlMRgwFgYDVQQDEw9UaWdh
+RHVhIENydXNhZGUwHhcNMTIwNjExMTUzMzQzWhcNMTMwOTE5MTUzMzQzWjB3MQsw
+CQYDVQQGEwJVSzEUMBIGA1UECBMLT3hmb3Jkc2hpcmUxFDASBgNVBAcTC01pbHRv
+biBQYXJrMQwwCgYDVQQKEwNFTUMxFDASBgNVBAsTC0RQQSBDcnVzYWRlMRgwFgYD
+VQQDEw9UaWdhRHVhIENydXNhZGUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGB
+AIfkzYPN/9oYyRMQ3Qoaw13NA9oFVeAD+YPxfAQ9R/rCvN/Ncl1v7J9JLqt3Ncay
+v0sNCJBsHJWQt15oS/wkPacEZKT2K+bHSxT7kO/60Zp1z7aD4EIWM8EB2sQF7leD
+nU8u9ufQ7DsN22qqzuD4fAn+wP/ZlBEf3OKEqM4iF0yPAgMBAAEwDQYJKoZIhvcN
+AQEFBQADgYEAb8putjCdo5++AKwCMPy7M8Ed9OtPyTPjkevpzcvho6CxCS8HCylA
+KGaOwOSYT2AdA5LM63JrTDBYiqHrBmHuGhMrkAidUCUeZKdg+KATfLIq9Uo5JCmA
+vNkvfbl2wq73U8XKY2/EG5nDEtrkl4Etgqa3qDCMU4yi+oHd4Y7K7SQ=
+-----END CERTIFICATE-----

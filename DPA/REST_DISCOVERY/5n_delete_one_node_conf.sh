@@ -1,0 +1,1 @@
+link /opt/rosli/DPA/REST_MAIN/5n_delete_one_node_conf.sh

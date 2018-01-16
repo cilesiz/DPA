@@ -1,0 +1,46 @@
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:/C=UK/ST=Oxfordshire/L=Milton Park/O=EMC/OU=DPA Crusade/CN=TigaDua Crusade
+   i:/C=UK/ST=Oxfordshire/L=Milton Park/O=EMC/OU=DPA Crusade/CN=TigaDua Crusade
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIICZTCCAc6gAwIBAgIET9YP1zANBgkqhkiG9w0BAQUFADB3MQswCQYDVQQGEwJV
+SzEUMBIGA1UECBMLT3hmb3Jkc2hpcmUxFDASBgNVBAcTC01pbHRvbiBQYXJrMQww
+CgYDVQQKEwNFTUMxFDASBgNVBAsTC0RQQSBDcnVzYWRlMRgwFgYDVQQDEw9UaWdh
+RHVhIENydXNhZGUwHhcNMTIwNjExMTUzMzQzWhcNMTMwOTE5MTUzMzQzWjB3MQsw
+CQYDVQQGEwJVSzEUMBIGA1UECBMLT3hmb3Jkc2hpcmUxFDASBgNVBAcTC01pbHRv
+biBQYXJrMQwwCgYDVQQKEwNFTUMxFDASBgNVBAsTC0RQQSBDcnVzYWRlMRgwFgYD
+VQQDEw9UaWdhRHVhIENydXNhZGUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGB
+AIfkzYPN/9oYyRMQ3Qoaw13NA9oFVeAD+YPxfAQ9R/rCvN/Ncl1v7J9JLqt3Ncay
+v0sNCJBsHJWQt15oS/wkPacEZKT2K+bHSxT7kO/60Zp1z7aD4EIWM8EB2sQF7leD
+nU8u9ufQ7DsN22qqzuD4fAn+wP/ZlBEf3OKEqM4iF0yPAgMBAAEwDQYJKoZIhvcN
+AQEFBQADgYEAb8putjCdo5++AKwCMPy7M8Ed9OtPyTPjkevpzcvho6CxCS8HCylA
+KGaOwOSYT2AdA5LM63JrTDBYiqHrBmHuGhMrkAidUCUeZKdg+KATfLIq9Uo5JCmA
+vNkvfbl2wq73U8XKY2/EG5nDEtrkl4Etgqa3qDCMU4yi+oHd4Y7K7SQ=
+-----END CERTIFICATE-----
+subject=/C=UK/ST=Oxfordshire/L=Milton Park/O=EMC/OU=DPA Crusade/CN=TigaDua Crusade
+issuer=/C=UK/ST=Oxfordshire/L=Milton Park/O=EMC/OU=DPA Crusade/CN=TigaDua Crusade
+---
+No client certificate CA names sent
+---
+SSL handshake has read 1196 bytes and written 279 bytes
+---
+New, TLSv1/SSLv3, Cipher is EDH-RSA-DES-CBC3-SHA
+Server public key is 1024 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+SSL-Session:
+    Protocol  : TLSv1
+    Cipher    : EDH-RSA-DES-CBC3-SHA
+    Session-ID: 4FD62BFCAFBC31C22372E63BFFEA716FA21CE1DC0C0880D68693BB461F314536
+    Session-ID-ctx: 
+    Master-Key: 5E247BE97EC44127DB3A9184BD4BF11164236E3F124F0D3E4E9D20740090F2B6BD8E1F96F8C8E8AE26DDF088927F72F4
+    Key-Arg   : None
+    Krb5 Principal: None
+    Start Time: 1339436028
+    Timeout   : 300 (sec)
+    Verify return code: 18 (self signed certificate)
+---

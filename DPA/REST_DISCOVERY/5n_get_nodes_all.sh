@@ -1,0 +1,1 @@
+link /opt/rosli/DPA/REST_MAIN/5n_get_nodes_all.sh

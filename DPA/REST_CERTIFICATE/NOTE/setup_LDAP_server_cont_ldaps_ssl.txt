@@ -1,0 +1,147 @@
+1) mkdir /etc/openldap/ssl
+
+2) cd /etc/openldap/ssl
+
+(inside /etc/openldap/ssl )
+3) openssl req -newkey rsa:1024 -x509 -nodes -out server.pem -keyout server.pem -days 3650
+
+This self-signed certificate is set for 10 years. Adjust accordingly by setting the -days parameter.
+
+Enter the appropriate information when prompted. 
+The Common Name (eg, YOUR name) []: entry must be set your your LDAP server name (e.g. bux.somedomain.com).
+The other lines can be left at their default settings (just press Enter when prompted). Here is an example of the output:
+
+[root@rhel57ldap ssl]# openssl req -newkey rsa:1024 -x509 -nodes -out server.pem -keyout server.pem -days 3650
+Generating a 1024 bit RSA private key
+.++++++
+...........++++++
+writing new private key to 'server.pem'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [GB]:
+State or Province Name (full name) [Berkshire]:Oxfordshire
+Locality Name (eg, city) [Newbury]:Abingdon
+Organization Name (eg, company) [My Company Ltd]:EMC Computer Systems
+Organizational Unit Name (eg, section) []:HB-DPA-QA
+Common Name (eg, your name or your server's hostname) []:rhel57ldap
+Email Address []:rosli.talib@emc.com
+[root@rhel57ldap ssl]#
+
+4) Edit the slapd.conf file
+
+The configuration file is located at /etc/openldap/slapd.conf. Edit the file and add this detailed to look like:
+
+TLSCipherSuite HIGH:MEDIUM:-SSLv2
+TLSCACertificateFile /etc/openldap/ssl/server.pem
+TLSCertificateFile /etc/openldap/ssl/server.pem
+TLSCertificateKeyFile /etc/openldap/ssl/server.pem
+
+The TLSCipherSuite directive allows all ciphers using greater than 128-bit encryption
+(HIGH), all ciphers with 128-bit encryption (MEDIUM),
+and disable all SSL version 2.0 ciphers (-SSLv2). Using SSLv2
+is not recommended for use however if you really need it (i.e. incompatibilites) change -SSLv2 to
++SSLv2. 
+
+5) Set the OpenLDAP server to start as SSL only
+
+Edit /etc/init.d/ldap file at "function start()" section, edit x$SLAPD_LAP
+value and comment out LDAP daemon (intention to use LDAPS daemon only)
+
+        # if test x$SLAPD_LDAP = xyes ; then
+        #     harg="ldap:///"
+        # fi
+ 
+6) Restart openldap server
+
+service ldap restart
+
+(or /etc/init.d/ldap restart)
+
+7) Check
+
+Test that ldap process running - it should running ldaps only (not running
+ldap) :
+
+[root@rhel57ldap init.d]# ps -ef | grep -i ldap
+avahi     3084     1  0 Nov24 ?        00:00:00 avahi-daemon: running
+[rhel57ldap.local]
+ldap      8501     1  0 14:17 ?        00:00:00 /usr/sbin/slapd -h  ldaps:///
+-u ldap
+root      8896  4384  0 17:58 pts/3    00:00:00 grep -i ldap
+[root@rhel57ldap init.d]#
+ 
+
+Test the SSL connection to the OpenLDAP server
+
+openssl s_client -connect <YOUR_LDAP_SERVER>:636 -showcerts
+Set YOUR_LDAP_SERVER to be a fully qualified domain name that matches the Common Name that was set while creating the self-signed certificate.
+
+Look for the following to indicate a successful connection:
+Verify return code: 18 (self signed certificate)
+
+8) Test your local LDAP lookups:
+
+Set your local machine (LDAP client) to to allow your self-signed certificate by editing
+/etc/ldap/ldap.conf to look like:
+# See ldap.conf(5) for details
+# This file should be world readable but not world writable.
+
+BASE dc=homebase,dc=corp,dc=emc,dc=com
+URI ldaps://10.64.213.18/
+TLS_REQCERT allow
+
+Setting TLS_REQCERT to allow does the following:
+
+If no certificate is provided, the session proceeds normally. If a bad certificate is provided, it will be
+ignored and the session proceeds normally.
+
+View LDAP infos:
+
+ldapsearch -x
+
+You should see:
+
+# extended LDIF
+#
+# LDAPv3
+# base <> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# homebase.corp.emc.com
+dn: dc=homebase,dc=corp,dc=emc,dc=com
+dc: homebase
+objectClass: domain
+
+# People, homebase.corp.emc.com
+dn: ou=People,dc=homebase,dc=corp,dc=emc,dc=com
+ou: People
+objectClass: organizationalUnit
+
+# Group, homebase.corp.emc.com
+dn: ou=Group,dc=homebase,dc=corp,dc=emc,dc=com
+ou: Group
+objectClass: organizationalUnit
+
+# root, Group, homebase.corp.emc.com
+dn: cn=root,ou=Group,dc=homebase,dc=corp,dc=emc,dc=com
+objectClass: posixGroup
+objectClass: top
+cn: root
+userPassword:: e2NyeXB0fXg=
+gidNumber: 0
+............................
+
+That is it. You now have a secure OpenLDAP server using SSL and a self-signed certificate.
+
+REFERENCE :
+
+1)
+http://www.yolinux.com/TUTORIALS/LinuxTutorialLDAP.html

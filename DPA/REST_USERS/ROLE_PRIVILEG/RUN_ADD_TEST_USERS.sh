@@ -1,0 +1,14 @@
+#!/bin/bash
+
+sh 6u_post_one_user_roles_roslitest_role_rosli.sh
+sh 6u_post_one_user_roles_test2_amorii.sh
+sh 6u_post_one_user_roles_test3.sh
+sh test3_post_create_usertest2_rw_role_rosli.sh
+sh test4_post_create_usertest3_r_.sh
+sh test5_post_create_usertest4_rw_role_amorii.sh
+sh test6_post_create_usertest5_rw.sh
+sh test7_post_create_usertest6_rw.sh
+sh 4_post_create_usertest2_rw.sh
+sh 4_post_create_usertest3_r_.sh
+sh 4_post_create_usertest4_rw.sh
+

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd USER_TEST
+
+sh POST_one_user_roles_datacollectionpolicy111_all_rwa.sh
+sh POST_one_user_roles_datacollectionpolicy101_no_w.sh
+sh POST_one_user_roles_datacollectionpolicy110_no_a.sh
+sh POST_create_user_dcp_noa_no_as.sh
+sh POST_create_user_dcp_rwa.sh
+sh POST_create_user_dcp_now_no_rw.sh

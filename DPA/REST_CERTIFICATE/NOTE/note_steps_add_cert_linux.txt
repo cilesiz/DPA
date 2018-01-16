@@ -1,0 +1,140 @@
+Existing Keystore/Certificate
+-----------------------------
+
+DPA 6.0 will ship with a cerficate 'apollokey' in a keystore 'apollo.keystore'.
+
+
+Existing Keystore
+-----------------
+
+Under /opt/emc/dpa/services/standalone/configuration
+
+	DPA Keystore
+
+	apollo.keystore
+
+Existing Certificate
+
+	DPA Certificate
+
+	Alias name: apollokey
+
+	Password: apollo
+
+Replacing Existing Certificate
+------------------------------
+
+Under /opt/emc/dpa/services/standalone/configuration  
+
+/opt/emc/dpa/services/_jre/bin/keytool -import -alias apollokey -file <name_of_the_new_certificate>.cer -keystore apollo.keystore
+	
+	password = apollo
+
+	alias needs to be apollokey
+
+Keytool requires the certificate to be in the .cer format - to translate from .pem to .cer
+
+openssl x509 -outform der -in server.pem -out server.cer
+
+Enabling HTTPS
+--------------
+
+Edit /opt/emc/dpa/services/standalone/configuration/standalone.xml
+
+Default standalone.xml without HTTPS
+
+<subsystem xmlns="urn:jboss:domain:web:1.1" default-virtual-server="default-host" native="false">
+  <connector name="http" protocol="HTTP/1.1" scheme="http" socket-binding="http"/>
+  <virtual-server name="default-host" enable-welcome-root="true">
+    <alias name="localhost"/>
+    <alias name="example.com"/>
+  </virtual-server>
+</subsystem>
+
+DPA standalone.xml with HTTPS
+
+<subsystem default-virtual-server="default-host" native="false" xmlns="urn:jboss:domain:web:1.1">
+  <connector name="http" protocol="HTTP/1.1" scheme="http" socket-binding="http"/>
+  <connector enable-lookups="false" name="https" protocol="HTTP/1.1" scheme="https" secure="true" socket-binding="https">
+    <ssl certificate-key-file="${jboss.server.config.dir}/apollo.keystore" key-alias="apollokey" name="ssl" password="apollo" protocol="ALL" verify-client="false"/>
+  </connector>
+  <virtual-server enable-welcome-root="false" name="default-host">
+    <alias name="localhost"/>
+    <alias name="example.com"/>
+  </virtual-server>
+</subsystem>
+
+Changing the Password
+---------------------
+
+Under /opt/emc/dpa/services/standalone/configuration
+
+Changing the keystore password
+
+/opt/emc/dpa/services/_jre/bin/keytool -storepasswd -keystore apollo.keystore
+	
+You will be prompted for the existing password "apollo" and then the new password.
+
+The new passwrod must be at least 6 characters long.
+
+Changing the SSL password
+-------------------------
+
+Edit /opt/emc/dpa/services/standalone/configuration/standalone.xml and update the password in the <ssl> tag
+
+<subsystem default-virtual-server="default-host" native="false" xmlns="urn:jboss:domain:web:1.1">
+  <connector name="http" protocol="HTTP/1.1" scheme="http" socket-binding="http"/>
+  <connector enable-lookups="false" name="https" protocol="HTTP/1.1" scheme="https" secure="true" socket-binding="https">
+    <ssl certificate-key-file="${jboss.server.config.dir}/apollo.keystore" key-alias="apollokey" name="ssl" password="apollo" protocol="ALL" verify-client="false"/>
+  </connector>
+  <virtual-server enable-welcome-root="false" name="default-host">
+    <alias name="localhost"/>
+    <alias name="example.com"/>
+  </virtual-server>
+</subsystem>
+
+
+Exporting the Certificate
+=========================
+
+Under /opt/emc/dpa/services/standalone/configuration
+
+Export in Binary
+----------------
+
+/opt/emc/dpa/services/_jre/bin/keytool -storepass apollo -alias apollokey -export -file <export file name>.cer -keystore apollo.keystore
+
+Export in Text Format
+---------------------
+
+/opt/emc/dpa/services/_jre/bin/keytool -storepass apollo -alias apollokey -export -rfc -file <export file name>.cer -keystore apollo.keystore
+
+ 
+Additional Keytool Commands
+===========================
+
+Under /opt/emc/dpa/services/standalone/configuration
+
+Deleting the Certificate
+------------------------
+
+It is possible to have muiltiple certificates in the keystore and if they have the same password the primary one will take precedence.  In this case you might want to delete a certificate:
+
+/opt/emc/dpa/services/_jre/bin/keytool -storepass apollo -alias apollokey -delete -keystore apollo.keystore
+
+Listing the Certificates
+------------------------
+
+To check what keystore certificates there are use
+
+/opt/emc/dpa/services/_jre/bin/keytool -list -v -keystore
+/opt/emc/dpa/services/standalone/configuration/apollo.keystore
+
+Generating a new certificate into the keystore
+----------------------------------------------
+
+/opt/emc/dpa/services/_jre/bin/keytool -genkeypair -alias apollokey -keystore apollo.keystore -storepass apollo
+
+ /opt/emc/dpa/services/_jre/bin/keytool -genkey -alias apollokey -keyalg RSA
+-validity 465 -keystore
+/opt/emc/dpa/services/standalone/configuration/apollo.keystore -storetype JKS

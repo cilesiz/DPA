@@ -1,0 +1,92 @@
+17:16
+Talib, Rosli
+hi Mike
+
+17:16
+Skilbeck, Michael
+Hi
+
+17:17
+Talib, Rosli
+I still struggling to get networker server been monitor by DPA server
+
+17:18
+Skilbeck, Michael
+it works fine on my build
+i am using b136
+but in b139 this doesn't work
+i am going to login to machine and see server.log
+
+17:19
+Talib, Rosli
+what's the step to make it been monitor? 
+
+17:19
+Skilbeck, Michael
+also only shows one backup application being monitored
+add in disc wizrd
+
+17:20
+Talib, Rosli
+ok
+
+17:20
+Skilbeck, Michael
+with remote agent set to dpa server agent
+discovery wizard doesn't complete 
+properly
+
+17:21
+Skilbeck, Michael
+i am trying to share desktop
+can you see the disc wzd
+
+17:23
+Skilbeck, Michael
+can you see disc wizard
+finish is greyed out but wizard doesn't close
+
+17:23
+Talib, Rosli
+ok
+
+17:24
+Skilbeck, Michael
+only one backup application is shown
+from elaines list there should be lots
+because the hosts have been created
+but the applications have not or aren't being displayed
+will need to check in db
+and the data collection policy doesn't show requests being assigned
+if requests aren't assigned no data can be collected
+this is very slow
+this seems ok
+anyway I am going to login to machine and have a look
+
+17:29
+Talib, Rosli
+ok... I missed the data collection steps and request 
+
+17:29
+Skilbeck, Michael
+well they are assigned to w2k8x64nw762
+so need to understand what is going wrong with wcu-nwsuse10.lss.emc.com
+
+17:32
+Talib, Rosli
+is it support networker 8? because networker client I hv is rhel55-networker (I can see in Elaine server just now) and rhel58-nw8 (networker 8)
+
+17:33
+Skilbeck, Michael
+we haven'ttested nw8 yet
+will be in 5.8.3
+but we are going on assumption that it should work without changes
+
+17:35
+Talib, Rosli
+ok, thanks Mike... I'm going to make it been monitor first.. that's the important one...
+will ping you if I hv problem
+
+17:36
+Skilbeck, Michael
+ok

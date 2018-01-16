@@ -1,0 +1,6 @@
+- Edit this file /opt/emc/dpa/services/standalone/configuration/standalone.xml
+- add this line :
+ 
+          <logger category="com.emc.dpa.services.licence">
+                <level name="DEBUG"/>
+          </logger>   

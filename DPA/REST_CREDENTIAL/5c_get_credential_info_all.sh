@@ -1,0 +1,1 @@
+link /opt/rosli/DPA/REST_MAIN/5c_get_credential_info_all.sh

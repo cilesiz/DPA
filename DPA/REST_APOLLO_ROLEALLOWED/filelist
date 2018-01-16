@@ -1,0 +1,17 @@
+RUN_CREATE_TESTS_USERS_AND_ROLES.sh
+POST_create_user_aa_rw.sh
+POST_one_user_roles_scheduledreports100_r.sh
+POST_create_user_ss_rw.sh
+POST_one_user_roles_apolloalert100_r.sh
+POST_one_user_roles_apollouser110_w.sh
+POST_create_user_ss_ro.sh
+POST_create_user_test123.sh
+POST_one_user_roles_apolloalert110_w.sh
+POST_create_user_au_rw.sh
+GET_objectattrb_all.sh
+POST_one_user_roles_test123.sh
+GET_scheduledreport_all.sh
+POST_create_user_aa_ro.sh
+POST_create_user_au_ro.sh
+POST_one_user_roles_scheduledreports110_w.sh
+POST_one_user_roles_apollouser100_r.sh

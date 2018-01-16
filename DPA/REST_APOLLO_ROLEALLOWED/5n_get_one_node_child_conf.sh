@@ -1,0 +1,1 @@
+link ../REST_MAIN/5n_get_one_node_child_conf.sh

@@ -1,0 +1,46 @@
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:/C=UK/ST=Oxfordshire/L=Milton/O=EMC/OU=DPA HB/CN=ThirtyTwo_eleven Crusade
+   i:/C=UK/ST=Oxfordshire/L=Milton/O=EMC/OU=DPA HB/CN=ThirtyTwo_eleven Crusade
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIICYzCCAcygAwIBAgIET9YC0jANBgkqhkiG9w0BAQUFADB2MQswCQYDVQQGEwJV
+SzEUMBIGA1UECBMLT3hmb3Jkc2hpcmUxDzANBgNVBAcTBk1pbHRvbjEMMAoGA1UE
+ChMDRU1DMQ8wDQYDVQQLEwZEUEEgSEIxITAfBgNVBAMMGFRoaXJ0eVR3b19lbGV2
+ZW4gQ3J1c2FkZTAeFw0xMjA2MTExNDM4MTBaFw0xMzA5MTkxNDM4MTBaMHYxCzAJ
+BgNVBAYTAlVLMRQwEgYDVQQIEwtPeGZvcmRzaGlyZTEPMA0GA1UEBxMGTWlsdG9u
+MQwwCgYDVQQKEwNFTUMxDzANBgNVBAsTBkRQQSBIQjEhMB8GA1UEAwwYVGhpcnR5
+VHdvX2VsZXZlbiBDcnVzYWRlMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCP
+JyUeB2Pkp06roTwoMHqZ9pHnAxRfmdg6yo77zp2/fHy5htJi+X+8+BSZZPLs+YCP
+r58/yZoCJanUbZMpVdkthFwJuKuwctIWwTA0vdN9FklHLn64/p/Hn2cyohd1ZiIQ
+ewdnpxDSr26j0S6E1TTCnUnHN2CKSNYmsM0NgLhIQQIDAQABMA0GCSqGSIb3DQEB
+BQUAA4GBAEBAmCldh6UGfJdlI6ABGspIOHqnNf2tNZhIIG5lkQEeVSAu4BX9EAJ8
+kk4TiE7w+cTXDGncBA91f821kljXhtKjSNqyVNkyRYDqm5T5YSOaYFpzU7OmYZPf
+c99X0ARoNQ9m9Tiym/V2EY3NS3yq702MGG+/UQ92QC7sSquWHWs9
+-----END CERTIFICATE-----
+subject=/C=UK/ST=Oxfordshire/L=Milton/O=EMC/OU=DPA HB/CN=ThirtyTwo_eleven Crusade
+issuer=/C=UK/ST=Oxfordshire/L=Milton/O=EMC/OU=DPA HB/CN=ThirtyTwo_eleven Crusade
+---
+No client certificate CA names sent
+---
+SSL handshake has read 1194 bytes and written 279 bytes
+---
+New, TLSv1/SSLv3, Cipher is EDH-RSA-DES-CBC3-SHA
+Server public key is 1024 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+SSL-Session:
+    Protocol  : TLSv1
+    Cipher    : EDH-RSA-DES-CBC3-SHA
+    Session-ID: 4FD62A6E4F6248B6B9A4B3D3652A69429064DD9F462C1A396F8D87A051D2CEA6
+    Session-ID-ctx: 
+    Master-Key: 8E8177CF740477593754F67A0D1DAEA62D4327FAF108567C6C1C5DF39DF68270B349B6E737BF873C4744AFF40A3A1FAF
+    Key-Arg   : None
+    Krb5 Principal: None
+    Start Time: 1339435630
+    Timeout   : 300 (sec)
+    Verify return code: 18 (self signed certificate)
+---
