@@ -1,6 +1,6 @@
 # DPA
 
-My DPA BASH scripts in my testings.
+My DPA BASH scripts.
 
 All my RESTful API testings using 'Client for URLs' (or 'cURL' / 'curl')
 
