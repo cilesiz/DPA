@@ -58,8 +58,12 @@ PUT	      - Update a resource
 
 DELETE	  - Delete a resource
 
-#### @filename	
+#### @filename	/  -T, --upload-file filename
 
 Loads content from a file.	
 
 curl -X POST -d @mypet.json http://www.example.com
+
+curl -X POST -T filename http://www.example.com
+
+curl -X POST -T "{file1,file2}" http://www.example.com
